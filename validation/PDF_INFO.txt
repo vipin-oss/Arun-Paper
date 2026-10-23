@@ -1,0 +1,24 @@
+Pages: 17
+Page size: 612.0 x 792.0 pt
+Producer: pdfTeX-1.40.29
+Creator: TeX
+PDF version: PDF 1.7
+
+Page dimensions:
+  p1: 612 x 792 pt
+  p2: 612 x 792 pt
+  p3: 612 x 792 pt
+  p4: 612 x 792 pt
+  p5: 612 x 792 pt
+  p6: 612 x 792 pt
+  p7: 612 x 792 pt
+  p8: 612 x 792 pt
+  p9: 612 x 792 pt
+  p10: 612 x 792 pt
+  p11: 612 x 792 pt
+  p12: 612 x 792 pt
+  p13: 612 x 792 pt
+  p14: 612 x 792 pt
+  p15: 612 x 792 pt
+  p16: 612 x 792 pt
+  p17: 612 x 792 pt
