@@ -355,7 +355,8 @@ def run_component(p, d, polym, k, P, n0, lam_int, m_s):
     mu = next((a for a in F.els() if F.pow_(a, P) == lam), None)
     assert mu is not None, "lambda has no P-th root"
     n = P * n0
-    M = F.trim(tuple([F.neg(mu)] + [F.zero()] * (n - 1) + [F.one()]))
+    # modulus is x^n - lambda  (NOT x^n - mu: mu is the n0-th root, lambda = mu^P)
+    M = F.trim(tuple([F.neg(lam)] + [F.zero()] * (n - 1) + [F.one()]))
     Mbar = F.trim(tuple([F.neg(mu)] + [F.zero()] * (n0 - 1) + [F.one()]))
     assert F.pmul_all([Mbar] * P) == M, "x^n - lambda != (x^n0 - mu)^P"
 

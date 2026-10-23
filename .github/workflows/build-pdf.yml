@@ -17,18 +17,21 @@ jobs:
     name: Compile IEEE single-column review manuscript
     runs-on: ubuntu-24.04
     timeout-minutes: 20
+    # Official TeX Live image: no apt round-trip needed for the LaTeX toolchain,
+    # which makes the build deterministic and fast.
+    container:
+      image: texlive/texlive:latest
     steps:
       - name: Check out source
         uses: actions/checkout@v4
 
-      - name: Install TeX Live (IEEEtran, amsmath, latexmk)
+      - name: Verify toolchain
         run: |
           set -eux
-          sudo apt-get update -qq
-          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
-            texlive-latex-base texlive-latex-recommended texlive-publishers \
-            texlive-fonts-recommended latexmk poppler-utils
+          latexmk --version | head -1
           kpsewhich IEEEtran.cls
+          kpsewhich amsmath.sty
+          kpsewhich amsthm.sty
 
       - name: Compile (120 s cap)
         id: compile
