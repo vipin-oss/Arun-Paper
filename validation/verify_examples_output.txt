@@ -1,0 +1,110 @@
+==============================================================================
+EXAMPLES 9.4-9.6 REPRODUCTION
+==============================================================================
+{
+  "case": "E4",
+  "n": 14,
+  "factors": 7,
+  "orbit_lengths": [
+    6,
+    1
+  ],
+  "weights": [
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3
+  ],
+  "assignments": 2187,
+  "distribution_match": true,
+  "cells_paper": 44,
+  "cells_computed": 44,
+  "total": 2187,
+  "mean_hull": "11/3",
+  "var_hull": "10/9",
+  "mean_hull_expected": "11/3",
+  "var_hull_expected": "10/9",
+  "moments_match": true,
+  "lcd": 4,
+  "lcd_match": true,
+  "so_dc": 258,
+  "so_dc_match": true,
+  "orientation_checked": 2187,
+  "predecessor_matches": 2187,
+  "successor_matches": 27,
+  "orientation_match": true,
+  "sample_size": 64,
+  "sample_mismatches": 0,
+  "sample_ok": true,
+  "seed": 20261023
+}
+------------------------------------------------------------------------------
+{
+  "case": "E5",
+  "orbit_data": [
+    {
+      "component": "F_2",
+      "orbit_lengths": [
+        1,
+        2
+      ],
+      "weights": [
+        1,
+        3,
+        3
+      ],
+      "assignments": 27
+    },
+    {
+      "component": "F_4",
+      "orbit_lengths": [
+        1,
+        2
+      ],
+      "weights": [
+        2,
+        6,
+        6
+      ],
+      "assignments": 27
+    }
+  ],
+  "assignments": 729,
+  "assignments_expected": 729,
+  "mean_hull": "11",
+  "mean_expected": "11",
+  "var_hull": "230/9",
+  "var_expected": "230/9",
+  "lcd": 16,
+  "lcd_expected": 16,
+  "matches": true
+}
+------------------------------------------------------------------------------
+{
+  "case": "E6",
+  "orbit_lengths": [
+    2
+  ],
+  "weights": [
+    4,
+    4
+  ],
+  "assignments": 16,
+  "assignments_expected": 16,
+  "distribution_match": true,
+  "cells": 7,
+  "mean_hull": "7/2",
+  "mean_expected": "7/2",
+  "var_hull": "15/4",
+  "var_expected": "15/4",
+  "lcd": 2,
+  "lcd_expected": 2,
+  "so_dc": 10,
+  "so_dc_expected": 10,
+  "matches": true
+}
+------------------------------------------------------------------------------
+ALL EXAMPLES REPRODUCED

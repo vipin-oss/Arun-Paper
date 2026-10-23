@@ -1,0 +1,2 @@
+multiplicativity (fg)# = f# g#: 2800 random pairs, 0 failures
+RESULT: PASS

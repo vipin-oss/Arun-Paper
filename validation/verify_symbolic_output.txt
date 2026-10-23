@@ -1,0 +1,23 @@
+==============================================================================
+SYMBOLIC (all-P) VERIFICATION OF THE MOMENT CLOSED FORMS
+==============================================================================
+PASS  E[min(U,V)] = mu_P
+PASS  E[min(U,V)^2]
+PASS  F(c) = E[min(c,U)]
+PASS  Var(X) used in the L=2 proof
+PASS  nu_P, P even
+PASS  nu_P, P odd
+PASS  V_1(P), P even
+PASS  V_1(P), P odd
+PASS  E[X_i X_{i+1}]
+PASS  kappa_P < 0
+PASS  E[X_0 X_1] for L = 2
+PASS  Cov(X_0,X_1) for L = 2
+PASS  V_2(P)
+PASS  Var(X) + 2 kappa_P
+PASS  V_L(P), L >= 3
+PASS  Var(P - A_f) = P(P+2)/12
+PASS  gamma_P = Cov(B, min(B,C))
+------------------------------------------------------------------------------
+identities checked: 15, failures: 0
+RESULT: PASS

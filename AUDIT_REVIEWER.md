@@ -74,3 +74,41 @@ Prop. P1 (P = 1 specialization) sits beside T6.
 
 Accept in substance, minor revision in form. The only remaining scientific
 debt is that Examples 9.4–9.6 were not independently reproduced here.
+
+---
+
+# Round 2 addendum — proof steps that no computation can reach
+
+The instruction was to recheck the proofs, "especially all steps not covered by
+finite computational examples". Finite tests cannot establish a universal
+statement, so here is the audit of the *argument* for every step where the
+verification is inspection-only. Each was re-read against its statement.
+
+| Statement | Step that computation cannot cover | Verdict |
+|---|---|---|
+| T2(i) multiplicativity `(fg)# = f# g#` | reversing the coefficient list of a product is *not* multiplicative in general (`rev(fg) = rev(f)rev(g)` only up to the normalization); the proof must show the constants cancel | **holds**: `(fg)_0 = f_0 g_0` and the normalizing factor `rho(c_0)^{-1}` composes exactly. Cross-checked on 2800 random polynomial pairs over five fields (`validation/verify_multiplicativity_output.txt`), 0 failures; the argument is what carries it. |
+| T2(ii) `f#` is the minimal polynomial of `xi^{-p^{d-k}}` | Frobenius transport of the algebraic closure; degree preservation; irreducibility | **holds**: `beta = xi^{-rho^{-1}}` is a root and `f#` is monic of the same degree, so it is the minimal polynomial up to the irreducibility of `f`, which is assumed. |
+| T2(iii) `tau_s` is a permutation | bijectivity from the explicit inverse construction | **holds**; and this is precisely where "involution" was wrong — a permutation of finite order dividing `d_s/gcd(d_s, ...)`, with order 3 and 6 orbits occurring in practice |
+| Lemma 4.1 (Euclidean dual `<h^♮>`) | the classical reciprocal-generator argument; the degree bookkeeping `h_0 != 0` | **holds**: `gh = x^n - lambda`, `g_0 h_0 = -lambda != 0`, both sides have dimension `r`, and the coefficient of `x^{n-1}` vanishing is shown explicitly |
+| Prop 4.2 transport | why the slot order forces `rho` rather than `sigma` | **holds**, and it is the sharpest step in the paper: `sum c_i sigma(y_i) = 0` iff `sigma(y) in C^perp` iff `y in rho(C^perp)`. This is where a wrong convention would silently produce a plausible-looking but reversed theory |
+| Lemma 5.1 (lcm of ideals in a quotient) | that intersecting *images* equals the image of the intersection, using `(M) subset (g),(l)` | **holds** |
+| T4 dimension identity | `P - max(u,v) = min(P-u, P-v)` and orbit-wise grouping | **holds** |
+| T5 closed-walk/assignment bijection | that a walk and its rotation are distinct assignments (labeled positions) | **holds**; the `L = 1` self-loop case is treated explicitly |
+| T6 factorisation | the finite distributive law over a Cartesian product of orbit restriction sets | **holds** |
+| Cor 6.4 joint symmetry | `alpha_i -> P - alpha_{-i}` is an involution and the hull term is invariant under it (the `j = -i+1` reindexing) | **holds**; the reindexing is the only place an error could hide, and it checks out term by term |
+| Cor 7.3 LCD count | the cycle argument forcing `alpha_i in {0,P}` | **holds**, including the `L = 1` and `P >= 2` cases |
+| Cor 7.5 SO/DC | `dim C - dim Hull = sum max(0, P - alpha_i - alpha_{i-1})` and the equality of the two counts under `alpha -> P - alpha` | **holds** |
+| T8.2 / T8.4 moments | independence across orbits, the `L = 2` versus `L >= 3` distinction | **holds**; and now also proved symbolically for all `P` |
+| Cor 8.5 `Cov = 0` | the cancellation of `+gamma_P` and `-gamma_P` over a cycle | **holds**; the telescoping is the real content and it is correct |
+
+**No gap was found and no theorem needed repair.** Two statements were
+mis-worded (a permutation called an involution; a mean called typical
+behaviour); both are claim-strength/terminology, not mathematics.
+
+## Consistency check between prose and algebra
+
+A referee-level read of §X ("Limitations") against §IV–§VIII found the scope
+statements to be exactly as strong as the theorems: incompatible twists are
+excluded where the hull formula genuinely needs compatibility, and the
+orientation remark is backed by the telescoping identity, which is stated in
+both places and is true.

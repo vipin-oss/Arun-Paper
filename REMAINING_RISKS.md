@@ -1,68 +1,61 @@
-# REMAINING_RISKS.md
+# REMAINING_RISKS.md (round 2)
 
-Ordered by consequence. Nothing here is hidden in the reports above.
+Ordered by consequence. R1 from round 1 is closed; the rest are narrowed.
 
-## R1 — No PDF was built (BLOCKER for "submission-ready")
+## R1 — CLOSED. PDF now exists and was inspected
 
-No TeX engine and no TeX Live tree is obtainable in this sandbox, and no
-`pdfinfo`/`pdftoppm` either. Consequences: the required
-`FINAL_IEEE_TIT_SUBMISSION.pdf` does not exist; no page-level visual inspection
-was performed; undefined control sequences and package availability are
-unverified; overfull boxes cannot be located or repaired.
+Round 1 had no TeX engine. Round 2 builds in CI (TeX Live container) and the
+built PDF is committed. 17 pages, 0 errors, 0 overfull boxes, every page
+rendered and read. See `BUILD_REPORT.md`.
 
-Mitigation shipped: a dependency-free static LaTeX lint (env/brace/label/ref/cite
-balance — all clean) and a one-line `latexmk` command. The source is
-self-contained and needs only standard packages plus `IEEEtran.cls`, which any
-IEEE author's TeX Live installation has.
+## R2 — DP2025 full text not read (highest-value remaining check)
 
-**Do not** treat any pre-existing PDF in the original package as the PDF of this
-source: those were built by the author's toolchain from the *uncorrected* file.
+The AIMS full-text link resolves to a paywall. The manuscript's Remark 7.4
+asserts that its mean agrees with [DP2025, Thm 3.3] and that "no variance or
+covariance formula is given there". The first half is supported by the abstract
+(which does present average-dimension formulas); the **second half is not
+verifiable without the full text**. If DP2025 does contain second-order
+results, one clause of Remark 7.4 needs revising. Everything else stands.
 
-## R2 — Two full-text comparisons are unverified
+Similarly, Remark 4.5 attributes an orbit-length restriction (1, 2 and 4) to
+[DPI2023, Thm 4] on abstract-level information only.
 
-Remark 4.5 (attribution of the orbit-length restriction to [DPI2023, Thm 4]) and
-Remark 7.4 (numerical agreement of the mean with [DP2025, Thm 3.3]) could only
-be checked at abstract/metadata level here. If either is inaccurate it is a
-one-sentence repair, not a structural problem. No paywalled full text was read,
-and none is claimed to have been read.
+## R3 — Novelty remains "not located", not "proved new"
 
-## R3 — Novelty is "no prior statement located", not "proved new"
+DIMP2026 was read in full (arXiv HTML) and does not contain the joint
+enumerator, the moments, or the transfer-matrix formulation; that is a solid
+data point. DP2025 and DPI2023 were not read in full. No systematic forward-
+citation sweep was performed. The manuscript makes no priority claim, which
+keeps this risk proportionate.
 
-The joint enumerator, the `2^{#orbits}` LCD count, the variance formulas and the
-zero-covariance corollary were not found in the literature reachable from this
-sandbox. That is an absence-of-evidence finding. A systematic citation-graph
-sweep (forward citations of DPI2023/DP2025, the Li–Shi and Bouyuklieva mass-
-formula line, and the multi-twisted/galois-hull literature) was not performed.
+## R4 — ORCID not independently verified
 
-## R4 — Examples 9.4–9.6 not independently reproduced
+`0009-0009-1169-3264` is printed in the author footnote. `pub.orcid.org` is
+unreachable from this sandbox, so the iD's match to the author is unverified.
+This is a 30-second check for the author and must not be assumed.
 
-E4 uses 2187 assignments over F_8 with n=14; E5/E6 involve two components and a
-twist of order four. Full linear-algebra reproduction exceeded the time budget.
-The identities those examples illustrate are verified on 10 smaller families,
-and E1–E3 were reproduced (E3 cell-for-cell). A referee asking for the E4
-table would get an honest "not re-derived here".
+## R5 — Definition-level coverage of Example 9.4 is sampled
 
-## R5 — Cosmetic typography not addressed
+The aggregate claims for Example 9.4 are exhaustive (all 2187 assignments via
+the exact enumerator), and the orientation claim is exhaustive (2187/2187). The
+*definition-level* dual/hull recomputation for 9.4 used a fixed-seed sample of
+64 assignments, because a full sweep would exceed the per-task time cap. No
+mismatch was found.
 
-Three overfull lines (~22.8pt near the line-877 region, ~26.6pt near 1168,
-~49.7pt near 1258 in the base file) were reported by the author's build. Without
-a compiler they cannot be located reliably, and blind line-breaking is exactly
-the kind of unverified change the protocol forbids. Deferred with the build.
+## R6 — Package-claimed computations remain unverified
 
-## R6 — Scope statements that a referee may push on
+The numbers the paper attributes to its own scripts — 2769 field-level
+assignments, 52 (P,L) pairs, and the various small cases in
+`code/validate_audit_fixes.py` — were **not** re-run and are not relied on.
+The independent verifier substitutes for them where they matter. The paper's
+§IX sentence that the proofs do not depend on these computations is correct.
 
-* Enumeration is over **labeled** assignments, not equivalence classes. The
-  paper says so twice; a referee may still ask for a monomial-equivalence
-  version. That is future work, correctly listed as such.
-* Reduced alphabets only (product of fields). Chain rings are explicitly out of
-  scope; the neighbouring literature (DIMP2026, DPC2025, ES2026) does cover
-  rings, so the positioning must stay precise.
-* `P = 1` gives hull dimension zero throughout the family; this is correct but
-  striking, and the paper explains it via the edge term rather than hiding it.
+## R7 — Scope statements a referee may still push on
 
-## R7 — Reproducibility of the *paper's* scripts
+Labeled assignments only (not monomial-equivalence classes); reduced alphabets
+only (no chain rings); no distances. All three are explicitly stated in §X, so
+they are scope limits rather than defects.
 
-The package's `code/validate_*.py` were deliberately not used as evidence.
-Their claimed outputs (≈48 edge cases, 1,800 mean comparisons, 2,187 orientation
-checks) are **unverified** and are not cited as support anywhere in this audit.
-The independent verifier is the evidence.
+## R8 — Cosmetic
+
+One underfull box in the author footnote. No action needed.
