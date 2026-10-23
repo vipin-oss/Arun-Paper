@@ -6,10 +6,11 @@ name: build-ieee-tit-pdf
 on:
   push:
     branches: ['arena/7ef3434e-arun-paper']
+    paths-ignore: ['build/**']
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write   # needed to commit the built PDF + logs back to the branch
 
 jobs:
   build:
@@ -97,6 +98,28 @@ jobs:
             BUILD_DIAGNOSTICS.md
           retention-days: 30
           if-no-files-found: warn
+
+      - name: Publish PDF and logs into build/ (so they are retrievable from git)
+        if: always()
+        run: |
+          set -eux
+          mkdir -p build
+          cp BUILD_DIAGNOSTICS.md build/ || true
+          [ -f FINAL_IEEE_TIT_SUBMISSION.log ] && cp FINAL_IEEE_TIT_SUBMISSION.log build/ || true
+          [ -f compile_stdout.txt ] && cp compile_stdout.txt build/ || true
+          [ -f PDF_INFO.txt ] && cp PDF_INFO.txt build/ || true
+          [ -f PDF_FONTS.txt ] && cp PDF_FONTS.txt build/ || true
+          [ -f FINAL_IEEE_TIT_SUBMISSION.pdf ] && cp FINAL_IEEE_TIT_SUBMISSION.pdf build/ || true
+          sha256sum FINAL_IEEE_TIT_SUBMISSION.tex > build/SOURCE_SHA256.txt
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f build
+          if git diff --cached --quiet; then
+            echo "nothing to publish"
+          else
+            git commit -m "build: CI-compiled PDF and logs (run ${{ github.run_id }}) [skip ci]"
+            git push
+          fi
 
       - name: Fail if compilation did not produce a PDF
         if: steps.compile.outputs.pdf_present != 'true'
