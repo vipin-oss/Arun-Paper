@@ -1,0 +1,686 @@
+Rc files read (in order):
+  NONE
+Latexmk: This is Latexmk, John Collins, 9 March 2026. Version 4.88.
+No existing .aux file, so I'll make a simple one, and require run of *latex.
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Category 'other':
+  Rerun of 'pdflatex' forced or previously required:
+    Reason or flag: 'Initial setup'
+
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -interaction=nonstopmode -file-line-error -halt-on-error -recorder  "FINAL_IEEE_TIT_SUBMISSION.tex"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./FINAL_IEEE_TIT_SUBMISSION.tex
+LaTeX2e <2026-06-01>
+L3 programming layer <2026-09-09>
+(/usr/local/texlive/2026/texmf-dist/tex/latex/ieeetran/IEEEtran.cls
+Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+(/usr/local/texlive/2026/texmf-dist/tex/latex/psnfss/ot1ptm.fd)
+-- Using 8.5in x 11in (letter) paper.
+-- Using PDF output.
+-- This is a 10 point document.
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amscls/amsthm.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3kernel/l3backend-pdftex.def)
+(./FINAL_IEEE_TIT_SUBMISSION.aux)
+-- Lines per column: 37 (exact).
+
+Underfull \hbox (badness 1728) in paragraph at lines 45--45
+[][][]\OT1/ptm/m/n/8 The au-thor is with the School of Ba-sic and Ap-plied Sci-
+ences, K.R. Man-galam Uni-ver-sity, Gu-ru-gram, In-dia (e-mail: arun-ya-
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd)
+
+LaTeX Warning: Citation `HP2003' on page 1 undefined on input line 81.
+
+
+LaTeX Warning: Citation `MS1977' on page 1 undefined on input line 81.
+
+
+LaTeX Warning: Citation `FZ2017' on page 1 undefined on input line 89.
+
+
+LaTeX Warning: Citation `DPI2023' on page 1 undefined on input line 96.
+
+
+LaTeX Warning: Citation `DPI2023corr' on page 1 undefined on input line 103.
+
+
+LaTeX Warning: Citation `DP2025' on page 1 undefined on input line 104.
+
+
+LaTeX Warning: Citation `DIYP2026' on page 1 undefined on input line 106.
+
+[1{/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/l
+ocal/texlive/2026/texmf-dist/fonts/enc/dvips/base/8r.enc}]
+
+LaTeX Warning: Citation `DIMP2026' on page 2 undefined on input line 113.
+
+
+LaTeX Warning: Citation `ES2026' on page 2 undefined on input line 118.
+
+
+LaTeX Warning: Citation `ACLMRS2024' on page 2 undefined on input line 123.
+
+
+LaTeX Warning: Citation `LS2024' on page 2 undefined on input line 126.
+
+
+LaTeX Warning: Citation `LSL2025' on page 2 undefined on input line 126.
+
+
+LaTeX Warning: Citation `BBO2026' on page 2 undefined on input line 126.
+
+
+LaTeX Warning: Citation `LYW2025' on page 2 undefined on input line 126.
+
+
+LaTeX Warning: Citation `Talbi2021' on page 2 undefined on input line 128.
+
+
+LaTeX Warning: Citation `DPDC2025' on page 2 undefined on input line 129.
+
+
+LaTeX Warning: Citation `DS2024' on page 2 undefined on input line 130.
+
+
+LaTeX Warning: Citation `CDL2015' on page 2 undefined on input line 133.
+
+
+LaTeX Warning: Citation `Sharma2015' on page 2 undefined on input line 133.
+
+
+LaTeX Warning: Citation `WZLL2023' on page 2 undefined on input line 133.
+
+
+LaTeX Warning: Citation `ZWLL2025' on page 2 undefined on input line 133.
+
+
+LaTeX Warning: Citation `DPI2023' on page 2 undefined on input line 154.
+
+
+LaTeX Warning: Citation `DIMP2026' on page 2 undefined on input line 156.
+
+
+LaTeX Warning: Citation `ES2026' on page 2 undefined on input line 157.
+
+
+LaTeX Warning: Citation `DP2025' on page 2 undefined on input line 175.
+
+[2]
+
+LaTeX Warning: Reference `sec:prelim' on page 3 undefined on input line 181.
+
+
+LaTeX Warning: Reference `sec:param' on page 3 undefined on input line 183.
+
+
+LaTeX Warning: Reference `sec:hull' on page 3 undefined on input line 183.
+
+
+LaTeX Warning: Reference `sec:enumerator' on page 3 undefined on input line 185
+.
+
+
+LaTeX Warning: Reference `sec:corollaries' on page 3 undefined on input line 18
+7.
+
+
+LaTeX Warning: Reference `sec:moments' on page 3 undefined on input line 187.
+
+
+LaTeX Warning: Reference `sec:examples' on page 3 undefined on input line 189.
+
+
+LaTeX Warning: Reference `sec:limitations' on page 3 undefined on input line 19
+0.
+
+
+LaTeX Warning: Citation `HP2003' on page 3 undefined on input line 206.
+
+
+LaTeX Warning: Citation `MS1977' on page 3 undefined on input line 206.
+
+
+LaTeX Warning: Citation `FZ2017' on page 3 undefined on input line 233.
+
+
+LaTeX Warning: Citation `LP2020' on page 3 undefined on input line 234.
+
+
+LaTeX Warning: Reference `prop:transport' on page 3 undefined on input line 238
+.
+
+[3]
+
+LaTeX Warning: Reference `prop:assembly' on page 4 undefined on input line 268.
+
+
+
+LaTeX Warning: Reference `thm:T2' on page 4 undefined on input line 286.
+
+
+LaTeX Warning: Reference `sec:dual' on page 4 undefined on input line 287.
+
+
+LaTeX Warning: Reference `prop:assembly' on page 4 undefined on input line 311.
+
+
+[4]
+
+LaTeX Warning: Citation `HP2003' on page 5 undefined on input line 375.
+
+
+LaTeX Warning: Citation `MS1977' on page 5 undefined on input line 375.
+
+
+LaTeX Warning: Reference `thm:T1' on page 5 undefined on input line 386.
+
+
+LaTeX Warning: Reference `sec:prelim' on page 5 undefined on input line 411.
+
+
+LaTeX Warning: Reference `lem:RR3' on page 5 undefined on input line 429.
+
+[5]
+
+LaTeX Warning: Reference `prop:transport' on page 6 undefined on input line 447
+.
+
+
+LaTeX Warning: Reference `thm:T2' on page 6 undefined on input line 448.
+
+
+LaTeX Warning: Reference `thm:T1' on page 6 undefined on input line 500.
+
+
+LaTeX Warning: Reference `thm:T3' on page 6 undefined on input line 500.
+
+
+LaTeX Warning: Reference `lem:lcm' on page 6 undefined on input line 502.
+
+
+LaTeX Warning: Citation `DPI2023' on page 6 undefined on input line 512.
+
+
+LaTeX Warning: Reference `thm:T4' on page 6 undefined on input line 513.
+
+
+LaTeX Warning: Citation `DPI2023' on page 6 undefined on input line 514.
+
+
+LaTeX Warning: Citation `DPI2023' on page 6 undefined on input line 519.
+
+[6]
+
+LaTeX Warning: Reference `thm:T1' on page 7 undefined on input line 597.
+
+
+LaTeX Warning: Reference `prop:assembly' on page 7 undefined on input line 597.
+
+
+
+LaTeX Warning: Reference `thm:T4' on page 7 undefined on input line 599.
+
+
+LaTeX Warning: Reference `thm:T5' on page 7 undefined on input line 605.
+
+[7]
+
+LaTeX Warning: Reference `thm:T6' on page 8 undefined on input line 639.
+
+
+LaTeX Warning: Reference `thm:T5' on page 8 undefined on input line 644.
+
+
+LaTeX Warning: Reference `thm:T1' on page 8 undefined on input line 646.
+
+
+LaTeX Warning: Reference `thm:T4' on page 8 undefined on input line 646.
+
+
+LaTeX Warning: Reference `sec:corollaries' on page 8 undefined on input line 65
+2.
+
+
+LaTeX Warning: Reference `sec:moments' on page 8 undefined on input line 653.
+
+
+LaTeX Warning: Reference `thm:T4' on page 8 undefined on input line 654.
+
+
+LaTeX Warning: Reference `sec:prelim' on page 8 undefined on input line 656.
+
+
+LaTeX Warning: Reference `thm:T6' on page 8 undefined on input line 668.
+
+[8]
+
+LaTeX Warning: Reference `cor:jointsym' on page 9 undefined on input line 729.
+
+
+LaTeX Warning: Reference `cor:C3' on page 9 undefined on input line 744.
+
+
+LaTeX Warning: Reference `thm:T4' on page 9 undefined on input line 747.
+
+
+LaTeX Warning: Reference `thm:T4' on page 9 undefined on input line 768.
+
+
+LaTeX Warning: Reference `thm:T5' on page 9 undefined on input line 775.
+
+
+LaTeX Warning: Reference `thm:T3' on page 9 undefined on input line 777.
+
+[9]
+
+LaTeX Warning: Reference `thm:T5' on page 10 undefined on input line 798.
+
+
+LaTeX Warning: Reference `cor:C4' on page 10 undefined on input line 818.
+
+
+LaTeX Warning: Reference `cor:C4' on page 10 undefined on input line 822.
+
+
+LaTeX Warning: Reference `thm:T5' on page 10 undefined on input line 824.
+
+
+LaTeX Warning: Reference `cor:C4' on page 10 undefined on input line 831.
+
+
+LaTeX Warning: Reference `thm:T1' on page 10 undefined on input line 846.
+
+
+LaTeX Warning: Citation `Sendrier1997' on page 10 undefined on input line 858.
+
+
+LaTeX Warning: Reference `thm:T4' on page 10 undefined on input line 868.
+
+[10]
+Overfull \hbox (22.7658pt too wide) in paragraph at lines 876--881
+\OT1/ptm/b/n/10 Lemma VIII.1 \OT1/ptm/m/n/10 (edge mo-ments)\OT1/ptm/b/n/10 . \
+OT1/ptm/m/it/10 For in-de-pen-dent $\OML/cmm/m/it/10 U; V$ \OT1/ptm/m/it/10 uni
+-form on $\OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 ; [] ; P\OMS/cmsy
+/m/n/10 g$\OT1/ptm/m/it/10 , $\U/msb/m/n/10 E\OT1/cmr/m/n/10 [[](\OML/cmm/m/it/
+10 U; V\OT1/cmr/m/n/10 )] = \OML/cmm/m/it/10 ^^V[]$ \OT1/ptm/m/it/10 and $\U/ms
+b/m/n/10 E\OT1/cmr/m/n/10 [[](\OML/cmm/m/it/10 U; V\OT1/cmr/m/n/10 )[]] =
+
+LaTeX Warning: Reference `thm:T4' on page 11 undefined on input line 904.
+
+
+LaTeX Warning: Reference `lem:edge' on page 11 undefined on input line 908.
+
+
+LaTeX Warning: Citation `DP2025' on page 11 undefined on input line 916.
+
+
+LaTeX Warning: Citation `DP2025' on page 11 undefined on input line 918.
+
+
+LaTeX Warning: Reference `thm:C6' on page 11 undefined on input line 925.
+
+
+LaTeX Warning: Reference `cor:secondorder' on page 11 undefined on input line 9
+26.
+
+
+LaTeX Warning: Citation `DP2025' on page 11 undefined on input line 926.
+
+
+LaTeX Warning: Reference `thm:C5' on page 11 undefined on input line 954.
+
+
+LaTeX Warning: Reference `lem:edge' on page 11 undefined on input line 957.
+
+[11]
+
+LaTeX Warning: Reference `lem:varpieces' on page 12 undefined on input line 978
+.
+
+
+LaTeX Warning: Reference `lem:varpieces' on page 12 undefined on input line 987
+.
+
+
+LaTeX Warning: Reference `lem:edge' on page 12 undefined on input line 990.
+
+
+LaTeX Warning: Reference `thm:T4' on page 12 undefined on input line 1014.
+
+
+LaTeX Warning: Reference `ex:E1' on page 12 undefined on input line 1037.
+
+
+LaTeX Warning: Reference `ex:E2' on page 12 undefined on input line 1039.
+
+
+LaTeX Warning: Reference `ex:E3' on page 12 undefined on input line 1040.
+
+
+LaTeX Warning: Reference `ex:E4' on page 12 undefined on input line 1040.
+
+
+LaTeX Warning: Reference `ex:E5' on page 12 undefined on input line 1043.
+
+
+LaTeX Warning: Reference `ex:E6' on page 12 undefined on input line 1044.
+
+
+LaTeX Warning: Reference `ex:E3' on page 12 undefined on input line 1045.
+
+
+LaTeX Warning: Reference `ex:E5' on page 12 undefined on input line 1045.
+
+[12]
+
+LaTeX Warning: Reference `thm:T4' on page 13 undefined on input line 1051.
+
+
+LaTeX Warning: Reference `cor:jointsym' on page 13 undefined on input line 1072
+.
+
+
+LaTeX Warning: Reference `thm:C6' on page 13 undefined on input line 1077.
+
+
+LaTeX Warning: Reference `cor:C3' on page 13 undefined on input line 1082.
+
+
+LaTeX Warning: Reference `prop:P1' on page 13 undefined on input line 1087.
+
+
+LaTeX Warning: Reference `cor:jointsym' on page 13 undefined on input line 1100
+.
+
+
+LaTeX Warning: Reference `thm:T4' on page 13 undefined on input line 1118.
+
+
+LaTeX Warning: Reference `thm:T6' on page 13 undefined on input line 1118.
+
+[13]
+
+LaTeX Warning: Reference `thm:C6' on page 14 undefined on input line 1139.
+
+
+LaTeX Warning: Reference `cor:C3' on page 14 undefined on input line 1141.
+
+
+LaTeX Warning: Reference `cor:C4' on page 14 undefined on input line 1143.
+
+
+LaTeX Warning: Reference `cor:restricted' on page 14 undefined on input line 11
+44.
+
+
+LaTeX Warning: Reference `ex:E3' on page 14 undefined on input line 1151.
+
+
+Overfull \hbox (26.62352pt too wide) in paragraph at lines 1162--1174
+[]\OT1/ptm/m/n/10 For the record, the full joint dis-tri-bu-tion of $\OT1/cmr/m
+/n/10 ([][] \OML/cmm/m/it/10 C; [][] [][]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 C\OT
+1/cmr/m/n/10 ))$ \OT1/ptm/m/n/10 is $\OT1/cmr/m/n/8 (0\OML/cmm/m/it/8 ; \OT1/cm
+r/m/n/8 0)[] 1$\OT1/ptm/m/n/8 , $\OT1/cmr/m/n/8 (1\OML/cmm/m/it/8 ; \OT1/cmr/m/
+n/8 1)[] 7$\OT1/ptm/m/n/8 , $\OT1/cmr/m/n/8 (2\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 
+0)[] 1$\OT1/ptm/m/n/8 , $\OT1/cmr/m/n/8 (2\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 2)[]
+ 27$\OT1/ptm/m/n/8 , $\OT1/cmr/m/n/8 (3\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 1)[] 6\
+OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 (3\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 2)[] 12$\OT1
+/ptm/m/n/8 ,
+
+LaTeX Warning: Reference `thm:T6' on page 14 undefined on input line 1183.
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/psnfss/ot1pcr.fd)
+
+LaTeX Warning: Reference `thm:T3' on page 14 undefined on input line 1189.
+
+
+LaTeX Warning: Reference `prop:assembly' on page 14 undefined on input line 119
+4.
+
+
+LaTeX Warning: Reference `thm:T6' on page 14 undefined on input line 1194.
+
+
+LaTeX Warning: Reference `thm:T5' on page 14 undefined on input line 1203.
+
+
+LaTeX Warning: Reference `thm:T6' on page 14 undefined on input line 1206.
+
+[14]
+
+LaTeX Warning: Reference `cor:C3' on page 15 undefined on input line 1210.
+
+
+LaTeX Warning: Reference `cor:C4' on page 15 undefined on input line 1211.
+
+
+LaTeX Warning: Reference `thm:C5' on page 15 undefined on input line 1215.
+
+
+LaTeX Warning: Reference `thm:C6' on page 15 undefined on input line 1218.
+
+
+LaTeX Warning: Reference `ex:E5' on page 15 undefined on input line 1220.
+
+
+LaTeX Warning: Reference `thm:T5' on page 15 undefined on input line 1250.
+
+
+LaTeX Warning: Reference `ex:E5' on page 15 undefined on input line 1260.
+
+
+LaTeX Warning: Reference `ex:E6' on page 15 undefined on input line 1262.
+
+
+LaTeX Warning: Reference `ex:E4' on page 15 undefined on input line 1267.
+
+
+LaTeX Warning: Reference `sec:param' on page 15 undefined on input line 1269.
+
+
+LaTeX Warning: Reference `sec:moments' on page 15 undefined on input line 1269.
+
+
+
+Overfull \hbox (49.7204pt too wide) in paragraph at lines 1246--1270
+\OT1/ptm/m/n/10 the scripts and their saved out-puts ac-com-pany the pa-per in 
+the di-rec-tory \OT1/pcr/m/n/10 code/\OT1/ptm/m/n/10 . (i) \OT1/ptm/m/it/10 Or-
+bit level \OT1/ptm/m/n/10 (\OT1/pcr/m/n/10 code/validate_p1_14.py\OT1/ptm/m/n/1
+0 ):
+
+LaTeX Warning: Reference `thm:T3' on page 15 undefined on input line 1280.
+
+
+LaTeX Warning: Reference `sec:moments' on page 15 undefined on input line 1286.
+
+
+
+LaTeX Warning: Reference `lem:varpieces' on page 15 undefined on input line 128
+8.
+
+
+LaTeX Warning: Reference `thm:T3' on page 15 undefined on input line 1291.
+
+
+LaTeX Warning: Reference `thm:T6' on page 15 undefined on input line 1291.
+
+
+LaTeX Warning: Reference `sec:prelim' on page 15 undefined on input line 1292.
+
+
+LaTeX Warning: Reference `sec:corollaries' on page 15 undefined on input line 1
+295.
+
+
+LaTeX Warning: Reference `sec:moments' on page 15 undefined on input line 1296.
+
+
+
+LaTeX Warning: Reference `thm:T4' on page 15 undefined on input line 1298.
+
+[15] [16] [17] (./FINAL_IEEE_TIT_SUBMISSION.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+(see the transcript file for additional information)</usr/local/texlive/2026/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2026/tex
+mf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/local/texlive/2026/
+texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/local/texlive/20
+26/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/202
+6/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2026/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2026/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2026/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2026/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2026/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2026/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2026/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2026/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2026/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmsy7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy9.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsf
+onts/symbols/msbm10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/
+amsfonts/symbols/msbm5.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/publ
+ic/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/u
+rw/courier/ucrr8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/times
+/utmb8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/times/utmr8a.pf
+b></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on FINAL_IEEE_TIT_SUBMISSION.pdf (17 pages, 370826 bytes).
+Transcript written on FINAL_IEEE_TIT_SUBMISSION.log.
+Latexmk: Getting log file 'FINAL_IEEE_TIT_SUBMISSION.log'
+Latexmk: Examining 'FINAL_IEEE_TIT_SUBMISSION.fls'
+Latexmk: Examining 'FINAL_IEEE_TIT_SUBMISSION.log'
+Latexmk: References changed.
+Latexmk: Log file says output to 'FINAL_IEEE_TIT_SUBMISSION.pdf'
+Latexmk: applying rule 'pdflatex'...
+Rule 'pdflatex':  Reasons for rerun
+Changed files or newly in use/created:
+  FINAL_IEEE_TIT_SUBMISSION.aux
+
+------------
+Run number 2 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -interaction=nonstopmode -file-line-error -halt-on-error -recorder  "FINAL_IEEE_TIT_SUBMISSION.tex"'
+------------
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./FINAL_IEEE_TIT_SUBMISSION.tex
+LaTeX2e <2026-06-01>
+L3 programming layer <2026-09-09>
+(/usr/local/texlive/2026/texmf-dist/tex/latex/ieeetran/IEEEtran.cls
+Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+(/usr/local/texlive/2026/texmf-dist/tex/latex/psnfss/ot1ptm.fd)
+-- Using 8.5in x 11in (letter) paper.
+-- Using PDF output.
+-- This is a 10 point document.
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amscls/amsthm.sty)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3kernel/l3backend-pdftex.def)
+(./FINAL_IEEE_TIT_SUBMISSION.aux)
+-- Lines per column: 37 (exact).
+
+Underfull \hbox (badness 1728) in paragraph at lines 45--45
+[][][]\OT1/ptm/m/n/8 The au-thor is with the School of Ba-sic and Ap-plied Sci-
+ences, K.R. Man-galam Uni-ver-sity, Gu-ru-gram, In-dia (e-mail: arun-ya-
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd) [1{/usr/local/t
+exlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/20
+26/texmf-dist/fonts/enc/dvips/base/8r.enc}] [2] [3] [4] [5] [6] [7] [8]
+[9] [10]
+Overfull \hbox (22.7658pt too wide) in paragraph at lines 876--881
+\OT1/ptm/b/n/10 Lemma VIII.1 \OT1/ptm/m/n/10 (edge mo-ments)\OT1/ptm/b/n/10 . \
+OT1/ptm/m/it/10 For in-de-pen-dent $\OML/cmm/m/it/10 U; V$ \OT1/ptm/m/it/10 uni
+-form on $\OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 ; [] ; P\OMS/cmsy
+/m/n/10 g$\OT1/ptm/m/it/10 , $\U/msb/m/n/10 E\OT1/cmr/m/n/10 [[](\OML/cmm/m/it/
+10 U; V\OT1/cmr/m/n/10 )] = \OML/cmm/m/it/10 ^^V[]$ \OT1/ptm/m/it/10 and $\U/ms
+b/m/n/10 E\OT1/cmr/m/n/10 [[](\OML/cmm/m/it/10 U; V\OT1/cmr/m/n/10 )[]] =
+[11] [12] [13]
+Overfull \hbox (26.62352pt too wide) in paragraph at lines 1162--1174
+[]\OT1/ptm/m/n/10 For the record, the full joint dis-tri-bu-tion of $\OT1/cmr/m
+/n/10 ([][] \OML/cmm/m/it/10 C; [][] [][]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 C\OT
+1/cmr/m/n/10 ))$ \OT1/ptm/m/n/10 is $\OT1/cmr/m/n/8 (0\OML/cmm/m/it/8 ; \OT1/cm
+r/m/n/8 0)[] 1$\OT1/ptm/m/n/8 , $\OT1/cmr/m/n/8 (1\OML/cmm/m/it/8 ; \OT1/cmr/m/
+n/8 1)[] 7$\OT1/ptm/m/n/8 , $\OT1/cmr/m/n/8 (2\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 
+0)[] 1$\OT1/ptm/m/n/8 , $\OT1/cmr/m/n/8 (2\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 2)[]
+ 27$\OT1/ptm/m/n/8 , $\OT1/cmr/m/n/8 (3\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 1)[] 6\
+OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 (3\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 2)[] 12$\OT1
+/ptm/m/n/8 ,
+(/usr/local/texlive/2026/texmf-dist/tex/latex/psnfss/ot1pcr.fd) [14]
+Overfull \hbox (49.7204pt too wide) in paragraph at lines 1246--1270
+\OT1/ptm/m/n/10 the scripts and their saved out-puts ac-com-pany the pa-per in 
+the di-rec-tory \OT1/pcr/m/n/10 code/\OT1/ptm/m/n/10 . (i) \OT1/ptm/m/it/10 Or-
+bit level \OT1/ptm/m/n/10 (\OT1/pcr/m/n/10 code/validate_p1_14.py\OT1/ptm/m/n/1
+0 ):
+[15] [16] [17] (./FINAL_IEEE_TIT_SUBMISSION.aux) )
+(see the transcript file for additional information)</usr/local/texlive/2026/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2026/tex
+mf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/local/texlive/2026/
+texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/local/texlive/20
+26/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/202
+6/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2026/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2026/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2026/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2026/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2026/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2026/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2026/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2026/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2026/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmsy7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy9.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsf
+onts/symbols/msbm10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/
+amsfonts/symbols/msbm5.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/publ
+ic/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/u
+rw/courier/ucrr8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/times
+/utmb8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/times/utmr8a.pf
+b></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on FINAL_IEEE_TIT_SUBMISSION.pdf (17 pages, 370919 bytes).
+Transcript written on FINAL_IEEE_TIT_SUBMISSION.log.
+Latexmk: Getting log file 'FINAL_IEEE_TIT_SUBMISSION.log'
+Latexmk: Examining 'FINAL_IEEE_TIT_SUBMISSION.fls'
+Latexmk: Examining 'FINAL_IEEE_TIT_SUBMISSION.log'
+Latexmk: Log file says output to 'FINAL_IEEE_TIT_SUBMISSION.pdf'
+Latexmk: All targets (FINAL_IEEE_TIT_SUBMISSION.pdf) are up-to-date
+

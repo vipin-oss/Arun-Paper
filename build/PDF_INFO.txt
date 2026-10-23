@@ -1,0 +1,1 @@
+/__w/_temp/114e3759-0dbc-4117-a628-7ec51a8a782f.sh: 17: pdfinfo: not found
