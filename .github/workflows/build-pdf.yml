@@ -1,0 +1,105 @@
+name: build-ieee-tit-pdf
+
+# Builds FINAL_IEEE_TIT_SUBMISSION.pdf from the exact source in this repository.
+# Hard limits: the compile invocation is capped at 120 s, the job at 20 min.
+
+on:
+  push:
+    branches: ['arena/7ef3434e-arun-paper']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Compile IEEE single-column review manuscript
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Install TeX Live (IEEEtran, amsmath, latexmk)
+        run: |
+          set -eux
+          sudo apt-get update -qq
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+            texlive-latex-base texlive-latex-recommended texlive-publishers \
+            texlive-fonts-recommended latexmk poppler-utils
+          kpsewhich IEEEtran.cls
+
+      - name: Compile (120 s cap)
+        id: compile
+        run: |
+          set +e
+          timeout 120 latexmk -pdf -interaction=nonstopmode -file-line-error \
+            -halt-on-error FINAL_IEEE_TIT_SUBMISSION.tex > compile_stdout.txt 2>&1
+          code=$?
+          set -e
+          echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+          echo "latexmk exit code: $code"
+          if [ "$code" -eq 124 ]; then
+            echo "::error::Compilation exceeded the 120 s limit"
+          fi
+          # Always preserve whatever the engine wrote, then fail the job if no PDF.
+          if [ -f FINAL_IEEE_TIT_SUBMISSION.pdf ]; then
+            echo "pdf_present=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "pdf_present=false" >> "$GITHUB_OUTPUT"
+            echo "::error::No PDF produced"
+          fi
+
+      - name: Collect diagnostics
+        if: always()
+        run: |
+          set +e
+          {
+            echo "# Build diagnostics"
+            echo
+            echo "latexmk exit code: ${{ steps.compile.outputs.exit_code }}"
+            echo
+            echo "## Overfull / Underfull boxes"
+            grep -n -A2 -E '^(Overfull|Underfull)' FINAL_IEEE_TIT_SUBMISSION.log || echo "(none)"
+            echo
+            echo "## Warnings (undefined refs/citations, missing files)"
+            grep -n -E 'Warning|undefined|Missing|not found' FINAL_IEEE_TIT_SUBMISSION.log || echo "(none)"
+            echo
+            echo "## Errors"
+            grep -n -E '^!|^\./.*:[0-9]+:' FINAL_IEEE_TIT_SUBMISSION.log || echo "(none)"
+          } > BUILD_DIAGNOSTICS.md 2>&1
+          if [ -f FINAL_IEEE_TIT_SUBMISSION.pdf ]; then
+            pdfinfo FINAL_IEEE_TIT_SUBMISSION.pdf > PDF_INFO.txt 2>&1 || true
+            pdffonts FINAL_IEEE_TIT_SUBMISSION.pdf > PDF_FONTS.txt 2>&1 || true
+          fi
+          true
+
+      - name: Upload compiled PDF
+        if: always() && steps.compile.outputs.pdf_present == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: FINAL_IEEE_TIT_SUBMISSION-pdf
+          path: |
+            FINAL_IEEE_TIT_SUBMISSION.pdf
+            PDF_INFO.txt
+            PDF_FONTS.txt
+            BUILD_DIAGNOSTICS.md
+          retention-days: 30
+
+      - name: Upload build logs (always)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-logs
+          path: |
+            FINAL_IEEE_TIT_SUBMISSION.log
+            compile_stdout.txt
+            BUILD_DIAGNOSTICS.md
+          retention-days: 30
+          if-no-files-found: warn
+
+      - name: Fail if compilation did not produce a PDF
+        if: steps.compile.outputs.pdf_present != 'true'
+        run: |
+          echo "Compilation failed; see build-logs artifact."
+          exit 1
