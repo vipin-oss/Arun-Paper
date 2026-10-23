@@ -97,3 +97,48 @@ wording repairs in `CHANGELOG_MINIMAL.md`.
 * Examples 9.1–9.3: 9.3 reproduced cell-for-cell in round 1; 9.1 and 9.2 by hand.
 * The package's own claimed totals (2769 field-level assignments, 52 (P,L)
   pairs) remain **unverified** and are not relied on here.
+
+---
+
+# Round 3 addendum — scientific corrections
+
+## What changed and what was re-verified
+
+Three prose corrections (see `CHANGELOG_MINIMAL.md` round 3). No theorem,
+proof, equation or number was touched, so the round-2 verification still
+applies; everything below was re-run against the corrected source anyway.
+
+| layer | result |
+|---|---|
+| definition-level finite-field, 10 families × every assignment | `RESULT: PASS`, 0 failed checks |
+| symbolic identities in `P` | 15/15 `PASS` |
+| Examples IX.3–IX.6 | `ALL EXAMPLES REPRODUCED` |
+| multiplicativity `(fg)# = f# g#`, 2800 pairs | `RESULT: PASS` |
+| static LaTeX lint (envs, braces, labels, refs, cites, `$`) | clean |
+| CI build | `latexmk exit 0`, **0 overfull**, 0 errors, 0 undefined refs/cites, 17 pp |
+
+## New evidence specific to this round
+
+1. **Dictionary falsification table.** `σ^{e−k}` was evaluated as a map on each
+   field and compared with `ρ`; they disagree for `k ∉ {1}` in F_8 and for
+   `k ∈ {2,3}` in F_16, and for `m_s > 1` under the `e−k` reading. The old
+   sentence also contradicted line 237 of the same paragraph.
+2. **Bound verification.** `Δ/6 ≤ E[hull] ≤ Δ/3` checked for all `P ∈ [2,400)`
+   symbolically/numerically and against exact ensemble means in all eight
+   `P ≥ 2` test families.
+3. **`P = 1` degenerate family.** Three families whose orbits all have length 1
+   have hull dimension `0` for **every** assignment (`8/8`, `8/8`, `16/16` LCD).
+   This is what made the old "`Δ/4` at `P = 1`" claim false rather than loose.
+4. **DP2025 ground truth.** The published Table 1 entry (q=4, n=7, λ=ω, k=1,
+   Δ_1=1) reports `E = 3/2`; my formula gives `ν_1·1 + μ_1·6 = 3/2` and the
+   independent computation gives `3.0` in `F_2`-dimensions `= 3/2` in
+   `F_4`-dimensions. The single-component agreement in Remark VIII.3 is
+   therefore **confirmed against the published number**, not merely asserted.
+
+## What remains unverified
+
+* DP2025 full text (paywalled): the *new* wording no longer depends on it.
+* DPI2023 full text (abstract-level only): its Thm 3/Thm 4 are used for
+  attribution in Remark V.3 only; the manuscript proves what it needs.
+* ORCID `0009-0009-1169-3264` (registry unreachable).
+* The package's own scripts and their claimed totals (not used as evidence).

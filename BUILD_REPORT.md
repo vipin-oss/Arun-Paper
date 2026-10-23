@@ -66,3 +66,25 @@ Producer:          pdfTeX-1.40.29
 Artifacts: `FINAL_IEEE_TIT_SUBMISSION.pdf`, `.log`, `BUILD_DIAGNOSTICS.md`,
 `PDF_FONTS.txt`, `compile_stdout.txt`, all in `build/` (committed by CI) and
 copied into `validation/`.
+
+## Round 3 build
+
+One source correction iteration was needed (limit: 3); it compiled cleanly on
+the first attempt.
+
+| run | change | result |
+|---|---|---|
+| 39956720158 | three prose corrections + dependency audit | `latexmk exit 0`, **0 overfull**, 0 errors, 0 undefined refs/cites, 17 pp |
+
+Cumulative iteration count across rounds 2–3: 3 in round 2, 1 in round 3.
+
+### A near-miss worth recording
+
+After the round-3 build I inspected the *root* `FINAL_IEEE_TIT_SUBMISSION.pdf`
+and saw the **old** text still on page 3 — because I had not re-copied the CI
+output into the repository root that round. The remote CI artifact and
+`build/FINAL_IEEE_TIT_SUBMISSION.pdf` were correct; the stale copy was mine.
+Caught by reading the rendered page and comparing SHA-256
+(`bd129dc2…` for the CI PDF vs `2302a523…` for the stale root copy). Fixed by
+re-syncing and re-verifying the hash. Lesson applied: the root PDF is now
+hash-checked against `build/SOURCE_SHA256.txt` at the end of every round.

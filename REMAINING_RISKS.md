@@ -59,3 +59,21 @@ they are scope limits rather than defects.
 ## R8 — Cosmetic
 
 One underfull box in the author footnote. No action needed.
+
+---
+
+# Round 3 update
+
+* **R2 narrowed.** The DP2025 remark no longer asserts the absence of
+  variance/covariance results; it now claims only what the abstract supports
+  (average = first moment) and that this paper's second-order results stand
+  independently. The single-component mean was additionally confirmed against
+  DP2025's *published Table 1 value* (`E = 3/2` for q=4, n=7, λ=ω, k=1), which
+  is stronger evidence than the earlier abstract-only comparison.
+  Still unverified: whether DP2025 contains second-order material — but nothing
+  in the manuscript now depends on that.
+* **Growth claim corrected.** The asymptotic statement is now a proved two-sided
+  bound for `P ≥ 2` plus an explicit `P = 1` characterization, instead of an
+  unqualified "grows linearly with `n`".
+* **Dictionary corrected.** `D(C) = ρ(C^⊥)` with `ρ(α) = α^{p^{d_s-k}}` now
+  stated once; the false `σ^{e-k}` removed.

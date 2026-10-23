@@ -1,8 +1,6 @@
 Pages: 17
 Page size: 612.0 x 792.0 pt
 Producer: pdfTeX-1.40.29
-Creator: TeX
-PDF version: PDF 1.7
 
 Page dimensions:
   p1: 612 x 792 pt
