@@ -1,0 +1,2 @@
+DP2025 Thm 3.3 == manuscript Thm 8.2 (one component): OK, 1800 cases
+DP2025 Example 3.6 via manuscript mean: 23/4 (printed: 23/4)

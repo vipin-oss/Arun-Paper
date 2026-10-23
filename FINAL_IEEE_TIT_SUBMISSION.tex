@@ -1,0 +1,1474 @@
+% =====================================================================
+% P1-15 -- First full manuscript draft (LaTeX source).
+% Content: frozen theorem core T1-T6, C1-C6 (corrected C5), proved in
+% P1_04/P1_05/P1_06 and independently audited in P1_14.  The candidate
+% corollaries N1-N3 of P1-14 are NOT used here; they are collected in
+% P1_15_OPTIONAL_COROLLARIES.md pending author approval.
+% No novelty or priority claim is made anywhere in this draft.
+% P1-17 (21 Oct 2026): audit corrections of P1_16_INDEPENDENT_AUDIT.md
+% applied; see P1_17_CORRECTION_LOG.md. Core statements unchanged.
+% Compilation: pdflatex P1_15_MANUSCRIPT_DRAFT.tex (twice).  Only
+% standard packages (amsmath, amssymb, amsthm, geometry) are required.
+% =====================================================================
+\documentclass[10pt,journal,draftclsnofoot,onecolumn]{IEEEtran}
+
+% P1-41: IEEE Transactions on Information Theory single-column review
+% version, converted from P1_15_MANUSCRIPT_DRAFT.tex (commit 3e4f87f).
+% Content, statements, proofs, examples, tables and references are
+% unchanged; only the class/format was converted (IEEEtran review
+% options above). The article-class file remains the reading copy.
+\usepackage{amsmath,amssymb,amsthm}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+\newcommand{\Fq}{\mathbb{F}_q}
+\newcommand{\Fp}{\mathbb{F}_p}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Hull}{\operatorname{Hull}}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\E}{\mathbb{E}}
+
+\title{The joint code--hull distribution of repeated-root constacyclic codes
+over finite products of finite fields via transfer matrices}
+\author{Arun Kumar Yadav\thanks{The author is with the School of Basic and Applied Sciences, K.R. Mangalam University, Gurugram, India (e-mail: arunyadav0307@gmail.com). ORCID: 0009-0009-1169-3264.}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We study \(\lambda\)-constacyclic codes of length \(n = P n_0\), with
+\(P\) a power of the characteristic \(p\) and \(\gcd(n_0, p) = 1\), over a
+finite product \(A \cong \prod_s K_s\) of finite fields, for twists
+compatible with the \(k\)-Galois pairing. Such codes are parametrized by
+exponent vectors on the irreducible factors of \(x^{n_0} - \mu_s\). We
+show that the Galois dual and hull are governed by the reciprocal
+map on those factors, and that the hull dimension is a sum of
+nearest-neighbour edge terms \(\min(P - \alpha_i, \alpha_{i-1})\) along
+its orbits. This gives a transfer-matrix formula for the joint
+distribution of the code dimension and the hull dimension over all
+labeled exponent assignments; the total number of codes; the number of
+LCD codes, \(2^{\#\mathrm{orbits}}\), independent of \(P\); counts of
+self-orthogonal and dual-containing codes; and the exact mean and
+variance of the hull dimension, with orbits of length one treated
+separately. Worked examples are verified by explicit construction of
+codes.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Constacyclic codes, repeated-root codes, Galois hull, joint enumerator, transfer matrix, finite fields.
+\end{IEEEkeywords}
+
+\noindent Mathematics Subject Classification: 94B15, 94B05, 11T71.
+
+% =====================================================================
+\section{Introduction}
+% =====================================================================
+
+Algebraic coding theory studies linear codes whose algebraic structure
+makes their generators, duals, and parameters accessible. A
+\(\lambda\)-constacyclic code is invariant under the
+\(\lambda\)-twisted cyclic shift and, through the coefficient
+identification, is an ideal of \(K[x]/(x^n-\lambda)\)
+\cite{HP2003, MS1977}. When \(\gcd(n,p)=1\), the polynomial
+\(x^n-\lambda\) is separable; in the repeated-root regime considered
+here, \(p\) divides \(n\) and the irreducible factors occur with
+multiplicity. For a code \(C\) with Euclidean dual \(C^\perp\), the
+hull \(C \cap C^\perp\) records the overlap between a code and its
+dual: it is zero for an LCD code, equals \(C\) for a self-orthogonal
+code, and equals the dual for a dual-containing code. Replacing the
+Euclidean pairing by the Galois pairing of Fan and
+Zhang~\cite{FZ2017} gives the \(k\)-Galois hull
+\(\Hull_k(C) = C \cap D(C)\), where \(D(C)\) is the dual with respect
+to a Frobenius-twisted pairing. This paper studies how the two
+dimensions \(\dim C\) and \(\dim \Hull_k(C)\) vary together over a
+whole family of repeated-root constacyclic codes.
+
+Much of the existing work determines the hull of a specified code or
+an average over a family. Debnath, Prakash and Islam~\cite{DPI2023}
+determined the Galois hull dimension of a given constacyclic code over
+a finite field, including repeated-root lengths \(n = n' p^{\nu}\);
+under the additional restriction \(e \mid 4(e-k)\) and
+\(e \nmid 2(e-k)\) on the field degree, they also counted such codes
+according to hull dimension alone, in the cases where the
+reciprocal-orbit lengths are \(1\), \(2\) and \(4\) (the
+correction~\cite{DPI2023corr} makes only minor textual changes).
+Debnath and Prakash~\cite{DP2025} subsequently computed average
+Galois hull dimensions over finite fields and over an auxiliary ring,
+while Debnath, Islam, Yadav and Prakash~\cite{DIYP2026} studied
+constacyclic codes with small Galois hull dimension. Thus both the
+per-code hull dimension in the single-field case and its average are
+established results, and they are not claimed as new here.
+
+Related per-code theories have been developed in neighbouring
+settings. Debnath, Islam, Mart\'inez-Moro and
+Prakash~\cite{DIMP2026} work over affine algebra rings, decomposing
+the alphabet into component codes over \(\Fq\); they obtain the hull
+generator and dimension of a given code componentwise, together with
+an LCD criterion, and leave the enumeration of codes over the
+affine algebra by hull dimension open. Eldin and
+Sol\'e~\cite{ES2026} construct generator polynomial matrices for the
+Galois dual and hull of a given multi-twisted code over a single
+finite field---constacyclic codes being the index-one case---and
+derive a hull-dimension formula and self-orthogonal and LCD criteria
+from them. Relative hulls for general linear codes, including
+\(e\)-Galois hulls, were studied in~\cite{ACLMRS2024}, and mass
+formulas, monotonicity results, and constructions for linear codes
+with prescribed hull dimensions were given
+in~\cite{LS2024, LSL2025, BBO2026, LYW2025}. Galois hulls have also
+been studied for cyclic serial codes over a finite chain ring
+\cite{Talbi2021} and for separable double cyclic codes over
+\(\mathbb{Z}_{p^2}\) \cite{DPDC2025}; cyclic and negacyclic codes with
+one-dimensional hulls were characterized in~\cite{DS2024}; and
+repeated-root constacyclic codes and their Euclidean duals in special
+lengths have a substantial literature
+\cite{CDL2015, Sharma2015, WZLL2023, ZWLL2025}.
+
+The closest work nevertheless leaves open the distributional question
+addressed here. A per-code formula, an average, or a count by hull
+dimension alone does not determine how the pairs
+\((\dim C, \dim \Hull_k(C))\) are distributed over all codes in the
+family. Our objective is to determine this joint distribution for
+repeated-root constacyclic codes of length \(n = P n_0\), with \(P\)
+a power of \(p\) and \(\gcd(n_0,p)=1\), over a finite product
+\(A \cong \prod_s K_s\) of finite fields, for twists compatible with
+the \(k\)-Galois pairing. In this setting each component code is
+described by exponents \(a_f \in \{0,\dots,P\}\) attached to the
+distinct irreducible factors of a separable polynomial
+\(x^{n_0} - \mu_s\); the aim is an enumerator in which every orbit of
+the reciprocal map on these factors contributes independently
+to the count of labeled assignments with given code and hull
+dimensions.
+
+The starting point is an exponent description of the Galois dual and
+hull over an arbitrary finite product of finite fields. For a single
+field component, the resulting hull-dimension formula agrees with
+\cite[Theorem~3]{DPI2023}; it is therefore a foundation for the
+counting below rather than a new per-code result, complementing the
+\(\Fq\)-component form in~\cite{DIMP2026} and the per-code generator
+polynomial matrix machinery of~\cite{ES2026}. Organizing the factors
+into orbits of the reciprocal map makes both dimensions sums
+over orbit edges: the code dimension contributes
+\(w_O \sum_i (P-\alpha_i)\) and the hull dimension contributes
+\(w_O \sum_i \min(P-\alpha_i, \alpha_{i-1})\) on an orbit of weight
+\(w_O\). Closed walks in a \((P{+}1)\)-state transfer matrix encode
+these edge contributions, and the product of the orbit traces is the
+bivariate enumerator \(\mathcal{E}(u,z)\), whose coefficient of
+\(u^K z^H\) counts the labeled assignments with
+\((\dim_{\Fq} C, \dim_{\Fq} \Hull_k(C)) = (K,H)\). From this
+enumerator we obtain the total number of assignments, the
+code-dimension distribution, the symmetry
+\(K \leftrightarrow \Delta - K\), the number
+\(2^{\#\mathrm{orbits}}\) of LCD assignments, and closed forms for
+the self-orthogonal and dual-containing families. Under the uniform
+distribution on labeled assignments, orbit independence then yields
+exact means and variances for the two dimensions and shows that they
+are uncorrelated. For a single field component the hull mean agrees
+with \cite[Theorem~3.3]{DP2025}, so it too is credited rather than
+claimed; the contribution of this paper, relative to the closest
+literature above, is the joint code--hull enumerator over a product
+of finite fields, the labeled counts drawn from it, and the
+second-order moment formulas.
+
+The paper is organized as follows. Section~\ref{sec:prelim} fixes the
+conventions, in particular the code-first Galois pairing on which the
+dual formulas depend. Sections~\ref{sec:param}--\ref{sec:hull}
+develop the parametrization, the Galois dual, and the hull formula in
+exponent form. Section~\ref{sec:enumerator} proves the
+transfer-matrix enumerator and its specialization at \(P=1\).
+Sections~\ref{sec:corollaries} and~\ref{sec:moments} contain the
+counting corollaries and the moment formulas.
+Section~\ref{sec:examples} gives worked examples and describes the
+computational verification, and Section~\ref{sec:limitations} records
+the scope and limitations. Throughout, counts are over labeled
+exponent assignments, not over equivalence or isometry classes of
+codes.
+
+% =====================================================================
+\section{Preliminaries and conventions}\label{sec:prelim}
+% =====================================================================
+
+Let \(p\) be a prime, \(q = p^e\), and let \(0 \le k < e\) be a fixed
+Galois index. Let
+\[
+A \;\cong\; \prod_{s=1}^{N} K_s, \qquad
+K_s = \mathbb{F}_{q^{m_s}} = \mathbb{F}_{p^{d_s}}, \quad d_s = e m_s,
+\]
+with fixed component labels. (Standard terminology for constacyclic codes
+follows \cite{HP2003, MS1977}.)
+
+\emph{Terminology.} We call \(A\) an \emph{affine algebra}: equivalently,
+\(A\) is a finite-dimensional commutative \(\Fq\)-algebra of the form
+\(\Fq[X_1,\dots,X_\ell]/\langle t_1(X_1),\dots,t_\ell(X_\ell)\rangle\)
+in which each \(t_i\) is \emph{square-free}, i.e.\ has no repeated
+irreducible factor; square-freeness is what makes \(A\) reduced
+(\'etale), hence a finite product of finite fields. Only this
+decomposition, the component Galois twists, and the weights
+\(w_O = m_s \deg f\) enter the results below, so we state the setting
+throughout as a finite product of finite fields. A \emph{labeled}
+assignment is an exponent tuple together with the fixed component and
+factor labels; all counts are over labeled assignments. On \(K_s\) write
+\(\sigma(\alpha) = \alpha^{p^k}\) and
+\(\rho(\alpha) = \alpha^{p^{d_s - k}} = \sigma^{-1}\).
+
+\begin{definition}[code-first Galois pairing]
+For one component (the subscript \(s\) suppressed), the \(k\)-Galois
+pairing on \(K^n\) is
+\(\langle x, y \rangle_k = \sum_{i=0}^{n-1} x_i \, \sigma(y_i)\),
+the \emph{code-first} dual of a code \(C \subseteq K^n\) is
+\(D(C) = \{ y \in K^n : \langle c, y \rangle_k = 0 \text{ for all } c \in C\}\),
+and the \(k\)-Galois hull is \(\Hull_k(C) = C \cap D(C)\).
+The Euclidean dual is denoted \(C^\perp\).
+\end{definition}
+
+This is the \(k\)-Galois inner product introduced by Fan and
+Zhang~\cite{FZ2017}. The code-first slot order agrees with the Galois
+dual convention of Liu and Pan~\cite{LP2020}; in the finite-field case
+the dictionary is \(D(C) = \sigma^{e-k}(C^\perp)\). The slot order is part of the definition: the candidate \(y\) occupies
+the \(\sigma\)-twisted slot, and this is what makes
+\(D(C) = \rho(C^\perp)\) (coordinatewise \(\rho\);
+Proposition~\ref{prop:transport}) rather than the analogous statement
+with \(\sigma\). All dual formulas below use this convention. The global
+pairing on \(A^n\) is the tuple of component pairings; a code over \(A\)
+is an \(A\)-submodule of \(A^n\).
+
+Fix a power \(P\) of \(p\), and \(n = P n_0\) with
+\(\gcd(n_0, p) = 1\). Let \(\lambda = (\lambda_s) \in A^*\) and
+\(M_s(x) = x^n - \lambda_s \in K_s[x]\). Since \(a \mapsto a^P\) is a
+bijection of the finite field \(K_s\), there is a unique \(\mu_s \in K_s^*\)
+with \(\mu_s^P = \lambda_s\). Writing \(\bar M_s(x) = x^{n_0} - \mu_s\), we
+have \(M_s = \bar M_s^{\,P}\) in characteristic \(p\), and \(\bar M_s\) is
+separable because \(\bar M_s' = n_0 x^{n_0-1}\) and every root of
+\(\bar M_s\) is nonzero. Let \(\mathcal{F}_s\) be the set of distinct
+monic irreducible factors of \(\bar M_s\) over \(K_s\); then
+\(M_s = \prod_{f \in \mathcal{F}_s} f^P\).
+
+An \emph{exponent assignment} on component \(s\) is a tuple
+\(a = (a_f)_{f \in \mathcal{F}_s}\) with \(a_f \in \{0, \dots, P\}\); put
+\(g_a = \prod_f f^{a_f}\) and \(C_s(a) = \langle g_a \rangle \subseteq
+K_s[x]/(M_s)\). A global assignment is a tuple of component assignments.
+
+A \emph{\(\lambda\)-constacyclic code} over \(A\) is an \(A\)-submodule of
+\(A^n\) closed under the componentwise \(\lambda\)-constacyclic shift
+\((c_0,\dots,c_{n-1}) \mapsto (\lambda c_{n-1}, c_0, \dots, c_{n-2})\).
+Under the coefficient identification \(A^n \cong A[x]/(x^n-\lambda)\), this
+shift is multiplication by \(x\); hence the \(\lambda\)-constacyclic codes
+over \(A\) are exactly the ideals of \(A[x]/(x^n-\lambda)\), an equivalence
+that needs no separability or compatibility hypothesis. From now on,
+``code over \(A\)'' means a \(\lambda\)-constacyclic code over \(A\);
+componentwise these are tuples of \(\lambda_s\)-constacyclic codes
+(Proposition~\ref{prop:assembly}).
+
+For a monic polynomial \(f(x) = \sum_{i=0}^{r} c_i x^i\) with
+\(f(0) = c_0 \ne 0\), define the (Frobenius-twisted) reciprocal
+\[
+f^{\#}(x) \;=\; \rho(c_0)^{-1} \sum_{i=0}^{r} \rho(c_i)\, x^{\,r-i},
+\]
+which is monic of degree \(r\). Every \(f \in \mathcal{F}_s\) satisfies
+\(f(0) \ne 0\) since \(\bar M_s(0) = -\mu_s \ne 0\).
+
+\begin{definition}[compatibility and the reciprocal map \(\tau_s\)]
+The twist \(\lambda_s\) is \emph{compatible} if
+\(\lambda_s^{\,1 + p^{d_s - k}} = 1\). Since \(K_s^*\) is cyclic, the
+number of compatible twists in \(K_s^*\) is
+\(\gcd\big(1 + p^{d_s-k},\, p^{d_s} - 1\big)\); in particular
+\(\lambda_s = 1\) is always compatible, and \(\lambda_s = -1\) is
+compatible when \(p\) is odd.
+Under compatibility, \(\tau_s : \mathcal{F}_s \to \mathcal{F}_s\),
+\(\tau_s(f) = f^{\#}\), is a permutation (Theorem~\ref{thm:T2}). We
+assume compatibility for every \(s\) from Section~\ref{sec:dual} on.
+A \(\tau_s\)-orbit is written \(O = (f_0, \dots, f_{L-1})\) with
+\(\tau_s(f_i) = f_{i+1}\), indices modulo \(L = L_O\); we set
+\(\alpha_i = a_{f_i}\) and call \(\alpha_{i-1}\) the predecessor of
+\(\alpha_i\). Since \(\#\) preserves degrees, all factors in an orbit
+have the same degree; the \emph{weight} of \(O\) and of a factor \(f\) is
+\(w_O = m_s \deg_{K_s} f\) and \(w_f = m_s \deg_{K_s} f\).
+\end{definition}
+
+Dimensions over \(\Fq\) are recovered from dimensions over \(K_s\) by
+\(\dim_{\Fq} V = m_s \dim_{K_s} V\). We write \(u, z\) for indeterminates
+and work in \(\Z[u,z]\).
+
+% =====================================================================
+\section{Parametrization and the reciprocal operation}\label{sec:param}
+% =====================================================================
+
+\begin{theorem}[parametrization]\label{thm:T1}
+The map \(a \mapsto C_s(a) = \langle g_a \rangle\) is a bijection from
+\(\{0,\dots,P\}^{\mathcal{F}_s}\) onto the set of \(\lambda_s\)-constacyclic
+codes of length \(n\) over \(K_s\), and
+\(\dim_{K_s} C_s(a) = n - \sum_{f} a_f \deg f\).
+Consequently there are \((P+1)^{\sum_s |\mathcal{F}_s|}\) labeled global
+assignments, and \(\lambda\)-constacyclic codes over \(A\) correspond to tuples
+of component assignments (Proposition~\ref{prop:assembly}).
+\end{theorem}
+
+\begin{proof}
+Ideals of \(K_s[x]/(M_s)\) correspond to ideals \((M_s) \subseteq I\) of
+the principal ideal domain \(K_s[x]\), hence to monic divisors
+\(\bar g\) of \(M_s\); by unique factorization and \(M_s =
+\prod f^P\), monic divisors are exactly the \(g_a\). For a monic divisor
+\(g\) of degree \(r\), multiplication by \(g\) identifies
+\(\langle g \rangle \subseteq K_s[x]/(M_s)\) with
+\(K_s[x]/((M_s)/g)\), of dimension \(n - r\). No separability hypothesis
+is used.
+\end{proof}
+
+\begin{theorem}[the reciprocal operation]\label{thm:T2}
+\begin{enumerate}
+\item[(i)] \(\#\) is multiplicative on monic polynomials with nonzero
+constant term; hence
+\(\big(\prod_f f^{a_f}\big)^{\#} = \prod_f (f^{\#})^{a_f}\) for all
+exponents \(a_f \ge 0\).
+\item[(ii)] If \(f(\xi) = 0\) with \(\xi \ne 0\) in an algebraic
+closure, then \(f^{\#}\big(\xi^{-p^{d_s-k}}\big) = 0\); in fact
+\(f^{\#}\) is the minimal polynomial of \(\xi^{-p^{d_s-k}}\).
+\item[(iii)] \(\lambda_s^{1+p^{d_s-k}} = 1 \iff
+\mu_s^{1+p^{d_s-k}} = 1\). Under compatibility, \(\tau_s\) permutes
+\(\mathcal{F}_s\) and preserves degrees.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Let \(\bar\rho\) be the coefficientwise extension of \(\rho\) to
+\(K_s[x]\); it is a ring automorphism with inverse \(\bar\sigma\).
+For (i), \(\overline\rho(fg) = \bar\rho(f)\bar\rho(g)\), reversal
+\(x^{r}f(1/x)\) is multiplicative in fixed degrees, and the normalizing
+constants multiply since \((fg)_0 = f_0 g_0\); combining the three gives
+\((fg)^{\#} = f^{\#} g^{\#}\), and induction on the number of factors
+gives the displayed identity. For (ii), apply the Frobenius map
+\(t \mapsto t^{p^{d_s-k}}\) of the algebraic closure to
+\(\sum c_i \xi^i = 0\) to get \(\sum \rho(c_i) \beta^{-i} = 0\) for
+\(\beta = \xi^{-p^{d_s-k}}\); multiplying by \(\beta^r\) yields
+\(\rho(c_0) f^{\#}(\beta) = 0\). The same Frobenius transport preserves
+degrees of minimal polynomials, so \(f^{\#}\) is the (monic irreducible)
+minimal polynomial of \(\beta\). For (iii),
+\((\mu_s^{1+p^{d_s-k}})^P = \lambda_s^{1+p^{d_s-k}}\) and in
+characteristic \(p\), \(y^P = 1\) implies \(y = 1\); now (ii) shows
+\(\tau_s(f)\) is the minimal polynomial of a root \(\beta\) with
+\(\beta^{n_0} = \rho(\mu_s)^{-1} = \mu_s\) (using compatibility in the
+form \(\rho(\mu_s) = \mu_s^{-1}\)), so \(\tau_s(f) \mid \bar M_s\);
+bijectivity follows by applying the same construction with \(\sigma\) in
+place of \(\rho\), which gives the inverse map.
+\end{proof}
+
+% =====================================================================
+\section{The Galois dual}\label{sec:dual}
+% =====================================================================
+
+The first step is a Euclidean-dual statement that uses no separability
+at all.
+
+\begin{lemma}[Euclidean dual generator]\label{lem:RR3}
+Let \(g\) be a monic divisor of \(x^n - \lambda\), \(\lambda \in K^*\),
+\(h = (x^n-\lambda)/g\), \(r = \deg g\), \(s = n - r\), and
+\(C = \langle g \rangle\) under the coefficient identification (this is
+the classical constacyclic dual statement;
+cf.~\cite{HP2003, MS1977}). Then
+\(h_0 \ne 0\), and with
+\(h^{\natural}(x) = h_0^{-1} \sum_{i=0}^{s} h_i x^{s-i}\) (the ordinary
+reciprocal, without Frobenius),
+\(C^\perp = \langle h^{\natural} \rangle\), a \(\lambda^{-1}\)-constacyclic
+code.
+\end{lemma}
+
+\begin{proof}
+From \(gh = x^n - \lambda\), \(g_0 h_0 = -\lambda \ne 0\). Both
+\(\langle h^{\natural} \rangle\) and \(C^\perp\) have dimension \(r\):
+the first by the divisor dimension count of Theorem~\ref{thm:T1}
+(applied to any modulus), the second by rank--nullity. The boundary
+cases are immediate from the definitions: if \(r = 0\), then \(g = 1\),
+\(C = K^n\) and \(C^\perp = \{0\}\), while \(h^{\natural}\) has degree
+\(n\) and hence no nonzero multiple of degree \(< n\); if \(s = 0\), then
+\(h = 1\), \(C = \{0\}\) and \(C^\perp = K^n\), while
+\(h^{\natural} = 1\). Assume \(r, s \ge 1\) below, so that \(V\) is
+defined (and \(v = 0\) gives \(d = 0\)). We show orthogonality. For polynomials \(a, d\) of degree \(< n\), write
+\(\operatorname{rev}_n(d) = x^{n-1} d(1/x)\); then
+\(\sum_i a_i d_i = [x^{n-1}]\big(a(x) \operatorname{rev}_n(d)(x)\big)\).
+Take \(a = gu\), \(\deg u < s\), and \(d = h^{\natural} v\),
+\(\deg v < r\). Since
+\(h^{\natural}(1/x) = h_0^{-1} x^{-s} h(x)\), one computes
+\(\operatorname{rev}_n(d) = h_0^{-1} h(x) V(x)\) with
+\(V(x) = x^{r-1} v(1/x)\), \(\deg V \le r-1\). Hence
+\(a(x)\operatorname{rev}_n(d)(x) = h_0^{-1} (x^n - \lambda) u(x) V(x)\)
+with \(\deg(uV) \le n-2\); the coefficient of \(x^{n-1}\) is \(0\).
+Thus \(\langle h^{\natural}\rangle \subseteq C^\perp\), and equality
+follows by dimensions. That \(h^{\natural} \mid x^n - \lambda^{-1}\)
+follows from \((gh)^* = g^* h^* = -\lambda(x^n - \lambda^{-1})\) for the
+unnormalized reciprocal \(\phi^*(x) = x^{\deg\phi}\phi(1/x)\).
+\end{proof}
+
+\begin{proposition}[transport by \(\rho\)]\label{prop:transport}
+Let the field be \(\mathbb{F}_{p^d}\), with \(\sigma, \rho\) as in
+Section~\ref{sec:prelim}. For every \(\mathbb{F}_{p^d}\)-linear code
+\(C \subseteq \mathbb{F}_{p^d}^n\),
+\(D(C) = \rho(C^\perp)\) (coordinatewise). Consequently, for
+\(C = \langle g \rangle \subseteq \mathbb{F}_{p^d}[x]/(x^n-\lambda)\) and
+\(h = (x^n-\lambda)/g\),
+\(D(C) = \langle h^{\#} \rangle \subseteq
+\mathbb{F}_{p^d}[x]/(x^n - \lambda^{-p^{d-k}})\); if \(\lambda\) is
+compatible, the modulus is again \(x^n - \lambda\).
+\end{proposition}
+
+\begin{proof}
+By the code-first definition, \(y \in D(C)\) iff
+\(\sum_i c_i \sigma(y_i) = 0\) for all \(c \in C\), i.e.\ iff
+\(\sigma(y) \in C^\perp\) (coordinatewise), i.e.\ iff
+\(y \in \rho(C^\perp)\) since \(\rho = \sigma^{-1}\); this is exactly
+where the slot order enters. Coefficientwise application of an
+automorphism sends the ideal \(\langle e \rangle\) in
+\(K[x]/(x^n-\eta)\) to \(\langle \bar\rho(e)\rangle\) in
+\(K[x]/(x^n - \rho(\eta))\); applying this to Lemma~\ref{lem:RR3} and
+comparing \(\bar\rho(h^{\natural})\) with \(h^{\#}\) gives the generator.
+Compatibility \(\lambda^{1+p^{d-k}}=1\) gives
+\(\lambda^{-p^{d-k}} = \lambda\).
+\end{proof}
+
+\begin{theorem}[dual exponents]\label{thm:T3}
+For every assignment \(a\), with \(h_a = M_s / g_a\),
+\(D(C_s(a)) = \langle h_a^{\#} \rangle\); under compatibility this is a
+\(\lambda_s\)-constacyclic code in the same quotient. On a
+\(\tau_s\)-orbit \(O = (f_0,\dots,f_{L-1})\) with \(\alpha_i = a_{f_i}\),
+the exponent of \(f_i\) in \(h_a^{\#}\) is
+\[
+\beta_i \;=\; P - \alpha_{i-1} \qquad (\text{indices mod } L).
+\]
+\end{theorem}
+
+\begin{proof}
+The generator statement is Proposition~\ref{prop:transport}. For the
+exponents, \(h_a = \prod_{f} f^{P - a_f}\), so by Theorem~\ref{thm:T2}(i)
+and the permutation property,
+\(h_a^{\#} = \prod_f (\tau_s f)^{P-a_f} = \prod_{g} g^{P - a_{\tau_s^{-1} g}}\);
+for \(g = f_i\), \(\tau_s^{-1}(f_i) = f_{i-1}\), giving \(P - \alpha_{i-1}\).
+\end{proof}
+
+\begin{remark}
+Without compatibility, \(D(C_s(a)) = \langle h_a^{\#}\rangle\) and the
+exponent formula remain valid, but in the modulus
+\(x^n - \lambda_s^{-p^{d_s-k}}\). Compatibility is what allows the dual
+to be viewed inside the same constacyclic family; it cannot simply be
+dropped (e.g.\ in \(\mathbb{F}_9\) with \(k=1\), a twist \(\lambda\) of
+order \(8\) satisfies \(\lambda^{1+3} = \lambda^4 = -1 \ne 1\) and indeed
+\(\lambda^{-3} \ne \lambda\)).
+\end{remark}
+
+% =====================================================================
+\section{The Galois hull}\label{sec:hull}
+% =====================================================================
+
+\begin{lemma}[intersection of ideals]\label{lem:lcm}
+For monic divisors \(g, l\) of a monic \(M \in K[x]\), the images of
+\((g)\) and \((l)\) in \(K[x]/(M)\) intersect in the image of
+\((\lcm(g,l))\), and
+\(\lcm(g,l) = \prod_{\pi} \pi^{\max(v_\pi(g), v_\pi(l))}\).
+\end{lemma}
+
+\begin{proof}
+In \(K[x]\), \((g) \cap (l) = (\lcm(g,l))\) since both consist of the
+common multiples of \(g\) and \(l\), characterized valuation-wise by the
+displayed maximum. If \(y\) lies in both images in the quotient, any
+lift \(Y\) satisfies \(Y \in (g)\) and \(Y \in (l)\) because
+\((M) \subseteq (g), (l)\); hence \(Y \in (\lcm(g,l))\). The reverse
+inclusion is immediate from \(g, l \mid \lcm(g,l)\).
+\end{proof}
+
+\begin{theorem}[hull generator and dimensions]\label{thm:T4}
+Under compatibility, for every assignment \(a\),
+\(\Hull_k(C_s(a)) = \langle \lcm(g_a, h_a^{\#}) \rangle\), the exponent
+of \(f_i\) in the hull generator being \(\max(\alpha_i, P-\alpha_{i-1})\).
+Moreover
+\[
+\dim_{\Fq} C(a) \;=\; \sum_{s} \sum_{O} w_O \sum_{i} (P - \alpha_i),
+\qquad
+\dim_{\Fq} \Hull_k(C(a)) \;=\; \sum_{s} \sum_{O} w_O \sum_i
+\min(P-\alpha_i,\, \alpha_{i-1}),
+\]
+the inner sums over orbit positions (indices mod \(L_O\)); here and
+below, \(\alpha_i\) refers to the orbit \((s,O)\) under discussion.
+\end{theorem}
+
+\begin{proof}
+Work in one component. By Theorems~\ref{thm:T1} and \ref{thm:T3},
+\(C(a)\) and \(D(C(a))\) are the images of \((g_a)\) and
+\((h_a^{\#})\), both dividing \(M = x^n-\lambda\); Lemma~\ref{lem:lcm}
+gives the hull generator, whose \(f_i\)-exponent is
+\(\max(\alpha_i, \beta_i) = \max(\alpha_i, P-\alpha_{i-1})\). Dimensions
+are \(n - \deg(\text{generator})\) over \(K\); grouping factors by
+orbits (constant degree on an orbit) and using
+\(P - \max(u,v) = \min(P-u, P-v)\) with \(v = P-\alpha_{i-1}\) gives the
+hull formula; multiplication by \(m_s\) and summation over \(s\) gives
+the \(\Fq\)-dimensions.
+\end{proof}
+
+\begin{remark}[relation to \cite{DPI2023}]
+For a single component (\(N = 1\)), Theorem~\ref{thm:T4} recovers
+\cite[Theorem~3]{DPI2023}: with \(P = p^{\nu}\) and cycle contribution
+\(a_t P - \sum_i \max(u_i, P - u_{i-1})\), the identity
+\(P - \max(u, P - v) = \min(P - u, v)\) identifies their summand with
+\(\sum_i \min(P - \alpha_i, \alpha_{i-1})\) above, the factor degree
+\(\operatorname{ord}_j(q)\) being our orbit weight \(w_O\). Their
+counting result \cite[Theorem~4]{DPI2023} is restricted to
+reciprocal-orbit lengths \(1, 2\) and \(4\) and counts by hull
+dimension alone; the joint enumerator below imposes no restriction on
+orbit length and records both dimensions.
+\end{remark}
+
+% =====================================================================
+\section{The transfer-matrix enumerator}\label{sec:enumerator}
+% =====================================================================
+
+For \(P \ge 1\), \(w \ge 1\), define the \((P{+}1)\times(P{+}1)\) matrix
+over \(\Z[u,z]\)
+\[
+T^{(P)}_w(u,z)_{a,b} \;=\; u^{\,w(P-b)}\, z^{\,w \min(P-b,\, a)},
+\qquad a, b \in \{0,\dots,P\},
+\]
+the row index \(a\) being the previous exponent and the column index
+\(b\) the current one.
+
+\begin{theorem}[local transfer trace]\label{thm:T5}
+For a \(\tau_s\)-orbit \(O\) of length \(L\) and weight \(w\),
+\[
+\tr\!\big(T^{(P)}_w(u,z)^L\big)
+\;=\; \sum_{\alpha \in \{0,\dots,P\}^L}
+u^{\,w \sum_i (P-\alpha_i)}\,
+z^{\,w \sum_i \min(P-\alpha_i,\, \alpha_{i-1})},
+\quad \text{indices mod } L.
+\]
+\end{theorem}
+
+\begin{proof}
+Expanding the matrix power,
+\((T^L)_{a_0,a_L} = \sum_{a_1,\dots,a_{L-1}} \prod_{j=1}^{L} T_{a_{j-1},a_j}\);
+setting \(a_L = a_0\) and summing over \(a_0\) gives
+\(\tr(T^L) = \sum_{a_0,\dots,a_{L-1}} \prod_{j=1}^{L} T_{a_{j-1},a_j}\).
+These closed walks are in bijection with assignments
+\(\alpha = (\alpha_0,\dots,\alpha_{L-1})\) (orbit positions are labeled;
+a walk and its rotation are different assignments). The \(j\)-th edge
+contributes \(u^{w(P-a_j)} z^{w\min(P-a_j, a_{j-1})}\); summing exponents
+over the walk and reindexing gives the claim. For \(L=1\) the single edge
+is the self-loop \(a_0 \to a_0\) and the formula reads
+\(\sum_a u^{w(P-a)} z^{w\min(P-a,a)}\), as required.
+\end{proof}
+
+\begin{proposition}[product assembly]\label{prop:assembly}
+Ideals of \(A[x]/(x^n-\lambda) \cong \prod_s K_s[x]/(x^n-\lambda_s)\) are
+exactly the products of component ideals; the global dual and hull
+decompose componentwise; and
+\(\dim_{\Fq} C = \sum_s m_s \dim_{K_s} C_s\), likewise for the hull.
+\end{proposition}
+
+\begin{proof}
+The ring isomorphism is coefficientwise; quotienting a product by the
+product ideal \((x^n-\lambda_s)_s\) gives the product of quotients (this
+is the direct-product structure of the square-free algebra \(A\) itself;
+no coprimality between components is involved). Ideals of a finite
+product of rings are products of ideals (project, and recover the
+components with the idempotents of \(A\)). The pairing is componentwise
+and vanishes exactly when every component does, giving the dual and hull
+statements; dimensions add over the direct sum \(A^n \cong \bigoplus_s
+K_s^n\) with the factor \([K_s:\Fq] = m_s\).
+\end{proof}
+
+\begin{theorem}[joint enumerator]\label{thm:T6}
+Under the standing hypotheses (common \(P, n, k\); compatible twists;
+labeled components),
+\[
+\mathcal{E}(u,z) \;:=\;
+\sum_{\text{labeled } a} u^{\dim_{\Fq} C(a)} z^{\dim_{\Fq} \Hull_k(C(a))}
+\;=\; \prod_{s=1}^{N} \prod_{O \in \mathcal{O}_s}
+\tr\!\Big(T^{(P)}_{w_O}(u,z)^{L_O}\Big),
+\]
+where \(\mathcal{O}_s\) is the set of \(\tau_s\)-orbits.
+The coefficient of \(u^K z^H\) is the number of labeled assignments with
+\(\dim_{\Fq} C = K\) and \(\dim_{\Fq} \Hull_k(C) = H\).
+\end{theorem}
+
+\begin{proof}
+By Theorem~\ref{thm:T1} and Proposition~\ref{prop:assembly}, a global
+assignment is the disjoint union of its orbit restrictions
+\(\alpha^{(O)} \in \{0,\dots,P\}^{L_O}\), and by Theorem~\ref{thm:T4}
+each of the two dimensions is a sum over \((s,O)\) of a quantity
+depending only on \(\alpha^{(O)}\). The finite distributive law
+(expanding a product of sums over a Cartesian product index set)
+factorizes the global sum into the product of the orbit sums
+\(\mathcal{E}_O(u,z) = \sum_{\alpha} u^{w_O \sum (P-\alpha_i)}
+z^{w_O \sum \min(P-\alpha_i,\alpha_{i-1})}\), and Theorem~\ref{thm:T5}
+identifies \(\mathcal{E}_O(u,z) = \tr(T^{(P)}_{w_O}(u,z)^{L_O})\).
+\end{proof}
+
+\begin{corollary}[joint symmetry of the enumerator]\label{cor:jointsym}
+Put \(\Delta := \sum_{s,O} P w_O L_O = n \sum_s m_s\) (indeed, for each
+component \(s\), \(\sum_{O \in \mathcal{O}_s} w_O L_O = m_s n_0\), since
+the degrees of the distinct irreducible factors of
+\(\bar M_s\) sum to \(n_0\); hence \(\Delta\) is the maximum, and ambient,
+\(\Fq\)-dimension). Then for all integers \(K, H\),
+\begin{align*}
+\#\{a : (\dim_{\Fq} C(a), \dim_{\Fq} \Hull_k(C(a))) = (K,H)\}
+&= \#\{a : (\dim_{\Fq} C(a), \dim_{\Fq} \Hull_k(C(a))) = (\Delta-K,H)\},
+\end{align*}
+equivalently \(\mathcal{E}(u,z) = u^{\Delta} \mathcal{E}(u^{-1}, z)\).
+In particular, for every \(K\) the multiset of hull dimensions over the
+assignments with \(\dim_{\Fq} C = K\) equals that over the assignments
+with \(\dim_{\Fq} C = \Delta - K\).
+\end{corollary}
+
+\begin{proof}
+It suffices to argue on one orbit \(O\) of length \(L\) and weight \(w\);
+the global statement follows by summing over orbits. Define
+\(\alpha'_i = P - \alpha_{-i}\) (indices mod \(L\)). This is an
+involution of \(\{0,\dots,P\}^L\): applying it twice returns
+\(\alpha_i\). Its code contribution is
+\(w \sum_i (P-\alpha'_i) = w \sum_i \alpha_{-i} = w \sum_i \alpha_i
+= PwL - w\sum_i (P-\alpha_i)\), so \(K\) maps to \(PwL - K\). Its hull
+contribution satisfies, with the reindexing \(j = -i+1\),
+\(\min(P-\alpha'_i, \alpha'_{i-1}) = \min(\alpha_{-i}, P-\alpha_{-i+1})
+= \min(P-\alpha_j, \alpha_{j-1})\),
+term by term equal to the hull sum of \(\alpha\). Hence the involution
+pairs tuples of joint type \((K,H)\) with tuples of type
+\((PwL-K, H)\), proving the per-orbit coefficient identity; the product
+over all orbits (Theorem~\ref{thm:T6}) gives the claim with
+\(\Delta = \sum_O Pw_OL_O\).
+\end{proof}
+
+\begin{remark}[hypotheses of the identity]
+As an identity in \(\Z[u,z]\), Theorem~\ref{thm:T5} holds for every
+integer \(P \ge 1\); that \(P\) is a power of \(p\) is needed
+for the field construction behind Theorems~\ref{thm:T1}--\ref{thm:T4},
+not for the matrix identity. The enumerator counts labeled assignments;
+the trace formula is insensitive to reversing the orbit orientation.
+Indeed the hull dimension of every individual assignment is unchanged
+under reversal, because
+\(\min(P-a,b) - \min(P-b,a) = b - a\) telescopes to \(0\) around the
+orbit; hence no statistic of Sections~\ref{sec:corollaries}
+and~\ref{sec:moments} can detect the orientation. The predecessor
+convention \(\alpha_{i-1}\) in Theorem~\ref{thm:T4} is nevertheless
+essential for identifying the hull \emph{generator}, and is fixed by
+the code-first pairing of Section~\ref{sec:prelim}.
+\end{remark}
+
+\begin{proposition}[simple-root recovery at \(P=1\)]\label{prop:P1}
+At \(P = 1\), assignments are binary, \(g_a\) is a
+squarefree divisor, the hull edge term \(\min(1-\alpha_i, \alpha_{i-1})\)
+is the indicator of the transition \(1 \to 0\) along the orbit, and
+\[
+T^{(1)}_w(u,z) \;=\;
+\begin{pmatrix} u^w & 1 \\ u^w z^w & 1 \end{pmatrix}
+\qquad (\text{rows/columns } a,b \in \{0,1\}),
+\]
+so Theorem~\ref{thm:T6} specializes to the binary-state simple-root
+joint enumerator with the same conventions.
+\end{proposition}
+
+\begin{proof}
+For \(P=1\), \(\min(1-b, a)\) is \(1\) exactly for \((a,b) = (1,0)\);
+reading off the four entries gives the matrix, and \(\mu_s = \lambda_s\),
+\(\bar M_s = M_s\) gives the squarefree parametrization.
+\end{proof}
+
+% =====================================================================
+\section{Counting corollaries}\label{sec:corollaries}
+% =====================================================================
+
+\begin{corollary}[total count]\label{cor:C1}
+\(\mathcal{E}(1,1) = (P+1)^{\sum_s |\mathcal{F}_s|}\).
+\end{corollary}
+
+\begin{proof}
+At \(u=z=1\) each \(T^{(P)}_w\) is the all-ones matrix \(J\) with
+\(J^L = (P+1)^{L-1} J\), so \(\tr(J^{L_O}) = (P+1)^{L_O}\); product over
+orbits gives \((P+1)^{\sum_s \sum_O L_O} = (P+1)^{\sum_s |\mathcal{F}_s|}\).
+\end{proof}
+
+\begin{corollary}[code-dimension distribution]\label{cor:C2}
+\(\displaystyle
+\mathcal{E}(u,1) = \prod_{s} \prod_{f \in \mathcal{F}_s}
+\big(1 + u^{w_f} + \dots + u^{P w_f}\big)\).
+\end{corollary}
+
+\begin{proof}
+At \(z=1\) the entry \(T_{a,b} = u^{w(P-b)}\) is independent of the row,
+so \(T = c\,r\) is rank one with \(r \cdot c = \sum_{j=0}^{P} u^{wj}\);
+then \(\tr(T^L) = (r\cdot c)^{L-1} \tr(T) = \big(\sum_{j=0}^P u^{wj}\big)^L\).
+Within an orbit all \(w_f\) equal \(w_O\), giving
+\(\prod_{f \in O} (1 + u^{w_f} + \dots + u^{Pw_f})\) per orbit.
+\end{proof}
+
+\begin{corollary}[LCD count]\label{cor:C3}
+The number of labeled assignments with \(\Hull_k(C(a)) = 0\) is
+\(2^{\#\text{orbits}}\), independent of \(P\).
+\end{corollary}
+
+\begin{proof}
+The hull dimension is a sum of nonnegative terms
+\(w_O \min(P-\alpha_i, \alpha_{i-1})\); it vanishes iff every orbit
+satisfies \(\min(P-\alpha_i, \alpha_{i-1}) = 0\) for all \(i\). On one
+orbit, if some \(\alpha_m \notin \{0,P\}\) (so \(P \ge 2\)), then
+\(\min(P-\alpha_{m+1}, \alpha_m) = 0\) with \(\alpha_m > 0\) forces
+\(\alpha_{m+1} = P\), and inductively every \(\alpha_i = P\) around the
+cycle, a contradiction (for \(L=1\), \(\min(P-\alpha_0,\alpha_0) = 0\)
+already forces \(\alpha_0 \in \{0,P\}\)). Hence each \(\alpha_i \in
+\{0,P\}\); if both values occurred, at a boundary position with
+\(\alpha_i = 0\), \(\alpha_{i-1} = P\) the term would be
+\(\min(P,P) = P \ge 1\). So exactly two tuples per orbit
+(\(\alpha \equiv 0\) or \(\alpha \equiv P\)), independently across
+orbits.
+\end{proof}
+
+\begin{corollary}[LCD refinement: the code dimension of LCD assignments]
+\label{cor:LCDref}
+With \(\Delta\) as in Corollary~\ref{cor:jointsym},
+\[
+\sum_{a \,:\, \Hull_k(C(a)) = 0} u^{\dim_{\Fq} C(a)}
+\;=\; \prod_{s} \prod_{O \in \mathcal{O}_s} \big(1 + u^{P w_O L_O}\big).
+\]
+Consequently, under the uniform distribution on labeled assignments,
+conditionally on \(\Hull_k(C(a)) = 0\) the code dimension is distributed
+as \(\sum_O (P w_O L_O)\, \xi_O\) with independent
+\(\xi_O \sim \mathrm{Bernoulli}(1/2)\); in particular
+\(\E[\dim_{\Fq} C \mid \Hull_k(C) = 0] = \Delta/2\) and
+\(\operatorname{Var}(\dim_{\Fq} C \mid \Hull_k(C) = 0)
+= \frac{P^2}{4} \sum_O (w_O L_O)^2\).
+\end{corollary}
+
+\begin{proof}
+By Corollary~\ref{cor:C3}, \(\Hull_k(C(a)) = 0\) if and only if every
+orbit restriction is constant, \(\alpha \equiv 0\) or \(\alpha \equiv
+P\); these two tuples have code contributions \(Pw_OL_O\) and \(0\)
+respectively (Theorem~\ref{thm:T4}), giving the displayed product by
+independence across orbits. Conditioning the uniform distribution on
+this product event keeps the orbits independent with the two options
+equally likely, which is the stated Bernoulli sum; its mean is
+\(\tfrac12 \sum_O Pw_OL_O = \Delta/2\) and its variance is
+\(\sum_O (Pw_OL_O)^2 \cdot \tfrac14\).
+\end{proof}
+
+\begin{corollary}[self-orthogonal and dual-containing codes]
+\label{cor:C4}
+\(C(a) \subseteq D(C(a))\) if and only if
+\(\alpha_{i-1} + \alpha_i \ge P\) on every orbit edge, and then the count
+is \(\prod_O \tr(B_P^{L_O})\) with \((B_P)_{a,b} = 1\) iff \(a+b \ge P\).
+Dually, \(D(C(a)) \subseteq C(a)\) if and only if
+\(\alpha_{i-1} + \alpha_i \le P\) on every edge, with count
+\(\prod_O \tr((B'_P)^{L_O})\), \((B'_P)_{a,b} = 1\) iff \(a+b \le P\).
+The two counts are equal.
+\end{corollary}
+
+\begin{proof}
+Since \(\Hull = C \cap D(C) \subseteq C\), \(C \subseteq D(C)\) iff
+\(\dim \Hull = \dim C\). By Theorem~\ref{thm:T4},
+\(\dim C - \dim \Hull = \sum_{s,O} w_O \sum_i \max(0, P-\alpha_i-\alpha_{i-1})\)
+because \((P-\alpha_i) - \min(P-\alpha_i,\alpha_{i-1}) =
+\max(0, P-\alpha_i-\alpha_{i-1})\); every summand is nonnegative, so the
+total vanishes iff every edge satisfies \(\alpha_{i-1}+\alpha_i \ge P\).
+The admissible tuples on one orbit are the closed walks of the \(0\)-\(1\)
+matrix \(B_P\), counted by \(\tr(B_P^{L_O})\) as in
+Theorem~\ref{thm:T5}. For the dual side, \(\dim D(C) =
+\sum w_O \sum_i \alpha_{i-1} = \sum w_O \sum_i \alpha_i\) by
+Theorem~\ref{thm:T3}, and \(\alpha_{i-1} - \min(P-\alpha_i,\alpha_{i-1})
+= \max(0, \alpha_i+\alpha_{i-1}-P)\); the same argument gives the
+condition \(\alpha_{i-1}+\alpha_i \le P\) and the count
+\(\tr((B'_P)^{L_O})\). The involution \(\alpha_i \mapsto P-\alpha_i\)
+maps one edge condition to the other, so the counts agree.
+\end{proof}
+
+\begin{corollary}[restricted enumerators for the self-orthogonal and
+dual-containing families]\label{cor:restricted}
+For an orbit of length \(L\) and weight \(w\), define matrices over
+\(\Z[t]\) and \(\Z[u,z]\) by
+\[
+\big(A^{\mathrm{SO}}_w(t)\big)_{a,b} =
+\begin{cases} t^{\,w(P-b)}, & a + b \ge P, \\ 0, & a + b < P,
+\end{cases}
+\qquad
+\big(A^{\mathrm{DC}}_w(u,z)\big)_{a,b} =
+\begin{cases} u^{\,w(P-b)} z^{\,wa}, & a + b \le P, \\ 0, & a + b > P,
+\end{cases}
+\]
+the row index \(a\) being the previous exponent and the column index
+\(b\) the current one, as in Theorem~\ref{thm:T5}. Then
+\[
+\sum_{a \,:\, C(a) \subseteq D(C(a))} t^{\dim_{\Fq} C(a)}
+= \prod_{s} \prod_{O \in \mathcal{O}_s}
+\tr\!\Big(\big(A^{\mathrm{SO}}_{w_O}(t)\big)^{L_O}\Big),
+\]
+whose specialization \(t = uz\) is the joint enumerator of the
+self-orthogonal family (there \(\dim_{\Fq} \Hull_k = \dim_{\Fq} C\)), and
+\[
+\sum_{a \,:\, D(C(a)) \subseteq C(a)}
+u^{\dim_{\Fq} C(a)} z^{\dim_{\Fq} \Hull_k(C(a))}
+= \prod_{s} \prod_{O \in \mathcal{O}_s}
+\tr\!\Big(\big(A^{\mathrm{DC}}_{w_O}(u,z)\big)^{L_O}\Big).
+\]
+Writing \(N_{\mathrm{SO}}(K)\) for the number of self-orthogonal
+assignments with \(\dim_{\Fq} C = K\) and \(N_{\mathrm{DC}}(K,H)\) for
+the number of dual-containing assignments with
+\((\dim_{\Fq} C, \dim_{\Fq} \Hull_k) = (K,H)\), one has
+\(N_{\mathrm{SO}}(K) = N_{\mathrm{DC}}(\Delta - K, K)\) for all \(K\).
+At \(u = z = 1\) the two enumerators reduce to the two counts of
+Corollary~\ref{cor:C4}.
+\end{corollary}
+
+\begin{proof}
+Both admissibility conditions are those of Corollary~\ref{cor:C4}, and
+both dimensions are sums over orbits, so by the closed-walk expansion of
+Theorem~\ref{thm:T5} it suffices to check one orbit. On a
+self-orthogonal tuple, \(\Hull_k(C) = C\), so the joint weight is
+\((uz)^{\dim_{\Fq} C}\); along an edge \(a \to b\) the code contribution
+is \(w(P-b)\) and admissibility is \(a+b \ge P\), which is exactly the
+weight built into \(A^{\mathrm{SO}}_w\). On a dual-containing tuple,
+\(\Hull_k(C) = D(C)\), whose per-orbit dimension is
+\(w \sum_i \alpha_i = w \sum_i \alpha_{i-1}\) (proof of
+Corollary~\ref{cor:C4}); the edge \(a \to b\) therefore carries code
+weight \(w(P-b)\) (from \(b\)) and hull weight \(wa\) (from the previous
+exponent), with admissibility \(a + b \le P\), as in
+\(A^{\mathrm{DC}}_w\). The trace includes the closing edge, i.e. the
+orbit-boundary condition. For the symmetry, the per-orbit complement
+\(\alpha_i \mapsto P - \alpha_i\) maps the self-orthogonal condition to
+the dual-containing condition bijectively, sends \(\dim_{\Fq} C = K\) to
+\(\dim_{\Fq} C = \Delta - K\), and sends the hull dimension to
+\(\sum_O w_O \sum_i (P - \alpha_i) = K\).
+\end{proof}
+
+% =====================================================================
+\section{Moments of the hull dimension}\label{sec:moments}
+% =====================================================================
+
+\emph{The model.} By Theorem~\ref{thm:T1}, labeled assignments are in
+bijection with the labeled constacyclic codes of the given length,
+alphabet and twist; we therefore put the uniform measure on assignments,
+equivalently on the codes of this family itself (not on random linear
+codes). The mean and variance below are the exact ensemble averages of
+\(\dim_{\Fq}\Hull_k\) over this family. Since
+\(\mu_P / P \to 1/3\) as \(P \to \infty\) (and \(\mu_1 = 1/4\)), the mean
+hull dimension is a positive proportion of the ambient dimension
+\(\Delta\) --- roughly \(\Delta/3\) for large \(P\), \(\Delta/4\) at
+\(P = 1\), apart from the length-one-orbit correction --- so the mean
+hull dimension grows linearly with \(n\), whereas the hull dimension of
+a random linear code stays bounded in
+probability~\cite{Sendrier1997}. The variance formulas quantify the
+fluctuations around this behaviour. Comparisons with average-dimension formulas in the literature
+should be made only under matching hypotheses; the results below are
+stated strictly for the labeled repeated-root ensemble defined here.
+
+Choose a labeled assignment uniformly at random; equivalently, all
+exponents \(A_i\) (over all components, orbits, positions) are
+independent and uniform on \(\{0,\dots,P\}\). For one orbit write
+\(X_i = \min(P-A_i, A_{i-1})\) (indices mod \(L\)) and
+\(S_L = \sum_i X_i\); the orbit contributes \(w_O S_{L_O}\) to
+\(\dim_{\Fq}\Hull_k\) (Theorem~\ref{thm:T4}). Set
+\[
+\mu_P = \frac{P(2P+1)}{6(P+1)},
+\qquad
+\nu_P = \frac{\lfloor P^2/4 \rfloor}{P+1}.
+\]
+
+\begin{lemma}[edge moments]\label{lem:edge}
+For independent \(U, V\) uniform on \(\{0,\dots,P\}\),
+\(\E[\min(U,V)] = \mu_P\) and
+\(\E[\min(U,V)^2] = \frac{P(P^2+P+1)}{6(P+1)}\).
+For \(0 \le c \le P\), \(F(c) := \E[\min(c,U)] =
+\frac{c(2P-c+1)}{2(P+1)}\).
+\end{lemma}
+
+\begin{proof}
+For a nonnegative integer variable,
+\(\E[X] = \sum_{t\ge1} \Pr(X \ge t)\) and
+\(\E[X^2] = \sum_{t\ge1} (2t-1)\Pr(X\ge t)\).
+Here \(\Pr(\min(U,V) \ge t) = ((P-t+1)/(P+1))^2\) for \(1 \le t \le P\);
+summing via \(\sum_{r=1}^P r^2 = P(P+1)(2P+1)/6\) and
+\(\sum r^3 = (P(P+1)/2)^2\) gives both formulas. The last claim is
+\(F(c) = \sum_{t=1}^c (P-t+1)/(P+1)\).
+\end{proof}
+
+\begin{theorem}[means]\label{thm:C5}
+\(\displaystyle \E[\dim_{\Fq} C] = \frac{n}{2} \sum_s m_s\), and
+\[
+\E[\dim_{\Fq} \Hull_k(C)] \;=\;
+\nu_P \sum_{O:\, L_O = 1} w_O \;+\;
+\mu_P \sum_{O:\, L_O \ge 2} w_O L_O .
+\]
+\end{theorem}
+
+\begin{proof}
+\(\E[P - A_f] = P/2\) and \(\sum_{f \in \mathcal{F}_s} \deg f = n_0\)
+give the first formula via Theorem~\ref{thm:T4}. For the hull, linearity
+over orbits reduces to \(\E[S_L]\). If \(L \ge 2\), each \(X_i\) is the
+minimum of two independent uniforms (for \(L=2\), \(X_0, X_1\) are the
+two ordered pairings of the same two distinct variables), so
+\(\E[S_L] = L\mu_P\) by Lemma~\ref{lem:edge}. If \(L = 1\),
+\(\E[S_1] = \frac{1}{P+1}\sum_{a=0}^P \min(P-a,a)\); the summands are
+symmetric under \(a \mapsto P-a\), giving \(P^2/4\) for \(P = 2m\) and
+\((P^2-1)/4\) for \(P = 2m+1\), i.e.\ \(\lfloor P^2/4 \rfloor\); hence
+\(\E[S_1] = \nu_P\). Note \(\nu_1 = 0\): at \(P=1\) an \(L_O=1\) orbit
+contributes nothing, and \(\E[\Hull] = \frac14 \sum_{L_O\ge2} w_O L_O\).
+\end{proof}
+
+\begin{remark}[relation to \cite{DP2025}]
+For a single component (\(N = 1\), \(K_s = \Fq\)), the hull mean above
+agrees with \cite[Theorem~3.3]{DP2025}: writing \(\Delta_t\) for the sum
+of the degrees of the distinct factors in reciprocal cycles of length
+\(a_t\) (so \(\sum_t a_t \Delta_t = n_0\)), their Formula simplifies,
+via \(P - \frac{P(4P+5)}{6(P+1)} = \mu_P\) and
+\(P - \frac{3P+1}{4} + \frac{\delta_P}{4(P+1)} = \nu_P\), to
+\(\nu_P \Delta_1 + \mu_P \sum_{t \ge 2} a_t \Delta_t\), which is the
+display above. No variance or covariance formula is given there; the
+second-order results below (Theorem~\ref{thm:C6} and
+Corollary~\ref{cor:secondorder}) have no counterpart in \cite{DP2025}.
+\end{remark}
+
+For the variance, orbit contributions are independent (disjoint exponent
+variables), so with \(V_L(P) := \operatorname{Var}(S_L)\),
+\(\operatorname{Var}(\dim_{\Fq}\Hull_k) = \sum_{s,O} w_O^2 V_{L_O}(P)\);
+note the squared weights, in contrast to the mean.
+
+\begin{lemma}[variance pieces]\label{lem:varpieces}
+\begin{enumerate}
+\item[(i)] \(L=1\):
+\(V_1(P) = \dfrac{P(P+2)(P^2+2P+4)}{48(P+1)^2}\) if \(P\) is even, and
+\(V_1(P) = \dfrac{(P-1)(P+3)}{48}\) if \(P\) is odd.
+\item[(ii)] For \(L \ge 3\), two adjacent edges satisfy
+\(\operatorname{Cov}(X_i, X_{i+1}) = \kappa_P < 0\), where
+\(\kappa_P = -\frac{P(P+2)(7P^2+14P+9)}{360(P+1)^2}\), while non-adjacent edge pairs
+are independent.
+\item[(iii)] For \(L=2\):
+\(\E[X_0 X_1] = \dfrac{P^2(P-1)}{12(P+1)}\) and
+\(\operatorname{Cov}(X_0,X_1) = -\dfrac{P^2(P+2)^2}{36(P+1)^2}\).
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(i) \(\E[\min(P-A,A)^2] = \frac{1}{P+1}\sum_a \min(P-a,a)^2\); for
+\(P = 2m\) the squared values are \(0^2,\dots,(m-1)^2,m^2,(m-1)^2,\dots,0^2\),
+summing to \(m(2m^2+1)/3\), and for \(P=2m+1\) each of \(0^2,\dots,m^2\)
+occurs twice, summing to \(m(m+1)(2m+1)/3\); subtracting \(\nu_P^2\)
+(Theorem~\ref{thm:C5}) and simplifying gives the claim.
+(ii) \(X_i, X_{i+1}\) share exactly the variable \(A_i\). Conditioning on
+\(A_i = b\) makes them conditionally independent with means
+\(F(P-b)\) and \(F(b)\) (Lemma~\ref{lem:edge}), so
+\(\E[X_iX_{i+1}] = \frac{1}{P+1}\sum_{b=0}^P F(P-b)F(b)
+= \frac{P(P-1)(11P^2+15P+6)}{120(P+1)^2}\) by the power sums
+\(\sum b^j\), \(j \le 4\); subtracting \(\mu_P^2\) gives \(\kappa_P\),
+negative for \(P \ge 1\). Non-adjacent edges depend on disjoint pairs of
+variables, hence are independent.
+(iii) \(X_0 \ge s\) and \(X_1 \ge t\) hold simultaneously iff
+\(s + t \le P\), in which case each of the two variables has
+\(P-s-t+1\) admissible values; thus
+\(\E[X_0X_1] = \sum_{s,t\ge1} \Pr(X_0\ge s, X_1\ge t)
+= \frac{1}{(P+1)^2} \sum_{r=1}^{P-1} (P-r) r^2
+= \frac{P^2(P-1)}{12(P+1)}\), and subtracting \(\mu_P^2\) gives the
+covariance.
+\end{proof}
+
+\begin{theorem}[variance of the hull dimension]\label{thm:C6}
+\(\displaystyle
+\operatorname{Var}\big(\dim_{\Fq} \Hull_k(C)\big)
+= \sum_{s} \sum_{O \in \mathcal{O}_s} w_O^2\, V_{L_O}(P)\), where
+\[
+\begin{aligned}
+V_1(P) &\text{ is as in Lemma~\ref{lem:varpieces}(i)},\\
+V_2(P) &= \frac{P(P+2)(P^2+2P+3)}{18(P+1)^2},\\
+V_L(P) &= \frac{L\, P(P+2)(P^2+2P+2)}{60(P+1)^2} \qquad (L \ge 3).
+\end{aligned}
+\]
+\end{theorem}
+
+\begin{proof}
+Independence across orbits gives the weighted sum. For one orbit:
+\(L=1\) is Lemma~\ref{lem:varpieces}(i). For \(L=2\),
+\(\operatorname{Var}(S_2) = 2\operatorname{Var}(X) + 2\operatorname{Cov}(X_0,X_1)\);
+with \(\operatorname{Var}(X) = \frac{P(P+2)(2P^2+4P+3)}{36(P+1)^2}\)
+(from Lemma~\ref{lem:edge}) and (iii), the bracket factors as
+\(P(P+2)(P^2+2P+3)\), giving \(V_2(P)\). For \(L \ge 3\),
+\(\operatorname{Var}(S_L) = L\operatorname{Var}(X) + 2L\kappa_P\) (exactly
+the \(L\) adjacent pairs contribute, by (ii)), and
+\(\operatorname{Var}(X) + 2\kappa_P =
+\frac{P(P+2)(P^2+2P+2)}{60(P+1)^2}\). At \(P=1\): \(V_1(1) = 0\),
+\(V_2(1) = 1/4\), \(V_L(1) = L/16\). The \(L=2\) formula is not the
+\(L \ge 3\) formula evaluated at \(L=2\) (at \(P=2\): \(44/81\) versus
+\(8/27\)), because the two edges of a 2-orbit share both variables.
+\end{proof}
+
+\begin{corollary}[second-order structure of the two dimensions]\label{cor:secondorder}
+Under the uniform model of this section,
+\[
+\operatorname{Var}\big(\dim_{\Fq} C\big)
+= \frac{P(P+2)}{12}\sum_s\sum_{f\in\mathcal{F}_s} w_f^2,
+\qquad
+\operatorname{Cov}\big(\dim_{\Fq} C,\,\dim_{\Fq}\Hull_k(C)\big)=0.
+\]
+In particular, the two dimensions are uncorrelated (they need not be
+independent).
+\end{corollary}
+
+\begin{proof}
+By Theorem~\ref{thm:T4},
+\(\dim_{\Fq} C=\sum_{s,f} w_f(P-A_f)\) with independent \(A_f\) uniform
+on \(\{0,\dots,P\}\), and
+\(\operatorname{Var}(P-A_f)=P(P+2)/12\), giving the variance formula.
+For the covariance, orbit blocks are independent, so it suffices to
+consider one orbit with \(K_O=\sum_i(P-A_i)\) and \(S_O=\sum_j X_j\).
+In \(\operatorname{Cov}(K_O,S_O)\), a term
+\(\operatorname{Cov}(P-A_i,X_j)\) can be nonzero only for
+\(i\in\{j,j-1\}\). With
+\(\gamma_P:=\operatorname{Cov}(B,\min(B,C))=P(P+2)/24\) for independent
+\(B,C\) uniform on \(\{0,\dots,P\}\) (a direct power-sum computation),
+the terms \(i=j\) and \(i=j-1\) contribute \(+\gamma_P\) and
+\(-\gamma_P\) respectively when \(L\ge2\); for \(L=1\), symmetry under
+\(A\mapsto P-A\) gives covariance \(0\) directly. Hence each orbit
+contributes \(0\), and summing with the weights \(w_O^2\) gives
+\(\operatorname{Cov}=0\).
+\end{proof}
+
+% =====================================================================
+\section{Examples and computational verification}\label{sec:examples}
+% =====================================================================
+
+The six examples are arranged so that each one makes a different part
+of the theory visible. Example~\ref{ex:E1} is small enough to check by
+hand and shows how a single exponent tuple produces its two coordinates.
+Example~\ref{ex:E2} isolates the simple-root specialization.
+Examples~\ref{ex:E3} and \ref{ex:E4} leave the orbit model and compare
+the exponent formulas with ranks of Gram matrices of explicitly
+constructed codes, first for mixed orbit lengths and then for a long
+orbit. Example~\ref{ex:E5} tests the product assembly over two
+components, and Example~\ref{ex:E6} leaves the cyclic case \(\lambda = 1\)
+used in Examples~\ref{ex:E3}--\ref{ex:E5} and works with a compatible
+twist of order four. Throughout, \(K\) denotes the code-dimension coordinate and
+\(H\) the hull-dimension coordinate of a labeled assignment.
+
+\begin{example}[one orbit, \(P=2\), \(L=2\), \(w=1\), by hand]
+\label{ex:E1}
+This example shows the bookkeeping of Theorem~\ref{thm:T4} in the
+smallest repeated-root case. The two positions form one orbit, and for
+\(\alpha = (\alpha_0,\alpha_1)\) the two coordinates are
+\(K = \sum_i (2-\alpha_i)\) and
+\(H = \sum_i \min(2-\alpha_i, \alpha_{i-1})\). For instance, for
+\(\alpha = (0,1)\) one gets \(K = (2-0) + (2-1) = 3\) and
+\(H = \min(2,1) + \min(1,0) = 1\); the first edge contributes because
+the predecessor exponent is positive, while the second edge contributes
+nothing because its predecessor exponent is \(0\). Evaluating all nine
+tuples gives
+\[
+\begin{aligned}
+(0,0)&\mapsto(4,0),\quad (0,1)\mapsto(3,1),\quad (0,2)\mapsto(2,2),\quad
+(1,0)\mapsto(3,1),\quad (1,1)\mapsto(2,2),\\
+(1,2)&\mapsto(1,1),\quad (2,0)\mapsto(2,2),\quad (2,1)\mapsto(1,1),\quad (2,2)\mapsto(0,0).
+\end{aligned}
+\]
+Grouping equal pairs yields the joint distribution
+\(\{(4,0):1, (3,1):2, (2,2):3, (1,1):2, (0,0):1\}\). Two features are
+already visible. First, the multiplicities are symmetric under
+\(K \leftrightarrow 4-K\) at fixed \(H\), as
+Corollary~\ref{cor:jointsym} requires for this orbit (here
+\(\Delta = PwL = 4\)). Second, the moments can be read off directly:
+\(\E[S_2] = (0\cdot1 + 1\cdot2 + 2\cdot3 + 1\cdot2 + 0\cdot1)/9 =
+10/9 = 2\mu_2\), and
+\(\operatorname{Var}(S_2) = 44/81 = V_2(2)\), the \(L=2\) case of
+Theorem~\ref{thm:C6}. The separate \(L=2\) formula is essential here:
+the two edges of a 2-orbit share both variables, and formally inserting
+\(L=2\) into the \(L \ge 3\) formula would give the incorrect value
+\(8/27\). Finally, exactly two assignments, \(\alpha \equiv 0\) and
+\(\alpha \equiv P\), have hull contribution \(0\), as
+Corollary~\ref{cor:C3} requires per orbit.
+\end{example}
+
+\begin{example}[simple-root orbit, \(P=1\), \(L=3\), \(w=1\)]\label{ex:E2}
+At \(P=1\) the exponents are binary and the example checks the
+simple-root specialization of Proposition~\ref{prop:P1}. The code
+coordinate is the number of zeros, \(K = \sum_i (1-\alpha_i)\), while
+the hull coordinate counts the cyclic transitions \(1 \to 0\). The
+two constant words behave exceptionally: \(000\) gives \((K,H) =
+(3,0)\) and \(111\) gives \((0,0)\). Every non-constant binary word
+of length \(3\), viewed cyclically, has exactly one block of ones and
+one block of zeros, hence exactly one \(1 \to 0\) transition and
+\(H = 1\). There are three words of weight \(1\) (so \(K=2\)) and
+three of weight \(2\) (so \(K=1\)). Therefore the joint distribution
+is
+\(\{(0,0):1,\ (1,1):3,\ (2,1):3,\ (3,0):1\}\), from which
+\(\E = 3/4 = 3\mu_1\) and
+\(\operatorname{Var} = 3/16 = V_3(1)\) follow immediately. The table
+also displays the symmetry of Corollary~\ref{cor:jointsym} in its
+smallest form: the hull multiplicity at \(K=0\) equals that at
+\(K=3\), and the multiplicity at \(K=1\) equals that at \(K=2\).
+\end{example}
+
+\begin{example}[a repeated-root field case]\label{ex:E3}
+Take \(K = \mathbb{F}_4\), \(k=1\), \(\lambda=1\), \(P=2\), \(n_0=5\),
+\(n=10\). This case is chosen because it is genuinely repeated-root
+(\(P=2\)) while still small, and because it contains both orbit types.
+The factors of \(x^5-1\) over \(\mathbb{F}_4\) have degrees
+\(1,2,2\); the degree-one factor is fixed by \(\tau\), and the two
+degree-two factors form one orbit of length \(2\). Thus there are three
+exponent positions and \(3^3=27\) assignments. (Dimensions in the
+display are over \(K\) itself; the orbit weights are therefore \(1\)
+for the length-one orbit and \(2\) for the length-two orbit.)
+
+The point of the example is that the distribution below was computed
+in two independent ways: from the exponent formulas of
+Theorems~\ref{thm:T4} and \ref{thm:T6}, and directly from codes, by
+forming, for each assignment \(a\), the generator \(g_a\), a basis of
+shifts, and the rank of the code-first Gram matrix
+\(\big(\sum_j B_{t,j}\sigma(B_{r,j})\big)\). The two computations
+agree on the joint \((\dim_K C, \dim_K \Hull_1(C))\) distribution
+\[
+\begin{aligned}
+\{&(0,0):1, (1,1):1, (2,0):1, (2,2):2, (3,3):2, (4,2):2, (4,4):3,
+(5,5):3, (6,2):2,\\
+&(6,4):3, (7,3):2, (8,0):1, (8,2):2, (9,1):1, (10,0):1\},
+\end{aligned}
+\]
+whose entries sum to \(27\), as they must. The moment formulas can be
+understood orbit by orbit: the length-one orbit is a self-loop and
+contributes \(\nu_2 = 1/3\), whereas the length-two orbit has weight
+\(2\) and two edges, hence contributes \(2 \cdot 2\mu_2 = 20/9\).
+This gives
+\(\E[\Hull] = 23/9 = \nu_2 + 2\cdot 2\mu_2 = \tfrac13 +
+\tfrac{20}{9}\) --- the separate \(\nu_P\) term is not a cosmetic
+distinction here, since using \(\mu_2\) for the length-one orbit as
+well would give the wrong mean. The variance is
+\(\operatorname{Var}(\Hull) = 194/81\) from Theorem~\ref{thm:C6}.
+The counting corollaries are equally visible: there are two orbits, so
+the LCD count is \(4 = 2^2\) (Corollary~\ref{cor:C3}), and the
+self-orthogonal and dual-containing counts agree at \(12\), in line
+with Corollary~\ref{cor:C4} and its refinement in
+Corollary~\ref{cor:restricted}.
+\end{example}
+
+\begin{example}[orbit of length \(6\)]\label{ex:E4}
+Take \(K = \mathbb{F}_8\), \(k=1\), \(\lambda=1\), \(P=2\), \(n_0=7\),
+\(n=14\). The seven linear factors of \(x^7-1\) form \(\tau\)-orbits
+of lengths \(1\) and \(6\), so there are \(3^7 = 2187\) assignments.
+Whereas Example~\ref{ex:E3} tests mixed orbit lengths, this example is
+included for the length-six orbit. The Gram-rank computation was
+compared with the exponent formula assignment by assignment, not only
+through the aggregated distribution; it gives
+\(\E[\Hull] = 11/3\) and
+\(\operatorname{Var}(\Hull) = 10/9 = V_1(2) + V_6(2) = \tfrac29 +
+\tfrac89\), with LCD count \(4\) and self-orthogonal \(=\) dual-containing
+count \(258\). The mean decomposition is again instructive: the
+length-one orbit contributes \(\nu_2 = 1/3\), and the length-six orbit,
+of weight \(1\) with six edges, contributes \(6\mu_2 = 10/3\).
+
+For the record, the full joint distribution of
+\((\dim_{\Fq} C, \dim_{\Fq}\Hull_k(C))\) is
+{\footnotesize
+\((0,0){:}\,1\), \((1,1){:}\,7\), \((2,0){:}\,1\), \((2,2){:}\,27\), \((3,1){:}\,6,
+(3,2){:}\,12\), \((3,3){:}\,59\), \((4,2){:}\,33\), \((4,3){:}\,48\), \((4,4){:}\,80,
+(5,2){:}\,24\), \((5,3){:}\,86\), \((5,4){:}\,96\), \((5,5){:}\,60\), \((6,2){:}\,24,
+(6,3){:}\,84\), \((6,4){:}\,144\), \((6,5){:}\,84\), \((6,6){:}\,21\), \((7,2){:}\,24,
+(7,3){:}\,84\), \((7,4){:}\,156\), \((7,5){:}\,102\), \((7,6){:}\,24\), \((7,7){:}\,3,
+(8,2){:}\,24\), \((8,3){:}\,84\), \((8,4){:}\,144\), \((8,5){:}\,84\), \((8,6){:}\,21,
+(9,2){:}\,24\), \((9,3){:}\,86\), \((9,4){:}\,96\), \((9,5){:}\,60\), \((10,2){:}\,33,
+(10,3){:}\,48\), \((10,4){:}\,80\), \((11,1){:}\,6\), \((11,2){:}\,12,
+(11,3){:}\,59\), \((12,0){:}\,1\), \((12,2){:}\,27\), \((13,1){:}\,7\), \((14,0){:}\,1\).}
+
+The exponent formula is thus checked against the hull dimensions of
+actual codes on an orbit of length \(6\). One point must be stated
+correctly: a dimension check of this kind cannot certify the predecessor
+orientation, because the hull dimension does not depend on the
+orientation convention at all --- for all \(a, b\),
+\(\min(P-a,b) - \min(P-b,a) = b - a\), which telescopes to \(0\) around
+any orbit, so the predecessor and successor readings give the same hull
+dimension for every assignment (cf.\ the remark after
+Theorem~\ref{thm:T6}). The orientation is instead visible in the hull
+generator: here, the exponent of \(f_i\) in \(h^{\#}\) equals the
+predecessor value \(P - \alpha_{i-1}\) for every one of the \(2187\)
+assignments, while the successor value \(P - \alpha_{i+1}\) agrees only
+for \(27\) of them (checked in
+\texttt{code/validate\_audit\_fixes.py}). The predecessor orientation is
+fixed by the code-first pairing (Theorem~\ref{thm:T3}).
+\end{example}
+
+\begin{example}[two components]\label{ex:E5}
+The final example tests the assembly step
+(Proposition~\ref{prop:assembly} and Theorem~\ref{thm:T6}), rather
+than a single orbit. Let \(A = \mathbb{F}_2 \times \mathbb{F}_4\)
+(\(q=2\), \(k=0\), \(\lambda=(1,1)\), \(P=2\), \(n_0=7\)). The orbit
+data \((L_O, w_O)\) are \((1,1), (2,3)\) on the first component and
+\((1,2), (2,6)\) on the second: four orbits and
+\(1+2+1+2 = 6\) exponent positions in total, hence
+\(3^6 = 729\) labeled assignments. Because assignments on distinct
+orbits are independent, the global joint distribution is the
+convolution (equivalently, the coefficientwise product) of the four
+per-orbit distributions of Theorem~\ref{thm:T5}; the same distribution
+is obtained by computing the two components separately and adding their
+dimensions. This agreement is the concrete content of the product
+formula in Theorem~\ref{thm:T6}.
+
+The summary numbers illustrate how the global formulas are assembled.
+There are four orbits, so the LCD count is \(2^4 = 16\)
+(Corollary~\ref{cor:C3}). The self-orthogonal and dual-containing
+counts are \(144\) each, as Corollary~\ref{cor:C4} predicts. The mean
+splits according to orbit length: the two length-one orbits contribute
+\((1+2)\nu_2 = 1\), while the two length-two orbits contribute
+\((3\cdot 2 + 6\cdot 2)\mu_2 = 10\), giving
+\(\E[\Hull] = 11\) (Theorem~\ref{thm:C5}). Likewise the variance is
+the weight-squared sum
+\(\operatorname{Var}(\Hull) = 230/9\) of
+Theorem~\ref{thm:C6}, namely
+\(1^2 V_1(2) + 3^2 V_2(2) + 2^2 V_1(2) + 6^2 V_2(2) = 230/9\).
+Thus Example~\ref{ex:E5} verifies, in one place, the independence of
+orbit blocks, the \(L=1\) versus \(L \ge 2\) mean constants, and the
+the \(w_O^2\) weighting in the variance.
+\end{example}
+
+\begin{example}[a twist of order four]\label{ex:E6}
+All field-level examples so far have \(\lambda = 1\). Take instead
+\(K = \mathbb{F}_9 = \mathbb{F}_3(\iota)\) with \(\iota^2 = -1\),
+\(k = 1\), \(\lambda = \iota\) of order \(4\) (compatible, since
+\(\lambda^{1+3} = \lambda^4 = 1\)), \(P = 3\), \(n_0 = 4\), \(n = 12\).
+Here \(\mu = -\iota\), and \(x^4 - \mu = x^4 + \iota\) factors over
+\(\mathbb{F}_9\) as two irreducible quadratics forming a single
+\(\tau\)-orbit of length \(2\); hence there are \((3+1)^2 = 16\)
+assignments. The joint distribution of
+\((\dim_{\Fq} C, \dim_{\Fq}\Hull_k(C))\) is
+\(\{(0,0):1, (2,2):2, (4,4):3, (6,6):4, (8,4):3, (10,2):2, (12,0):1\}\);
+hence \(\E[\Hull] = 7/2\) and \(\operatorname{Var}(\Hull) = 15/4\), the
+LCD count is \(2 = 2^1\) (one orbit), and the self-orthogonal and
+dual-containing counts are \(10\) each. Every value was recomputed by
+Gram-rank brute force over the explicitly constructed codes
+(\texttt{code/validate\_audit\_fixes.py}), so the constacyclic theory is
+exercised here beyond the cyclic case \(\lambda = 1\) and the negacyclic
+case \(\lambda = -1\).
+\end{example}
+
+\paragraph{Computational verification.}
+All formulas above were checked by exact (integer and rational)
+computation; the scripts and their saved outputs accompany the paper in
+the directory \texttt{code/}. (i) \emph{Orbit level}
+(\texttt{code/validate\_p1\_14.py}): direct enumeration of exponent
+tuples against the transfer traces of Theorem~\ref{thm:T5}, on the grid
+of \(52\) pairs \((P,L)\) with \(P \in \{1,2,3,4,5,7,8,9\}\),
+\(1 \le L \le 8\) and \((P+1)^L \le 10^5\); the moment closed forms were
+also re-derived symbolically from their defining sums. (ii) \emph{Field
+level}: Gram-rank brute force over explicitly constructed codes for
+\(\mathbb{F}_4\) with \(n_0 = 3\) (\(27\) assignments) and \(n_0 = 5\)
+(\(27\)), \(\mathbb{F}_9\) with \(k = 1\), \(\lambda = 1\) (\(256\)) and
+\(\lambda = -1\) (\(256\)), \(\mathbb{F}_3\) with \(\lambda = -1\)
+(\(16\)), and \(\mathbb{F}_8\) with \(n_0 = 7\) (\(2187\)) ---
+\(2769\) field-level assignments in total --- together with the
+two-component assembly of Example~\ref{ex:E5} (\(729\) assignments),
+checked by convolution of the component distributions. (iii) The twist
+of order four in Example~\ref{ex:E6} (\(16\) assignments) and further
+field-level cases with \(P \in \{4, 8, 9\}\) (\(\mathbb{F}_2\) with
+\(P = 4\) (\(25\)) and \(P = 8\) (\(81\)); \(\mathbb{F}_3\) with
+\(P = 9\) (\(100\))) are checked in
+\texttt{code/validate\_audit\_fixes.py}, which also verifies the
+hull-generator orientation statement of Example~\ref{ex:E4}. These computations are supporting evidence for the
+tested cases; the proofs of
+Sections~\ref{sec:param}--\ref{sec:moments} are independent of them.
+
+% =====================================================================
+\section{Limitations and scope}\label{sec:limitations}
+% =====================================================================
+
+\emph{Scope.} All enumerations count labeled exponent assignments over
+a fixed labeled decomposition \(A \cong \prod_s K_s\); they are not
+counts of equivalence or isometry classes of codes, and no such
+interpretation should be attached to \(\mathcal{E}(u,z)\). Only
+compatible twists are treated: for incompatible \(\lambda_s\),
+Theorem~\ref{thm:T3} persists in the two-modulus form
+\(x^n - \lambda_s^{-p^{d_s-k}}\), but the hull formula and everything
+following it are not asserted. The alphabet is reduced (square-free) by
+the standing hypothesis \(A \cong \prod_s K_s\); non-reduced alphabets,
+such as chain rings, are outside the scope, as are distances, which the
+enumerator does not address. The means and variances of
+Section~\ref{sec:moments} refer to the uniform distribution on labeled
+assignments; orbit contributions are independent in this model, edges
+within an orbit are not (Lemma~\ref{lem:varpieces}), and the \(L=1\),
+\(L=2\), \(L\ge3\) regimes are genuinely distinct. Finally, the
+predecessor index \(\alpha_{i-1}\) in
+Theorems~\ref{thm:T3}--\ref{thm:T6} is tied to the code-first pairing of
+Section~\ref{sec:prelim}: reversing the convention replaces \(\rho\) by
+\(\sigma\) and \(\alpha_{i-1}\) by \(\alpha_{i+1}\). By the telescoping
+identity \(\min(P-a,b) - \min(P-b,a) = b - a\), every hull dimension ---
+and hence every statistic of Sections~\ref{sec:corollaries}
+and~\ref{sec:moments} --- is unchanged assignment by assignment; the
+convention is visible only in the identification of the hull generator
+(Theorem~\ref{thm:T4}), not in any dimension.
+
+\emph{Open problems.} Natural directions include the incompatible-twist
+regime, where the dual exists in a two-modulus form but the hull
+intersection must be reconsidered; counting up to monomial equivalence
+rather than by labeled assignments; the extension from constacyclic
+(index-one) to multi-twisted codes; and distance distributions, which
+would require machinery beyond the enumerator.
+
+% =====================================================================
+\section{Conclusion}
+% =====================================================================
+
+For repeated-root constacyclic codes over a finite product of finite
+fields with compatible twists, the joint distribution of code dimension and
+Galois hull dimension over all labeled exponent assignments is given by
+a product of transfer-matrix traces indexed by the orbits of the
+reciprocal map. The enumerator yields the total count, the
+code-dimension distribution, the LCD count \(2^{\#\mathrm{orbits}}\), the
+self-orthogonal and dual-containing counts, and exact mean and variance
+formulas in which length-one orbits enter through the separate constant
+\(\nu_P\). At \(P=1\) the theory reduces to the binary simple-root
+enumerator. Natural directions for further work include the
+incompatible-twist regime, where the dual already exists in a
+two-modulus form but the hull intersection must be reconsidered;
+counting up to monomial equivalence rather than by labeled assignments;
+and distance questions, which the enumerator alone does not address.
+
+% =====================================================================
+\begin{thebibliography}{99}
+% =====================================================================
+
+\bibitem{ACLMRS2024}
+S.~E. Anderson, E.~Camps-Moreno, H.~H. L\'opez, G.~L. Matthews,
+D.~Ruano, and I.~Soprunov,
+Relative hulls and quantum codes,
+\emph{IEEE Transactions on Information Theory} 70(5) (2024),
+3190--3201. doi:10.1109/TIT.2024.3373550.
+
+\bibitem{BBO2026}
+S.~Bouyuklieva, I.~Bouyukliev, and F.~\"Ozbudak,
+Sequence of numbers of linear codes with increasing hull dimensions,
+\emph{Designs, Codes and Cryptography} 94 (2026), Article 39.
+doi:10.1007/s10623-025-01776-9.
+
+\bibitem{CDL2015}
+B.~Chen, H.~Q. Dinh, and H.~Liu,
+Repeated-root constacyclic codes of length \(2\ell^m p^n\),
+\emph{Finite Fields and Their Applications} 33 (2015), 137--159.
+doi:10.1016/j.ffa.2014.11.006.
+
+\bibitem{DP2025}
+I.~Debnath and O.~Prakash,
+Average dimensions of Galois hulls of constacyclic codes,
+\emph{Advances in Mathematics of Communications} 19(6) (2025),
+1569--1604. doi:10.3934/amc.2025010.
+
+\bibitem{DPDC2025}
+I.~Debnath and O.~Prakash,
+Hulls of separable double cyclic codes over \(\mathbb{Z}_{p^2}\),
+\emph{Computational and Applied Mathematics} 44 (2025), Article 255.
+doi:10.1007/s40314-025-03206-x.
+
+\bibitem{DIMP2026}
+I.~Debnath, H.~Islam, E.~Mart\'inez-Moro, and O.~Prakash,
+Galois hulls of constacyclic codes over affine algebra rings,
+\emph{Discrete Mathematics} 349(2) (2026), Article 114750.
+doi:10.1016/j.disc.2025.114750; arXiv:2412.08512.
+
+\bibitem{DIYP2026}
+I.~Debnath, H.~Islam, S.~Yadav, and O.~Prakash,
+Study of small Galois hull dimensions of constacyclic codes,
+\emph{Advances in Mathematics of Communications} 22 (2026), 1--18.
+doi:10.3934/amc.2025054.
+
+\bibitem{DPI2023}
+I.~Debnath, O.~Prakash, and H.~Islam,
+Galois hulls of constacyclic codes over finite fields,
+\emph{Cryptography and Communications} 15(1) (2023), 111--127.
+doi:10.1007/s12095-022-00591-6.
+
+\bibitem{DPI2023corr}
+I.~Debnath, O.~Prakash, and H.~Islam,
+Correction to: Galois hulls of constacyclic codes over finite fields,
+\emph{Cryptography and Communications} 15 (2023), 129--130.
+doi:10.1007/s12095-022-00602-6.
+
+\bibitem{DS2024}
+S.~T. Dougherty and S.~\c{S}ahinkaya,
+On cyclic and negacyclic codes with one-dimensional hulls and their
+applications,
+\emph{Advances in Mathematics of Communications} 18(5) (2024),
+1364--1378. doi:10.3934/amc.2022096.
+
+\bibitem{ES2026}
+R.~F.~Taki Eldin and P.~Sol\'e,
+Generator polynomial matrices of the Galois hulls of multi-twisted codes,
+\emph{Finite Fields and Their Applications} 109 (2026), Article 102712.
+doi:10.1016/j.ffa.2025.102712; arXiv:2305.15237.
+
+\bibitem{FZ2017}
+Y.~Fan and L.~Zhang,
+Galois self-dual constacyclic codes,
+\emph{Designs, Codes and Cryptography} 84 (2017), 473--492.
+doi:10.1007/s10623-016-0282-8.
+
+\bibitem{HP2003}
+W.~C. Huffman and V.~Pless,
+\emph{Fundamentals of Error-Correcting Codes},
+Cambridge University Press, 2003.
+
+\bibitem{LP2020}
+H.~Liu and X.~Pan,
+Galois hulls of linear codes over finite fields,
+\emph{Designs, Codes and Cryptography} 88 (2020), 241--255.
+doi:10.1007/s10623-019-00681-2.
+
+\bibitem{LS2024}
+S.~Li and M.~Shi,
+Characterization and classification of binary linear codes with various
+hull dimensions from an improved mass formula,
+\emph{IEEE Transactions on Information Theory} 70(5) (2024),
+3357--3372. doi:10.1109/TIT.2023.3298379.
+
+\bibitem{LSL2025}
+S.~Li, M.~Shi, and S.~Ling,
+A mass formula for linear codes with prescribed hull dimension and
+related classification,
+\emph{IEEE Transactions on Information Theory} 71(1) (2025),
+273--286. doi:10.1109/TIT.2024.3425058.
+
+\bibitem{LYW2025}
+Y.~Liu, X.~Yu, and G.~Wang,
+Several constructions of linear codes with various Galois hull
+dimensions,
+\emph{Computational and Applied Mathematics} 44 (2025), Article 299.
+doi:10.1007/s40314-025-03261-4.
+
+\bibitem{MS1977}
+F.~J. MacWilliams and N.~J.~A. Sloane,
+\emph{The Theory of Error-Correcting Codes},
+North-Holland, 1977.
+
+\bibitem{Sendrier1997}
+N.~Sendrier,
+On the dimension of the hull,
+\emph{SIAM Journal on Discrete Mathematics} 10(2) (1997), 282--293.
+doi:10.1137/S0895480195294027.
+
+\bibitem{Sharma2015}
+A.~Sharma,
+Repeated-root constacyclic codes of length \(\ell^t p^s\) and their
+dual codes,
+\emph{Cryptography and Communications} 7 (2015), 229--255.
+doi:10.1007/s12095-014-0106-5.
+
+\bibitem{Talbi2021}
+S.~Talbi, A.~Batoul, A.~Fotue Tabue, and E.~Mart\'inez-Moro,
+Galois hulls of cyclic serial codes over a finite chain ring,
+arXiv:2102.06995 (2021).
+
+\bibitem{WZLL2023}
+T.~Wu, S.~Zhu, L.~Liu, and L.~Li,
+Repeated-root constacyclic codes of length \(6\ell^m p^n\),
+\emph{Advances in Mathematics of Communications} 17(5) (2023),
+1154--1180. doi:10.3934/amc.2021044.
+
+\bibitem{ZWLL2025}
+Q.~Zhang, W.~Wang, S.~Luo, and Y.~Li,
+Repeated-root constacyclic codes of length \(k^s\ell^m p^n\) over
+finite fields,
+\emph{Finite Fields and Their Applications} 101 (2025), Article 102542.
+doi:10.1016/j.ffa.2024.102542.
+
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,30 @@
+=== 1. Worked example with lambda of order 4 (Example 9.6 data) ===
+FIELD GF(9), k=1, lambda=3, mu=6, P=3, n0=4, n=12: |F|=2, degrees=[2, 2], orbit lengths=[2], assignments=16
+   joint (dim_K C, dim_K Hull) = {(0, 0): 1, (2, 2): 2, (4, 4): 3, (6, 6): 4, (8, 4): 3, (10, 2): 2, (12, 0): 1}
+   E[H]=7/2 (formula 7/2), Var(H)=15/4, Var(C)=10 (N2 10), Cov(C,H)=0, LCD=2=2^1, selforth=10, dualcont=10
+   OK: Gram brute == T4 formula == T6 transfer; moments incl. N1/N2 verified
+
+=== 2. Field-level cases with P = 4, 8, 9 (audit M5) ===
+FIELD GF(2), k=0, lambda=1, mu=1, P=4, n0=3, n=12: |F|=2, degrees=[1, 2], orbit lengths=[1, 1], assignments=25
+   joint (dim_K C, dim_K Hull) = {(0, 0): 1, (1, 1): 1, (2, 2): 2, (3, 1): 1, (3, 3): 1, (4, 0): 1, (4, 4): 2, (5, 3): 1, (5, 5): 1, (6, 2): 2, (6, 6): 1, (7, 3): 1, (7, 5): 1, (8, 0): 1, (8, 4): 2, (9, 1): 1, (9, 3): 1, (10, 2): 2, (11, 1): 1, (12, 0): 1}
+   E[H]=12/5 (formula 12/5), Var(H)=14/5, Var(C)=10 (N2 10), Cov(C,H)=0, LCD=4=2^2, selforth=9, dualcont=9
+   OK: Gram brute == T4 formula == T6 transfer; moments incl. N1/N2 verified
+FIELD GF(2), k=0, lambda=1, mu=1, P=8, n0=3, n=24: |F|=2, degrees=[1, 2], orbit lengths=[1, 1], assignments=81
+   joint (dim_K C, dim_K Hull) = {(0, 0): 1, (1, 1): 1, (2, 2): 2, (3, 3): 2, (4, 4): 3, (5, 3): 1, (5, 5): 2, (6, 2): 1, (6, 6): 3, (7, 1): 1, (7, 5): 1, (7, 7): 2, (8, 0): 1, (8, 4): 1, (8, 8): 3, (9, 3): 1, (9, 7): 1, (9, 9): 2, (10, 2): 1, (10, 6): 2, (10, 10): 2, (11, 5): 1, (11, 7): 1, (11, 9): 1, (11, 11): 1, (12, 4): 2, (12, 8): 2, (12, 12): 1, (13, 5): 1, (13, 7): 1, (13, 9): 1, (13, 11): 1, (14, 2): 1, (14, 6): 2, (14, 10): 2, (15, 3): 1, (15, 7): 1, (15, 9): 2, (16, 0): 1, (16, 4): 1, (16, 8): 3, (17, 1): 1, (17, 5): 1, (17, 7): 2, (18, 2): 1, (18, 6): 3, (19, 3): 1, (19, 5): 2, (20, 4): 3, (21, 3): 2, (22, 2): 2, (23, 1): 1, (24, 0): 1}
+   E[H]=16/3 (formula 16/3), Var(H)=700/81, Var(C)=100/3 (N2 100/3), Cov(C,H)=0, LCD=4=2^2, selforth=25, dualcont=25
+   OK: Gram brute == T4 formula == T6 transfer; moments incl. N1/N2 verified
+FIELD GF(3), k=0, lambda=1, mu=1, P=9, n0=2, n=18: |F|=2, degrees=[1, 1], orbit lengths=[1, 1], assignments=100
+   joint (dim_K C, dim_K Hull) = {(0, 0): 1, (1, 1): 2, (2, 2): 3, (3, 3): 4, (4, 4): 5, (5, 4): 2, (5, 5): 4, (6, 3): 2, (6, 5): 2, (6, 6): 3, (7, 2): 2, (7, 4): 2, (7, 6): 2, (7, 7): 2, (8, 1): 2, (8, 3): 2, (8, 5): 2, (8, 7): 2, (8, 8): 1, (9, 0): 2, (9, 2): 2, (9, 4): 2, (9, 6): 2, (9, 8): 2, (10, 1): 2, (10, 3): 2, (10, 5): 2, (10, 7): 2, (10, 8): 1, (11, 2): 2, (11, 4): 2, (11, 6): 2, (11, 7): 2, (12, 3): 2, (12, 5): 2, (12, 6): 3, (13, 4): 2, (13, 5): 4, (14, 4): 5, (15, 3): 4, (16, 2): 3, (17, 1): 2, (18, 0): 1}
+   E[H]=4 (formula 4), Var(H)=4, Var(C)=33/2 (N2 33/2), Cov(C,H)=0, LCD=4=2^2, selforth=25, dualcont=25
+   OK: Gram brute == T4 formula == T6 transfer; moments incl. N1/N2 verified
+
+=== 3a. Hull dimension is orientation-invariant per assignment ===
+  (P,L)=(2,6): predecessor sum == successor sum on all 729 tuples (telescoping identity)
+  (P,L)=(3,4): predecessor sum == successor sum on all 256 tuples (telescoping identity)
+  (P,L)=(2,1): predecessor sum == successor sum on all 3 tuples (telescoping identity)
+  (P,L)=(4,3): predecessor sum == successor sum on all 125 tuples (telescoping identity)
+
+=== 3b. Hull generator sees the orientation (GF(8), Example 9.4 case) ===
+  h^# exponent vector == predecessor prediction on 2187/2187 assignments; successor prediction on 27/2187
+
+ALL AUDIT-FIX VALIDATION CHECKS PASSED

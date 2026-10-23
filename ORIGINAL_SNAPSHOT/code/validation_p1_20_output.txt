@@ -1,0 +1,185 @@
+=== R1/R2: orbit grid (symmetry + restricted enumerators) ===
+ok: R1 symmetry P=1 L=1 w=1
+ok: full trace = brute P=1 L=1 w=1
+ok: R2 SO restricted trace = brute P=1 L=1 w=1
+ok: R2 DC restricted trace = brute P=1 L=1 w=1
+ok: R3 per-orbit LCD options P=1 L=1 w=1
+ok: R1 symmetry P=1 L=1 w=2
+ok: full trace = brute P=1 L=1 w=2
+ok: R2 SO restricted trace = brute P=1 L=1 w=2
+ok: R2 DC restricted trace = brute P=1 L=1 w=2
+ok: R3 per-orbit LCD options P=1 L=1 w=2
+ok: R1 symmetry P=1 L=2 w=1
+ok: full trace = brute P=1 L=2 w=1
+ok: R2 SO restricted trace = brute P=1 L=2 w=1
+ok: R2 DC restricted trace = brute P=1 L=2 w=1
+ok: R3 per-orbit LCD options P=1 L=2 w=1
+ok: R1 symmetry P=1 L=2 w=2
+ok: full trace = brute P=1 L=2 w=2
+ok: R2 SO restricted trace = brute P=1 L=2 w=2
+ok: R2 DC restricted trace = brute P=1 L=2 w=2
+ok: R3 per-orbit LCD options P=1 L=2 w=2
+ok: R1 symmetry P=1 L=3 w=1
+ok: full trace = brute P=1 L=3 w=1
+ok: R2 SO restricted trace = brute P=1 L=3 w=1
+ok: R2 DC restricted trace = brute P=1 L=3 w=1
+ok: R3 per-orbit LCD options P=1 L=3 w=1
+ok: R1 symmetry P=1 L=3 w=2
+ok: full trace = brute P=1 L=3 w=2
+ok: R2 SO restricted trace = brute P=1 L=3 w=2
+ok: R2 DC restricted trace = brute P=1 L=3 w=2
+ok: R3 per-orbit LCD options P=1 L=3 w=2
+ok: R1 symmetry P=1 L=4 w=1
+ok: full trace = brute P=1 L=4 w=1
+ok: R2 SO restricted trace = brute P=1 L=4 w=1
+ok: R2 DC restricted trace = brute P=1 L=4 w=1
+ok: R3 per-orbit LCD options P=1 L=4 w=1
+ok: R1 symmetry P=1 L=4 w=2
+ok: full trace = brute P=1 L=4 w=2
+ok: R2 SO restricted trace = brute P=1 L=4 w=2
+ok: R2 DC restricted trace = brute P=1 L=4 w=2
+ok: R3 per-orbit LCD options P=1 L=4 w=2
+ok: R1 symmetry P=2 L=1 w=1
+ok: full trace = brute P=2 L=1 w=1
+ok: R2 SO restricted trace = brute P=2 L=1 w=1
+ok: R2 DC restricted trace = brute P=2 L=1 w=1
+ok: R3 per-orbit LCD options P=2 L=1 w=1
+ok: R1 symmetry P=2 L=1 w=2
+ok: full trace = brute P=2 L=1 w=2
+ok: R2 SO restricted trace = brute P=2 L=1 w=2
+ok: R2 DC restricted trace = brute P=2 L=1 w=2
+ok: R3 per-orbit LCD options P=2 L=1 w=2
+ok: R1 symmetry P=2 L=2 w=1
+ok: full trace = brute P=2 L=2 w=1
+ok: R2 SO restricted trace = brute P=2 L=2 w=1
+ok: R2 DC restricted trace = brute P=2 L=2 w=1
+ok: R3 per-orbit LCD options P=2 L=2 w=1
+ok: R1 symmetry P=2 L=2 w=2
+ok: full trace = brute P=2 L=2 w=2
+ok: R2 SO restricted trace = brute P=2 L=2 w=2
+ok: R2 DC restricted trace = brute P=2 L=2 w=2
+ok: R3 per-orbit LCD options P=2 L=2 w=2
+ok: R1 symmetry P=2 L=3 w=1
+ok: full trace = brute P=2 L=3 w=1
+ok: R2 SO restricted trace = brute P=2 L=3 w=1
+ok: R2 DC restricted trace = brute P=2 L=3 w=1
+ok: R3 per-orbit LCD options P=2 L=3 w=1
+ok: R1 symmetry P=2 L=3 w=2
+ok: full trace = brute P=2 L=3 w=2
+ok: R2 SO restricted trace = brute P=2 L=3 w=2
+ok: R2 DC restricted trace = brute P=2 L=3 w=2
+ok: R3 per-orbit LCD options P=2 L=3 w=2
+ok: R1 symmetry P=2 L=4 w=1
+ok: full trace = brute P=2 L=4 w=1
+ok: R2 SO restricted trace = brute P=2 L=4 w=1
+ok: R2 DC restricted trace = brute P=2 L=4 w=1
+ok: R3 per-orbit LCD options P=2 L=4 w=1
+ok: R1 symmetry P=2 L=4 w=2
+ok: full trace = brute P=2 L=4 w=2
+ok: R2 SO restricted trace = brute P=2 L=4 w=2
+ok: R2 DC restricted trace = brute P=2 L=4 w=2
+ok: R3 per-orbit LCD options P=2 L=4 w=2
+ok: R1 symmetry P=3 L=1 w=1
+ok: full trace = brute P=3 L=1 w=1
+ok: R2 SO restricted trace = brute P=3 L=1 w=1
+ok: R2 DC restricted trace = brute P=3 L=1 w=1
+ok: R3 per-orbit LCD options P=3 L=1 w=1
+ok: R1 symmetry P=3 L=1 w=2
+ok: full trace = brute P=3 L=1 w=2
+ok: R2 SO restricted trace = brute P=3 L=1 w=2
+ok: R2 DC restricted trace = brute P=3 L=1 w=2
+ok: R3 per-orbit LCD options P=3 L=1 w=2
+ok: R1 symmetry P=3 L=2 w=1
+ok: full trace = brute P=3 L=2 w=1
+ok: R2 SO restricted trace = brute P=3 L=2 w=1
+ok: R2 DC restricted trace = brute P=3 L=2 w=1
+ok: R3 per-orbit LCD options P=3 L=2 w=1
+ok: R1 symmetry P=3 L=2 w=2
+ok: full trace = brute P=3 L=2 w=2
+ok: R2 SO restricted trace = brute P=3 L=2 w=2
+ok: R2 DC restricted trace = brute P=3 L=2 w=2
+ok: R3 per-orbit LCD options P=3 L=2 w=2
+ok: R1 symmetry P=3 L=3 w=1
+ok: full trace = brute P=3 L=3 w=1
+ok: R2 SO restricted trace = brute P=3 L=3 w=1
+ok: R2 DC restricted trace = brute P=3 L=3 w=1
+ok: R3 per-orbit LCD options P=3 L=3 w=1
+ok: R1 symmetry P=3 L=3 w=2
+ok: full trace = brute P=3 L=3 w=2
+ok: R2 SO restricted trace = brute P=3 L=3 w=2
+ok: R2 DC restricted trace = brute P=3 L=3 w=2
+ok: R3 per-orbit LCD options P=3 L=3 w=2
+ok: R1 symmetry P=3 L=4 w=1
+ok: full trace = brute P=3 L=4 w=1
+ok: R2 SO restricted trace = brute P=3 L=4 w=1
+ok: R2 DC restricted trace = brute P=3 L=4 w=1
+ok: R3 per-orbit LCD options P=3 L=4 w=1
+ok: R1 symmetry P=3 L=4 w=2
+ok: full trace = brute P=3 L=4 w=2
+ok: R2 SO restricted trace = brute P=3 L=4 w=2
+ok: R2 DC restricted trace = brute P=3 L=4 w=2
+ok: R3 per-orbit LCD options P=3 L=4 w=2
+ok: R1 symmetry P=4 L=1 w=1
+ok: full trace = brute P=4 L=1 w=1
+ok: R2 SO restricted trace = brute P=4 L=1 w=1
+ok: R2 DC restricted trace = brute P=4 L=1 w=1
+ok: R3 per-orbit LCD options P=4 L=1 w=1
+ok: R1 symmetry P=4 L=1 w=2
+ok: full trace = brute P=4 L=1 w=2
+ok: R2 SO restricted trace = brute P=4 L=1 w=2
+ok: R2 DC restricted trace = brute P=4 L=1 w=2
+ok: R3 per-orbit LCD options P=4 L=1 w=2
+ok: R1 symmetry P=4 L=2 w=1
+ok: full trace = brute P=4 L=2 w=1
+ok: R2 SO restricted trace = brute P=4 L=2 w=1
+ok: R2 DC restricted trace = brute P=4 L=2 w=1
+ok: R3 per-orbit LCD options P=4 L=2 w=1
+ok: R1 symmetry P=4 L=2 w=2
+ok: full trace = brute P=4 L=2 w=2
+ok: R2 SO restricted trace = brute P=4 L=2 w=2
+ok: R2 DC restricted trace = brute P=4 L=2 w=2
+ok: R3 per-orbit LCD options P=4 L=2 w=2
+ok: R1 symmetry P=4 L=3 w=1
+ok: full trace = brute P=4 L=3 w=1
+ok: R2 SO restricted trace = brute P=4 L=3 w=1
+ok: R2 DC restricted trace = brute P=4 L=3 w=1
+ok: R3 per-orbit LCD options P=4 L=3 w=1
+ok: R1 symmetry P=4 L=3 w=2
+ok: full trace = brute P=4 L=3 w=2
+ok: R2 SO restricted trace = brute P=4 L=3 w=2
+ok: R2 DC restricted trace = brute P=4 L=3 w=2
+ok: R3 per-orbit LCD options P=4 L=3 w=2
+ok: R1 symmetry P=4 L=4 w=1
+ok: full trace = brute P=4 L=4 w=1
+ok: R2 SO restricted trace = brute P=4 L=4 w=1
+ok: R2 DC restricted trace = brute P=4 L=4 w=1
+ok: R3 per-orbit LCD options P=4 L=4 w=1
+ok: R1 symmetry P=4 L=4 w=2
+ok: full trace = brute P=4 L=4 w=2
+ok: R2 SO restricted trace = brute P=4 L=4 w=2
+ok: R2 DC restricted trace = brute P=4 L=4 w=2
+ok: R3 per-orbit LCD options P=4 L=4 w=2
+=== R2 worked example P=2 L=2 w=1 ===
+SO joint: {(0, 0): 1, (1, 1): 2, (2, 2): 3}  DC joint: {(2, 2): 3, (3, 1): 2, (4, 0): 1}
+ok: SO example counts (0,0):1,(1,1):2,(2,2):3
+ok: DC example counts (4,0):1,(3,1):2,(2,2):3
+=== R1 global + R5 conditional counterexample ===
+ok: R1 global symmetry D=10
+global config moments: E[K]=5 E[H]=19/9 VarK=14/3 VarH=134/81 Cov=0
+ok: N1/N2 consequence on this config: Cov=0, Var(K+-H)=VarK+VarH
+P=1 L=3 conditional E[H|K]: {0: '0', 1: '1', 2: '1', 3: '0'}
+ok: R5 conditional mean not constant (0,1,1,0) despite Cov=0
+=== R3: LCD conditional law, E5-type configuration ===
+LCD count=16 mean=21 var=185 | formulas mean=21 var=185
+ok: R3 LCD conditional mean/variance formulas
+=== R4: P=1 orbit-length recurrence ===
+ok: R4 recurrence s_2 = (1+u)s_1 - u(1-z)s_L
+ok: R4 recurrence s_3 = (1+u)s_2 - u(1-z)s_L
+ok: R4 recurrence s_4 = (1+u)s_3 - u(1-z)s_L
+ok: R4 recurrence s_5 = (1+u)s_4 - u(1-z)s_L
+ok: R4 recurrence s_6 = (1+u)s_5 - u(1-z)s_L
+ok: R4 recurrence s_7 = (1+u)s_6 - u(1-z)s_L
+ok: R4 recurrence s_8 = (1+u)s_7 - u(1-z)s_L
+s_1 = {(0, 0): 1, (1, 0): 1}  s_2 = {(0, 0): 1, (1, 1): 2, (2, 0): 1}
+
+ALL P1-20 VALIDATION CHECKS PASSED

@@ -1,0 +1,85 @@
+
+=== ORBIT STATISTICS (exact enumeration vs transfer trace) ===
+P  L  seqs        mean-brute        nu_P(L=1)   mu_P(edge)  LCD  selforth  dualcont
+2  1  3          1/3              1/3        5/9        2    2        2
+2  2  9          10/9             1/3        5/9        2    6        6
+2  3  27         5/3              1/3        5/9        2    11       11
+2  4  81         20/9             1/3        5/9        2    26       26
+2  5  243        25/9             1/3        5/9        2    57       57
+2  6  729        10/3             1/3        5/9        2    129      129
+3  1  4          1/2              1/2        7/8        2    2        2
+3  2  16         7/4              1/2        7/8        2    10       10
+3  3  64         21/8             1/2        7/8        2    23       23
+3  4  256        7/2              1/2        7/8        2    70       70
+3  5  1024       35/8             1/2        7/8        2    197      197
+3  6  4096       21/4             1/2        7/8        2    571      571
+4  1  5          4/5              4/5        6/5        2    3        3
+4  2  25         12/5             4/5        6/5        2    15       15
+4  3  125        18/5             4/5        6/5        2    42       42
+4  4  625        24/5             4/5        6/5        2    155      155
+4  5  3125       6                4/5        6/5        2    533      533
+4  6  15625      36/5             4/5        6/5        2    1884     1884
+5  1  6          1                1          55/36      2    3        3
+5  2  36         55/18            1          55/36      2    21       21
+5  3  216        55/12            1          55/36      2    69       69
+5  4  1296       55/9             1          55/36      2    301      301
+5  5  7776       275/36           1          55/36      2    1223     1223
+8  1  9          16/9             16/9       68/27      2    5        5
+8  2  81         136/27           16/9       68/27      2    45       45
+8  3  729        68/9             16/9       68/27      2    215      215
+8  4  6561       272/27           16/9       68/27      2    1365     1365
+9  1  10         2                2          57/20      2    5        5
+9  2  100        57/10            2          57/20      2    55       55
+9  3  1000       171/20           2          57/20      2    290      290
+9  4  10000      57/5             2          57/20      2    2035     2035
+OK: transfer trace == direct enumeration; L=1 mean is nu_P, L>=2 edge mean is mu_P
+
+=== VECTOR GF(2), k=0, lambda=1, mu=1, P=2, n0=7, n=14 ===
+factor degrees: [1, 3, 3]  orbit lengths: [1, 2]
+assignments checked: 27 (expected 27)
+joint (K,H) distribution: {(0, 0): 1, (1, 1): 1, (2, 0): 1, (3, 3): 2, (4, 4): 2, (5, 3): 2, (6, 6): 3, (7, 7): 3, (8, 6): 3, (9, 3): 2, (10, 4): 2, (11, 3): 2, (12, 0): 1, (13, 1): 1, (14, 0): 1}
+LCD: brute 4 vs 2^#orbits 4; self-orth: brute 12 vs tr(B^L) 12; dual-cont: brute 12 vs tr(B'^L) 12
+mean Hull: brute 11/3  corrected-split 11/3  frozen-C5 35/9
+OK: Gram-rank brute force == exponent formula == transfer trace
+
+=== VECTOR GF(3), k=0, lambda=1, mu=1, P=3, n0=4, n=12 ===
+factor degrees: [1, 1, 2]  orbit lengths: [1, 1, 1]
+assignments checked: 64 (expected 64)
+joint (K,H) distribution: {(0, 0): 1, (1, 1): 2, (2, 1): 2, (2, 2): 2, (3, 0): 2, (3, 2): 2, (3, 3): 2, (4, 1): 2, (4, 2): 2, (4, 3): 2, (4, 4): 1, (5, 1): 2, (5, 2): 2, (5, 3): 2, (5, 4): 2, (6, 0): 2, (6, 3): 4, (6, 4): 2, (7, 1): 2, (7, 2): 2, (7, 3): 2, (7, 4): 2, (8, 1): 2, (8, 2): 2, (8, 3): 2, (8, 4): 1, (9, 0): 2, (9, 2): 2, (9, 3): 2, (10, 1): 2, (10, 2): 2, (11, 1): 2, (12, 0): 1}
+LCD: brute 8 vs 2^#orbits 8; self-orth: brute 8 vs tr(B^L) 8; dual-cont: brute 8 vs tr(B'^L) 8
+mean Hull: brute 2  corrected-split 2  frozen-C5 7/2
+OK: Gram-rank brute force == exponent formula == transfer trace
+
+=== VECTOR GF(3), k=0, lambda=2, mu=2, P=3, n0=4, n=12 ===
+factor degrees: [2, 2]  orbit lengths: [2]
+assignments checked: 16 (expected 16)
+joint (K,H) distribution: {(0, 0): 1, (2, 2): 2, (4, 4): 3, (6, 6): 4, (8, 4): 3, (10, 2): 2, (12, 0): 1}
+LCD: brute 2 vs 2^#orbits 2; self-orth: brute 10 vs tr(B^L) 10; dual-cont: brute 10 vs tr(B'^L) 10
+mean Hull: brute 7/2  corrected-split 7/2  frozen-C5 7/2
+OK: Gram-rank brute force == exponent formula == transfer trace
+
+=== VECTOR GF(9), k=1, lambda=1, mu=1, P=3, n0=4, n=12 ===
+factor degrees: [1, 1, 1, 1]  orbit lengths: [1, 1, 1, 1]
+assignments checked: 256 (expected 256)
+joint (K,H) distribution: {(0, 0): 1, (1, 1): 4, (2, 1): 4, (2, 2): 6, (3, 0): 4, (3, 2): 12, (3, 3): 4, (4, 1): 12, (4, 2): 6, (4, 3): 12, (4, 4): 1, (5, 1): 12, (5, 2): 12, (5, 3): 12, (5, 4): 4, (6, 0): 6, (6, 2): 24, (6, 3): 8, (6, 4): 6, (7, 1): 12, (7, 2): 12, (7, 3): 12, (7, 4): 4, (8, 1): 12, (8, 2): 6, (8, 3): 12, (8, 4): 1, (9, 0): 4, (9, 2): 12, (9, 3): 4, (10, 1): 4, (10, 2): 6, (11, 1): 4, (12, 0): 1}
+LCD: brute 16 vs 2^#orbits 16; self-orth: brute 16 vs tr(B^L) 16; dual-cont: brute 16 vs tr(B'^L) 16
+mean Hull: brute 2  corrected-split 2  frozen-C5 7/2
+OK: Gram-rank brute force == exponent formula == transfer trace
+
+=== VECTOR GF(9), k=1, lambda=2, mu=2, P=3, n0=4, n=12 ===
+factor degrees: [1, 1, 1, 1]  orbit lengths: [2, 2]
+assignments checked: 256 (expected 256)
+joint (K,H) distribution: {(0, 0): 1, (1, 1): 4, (2, 2): 10, (3, 3): 20, (4, 2): 6, (4, 4): 25, (5, 1): 4, (5, 3): 12, (5, 5): 24, (6, 0): 2, (6, 2): 8, (6, 4): 18, (6, 6): 16, (7, 1): 4, (7, 3): 12, (7, 5): 24, (8, 2): 6, (8, 4): 25, (9, 3): 20, (10, 2): 10, (11, 1): 4, (12, 0): 1}
+LCD: brute 4 vs 2^#orbits 4; self-orth: brute 100 vs tr(B^L) 100; dual-cont: brute 100 vs tr(B'^L) 100
+mean Hull: brute 7/2  corrected-split 7/2  frozen-C5 7/2
+OK: Gram-rank brute force == exponent formula == transfer trace
+
+=== VECTOR GF(8), k=1, lambda=1, mu=1, P=2, n0=7, n=14 ===
+factor degrees: [1, 1, 1, 1, 1, 1, 1]  orbit lengths: [1, 6]
+assignments checked: 2187 (expected 2187)
+joint (K,H) distribution: {(0, 0): 1, (1, 1): 7, (2, 0): 1, (2, 2): 27, (3, 1): 6, (3, 2): 12, (3, 3): 59, (4, 2): 33, (4, 3): 48, (4, 4): 80, (5, 2): 24, (5, 3): 86, (5, 4): 96, (5, 5): 60, (6, 2): 24, (6, 3): 84, (6, 4): 144, (6, 5): 84, (6, 6): 21, (7, 2): 24, (7, 3): 84, (7, 4): 156, (7, 5): 102, (7, 6): 24, (7, 7): 3, (8, 2): 24, (8, 3): 84, (8, 4): 144, (8, 5): 84, (8, 6): 21, (9, 2): 24, (9, 3): 86, (9, 4): 96, (9, 5): 60, (10, 2): 33, (10, 3): 48, (10, 4): 80, (11, 1): 6, (11, 2): 12, (11, 3): 59, (12, 0): 1, (12, 2): 27, (13, 1): 7, (14, 0): 1}
+LCD: brute 4 vs 2^#orbits 4; self-orth: brute 258 vs tr(B^L) 258; dual-cont: brute 258 vs tr(B'^L) 258
+mean Hull: brute 11/3  corrected-split 11/3  frozen-C5 35/9
+OK: Gram-rank brute force == exponent formula == transfer trace
+
+ALL P1-03 EXTENDED CHECKS PASSED

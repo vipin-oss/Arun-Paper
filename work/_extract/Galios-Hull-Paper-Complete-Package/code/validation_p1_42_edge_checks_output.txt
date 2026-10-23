@@ -1,0 +1,1 @@
+ALL P1-42 INDEPENDENT EDGE CHECKS PASSED (48 (P,L,w) cases; trace==enumeration, means, variances, Cov=0, symmetry, LCD=2/orbit, SO=DC)
