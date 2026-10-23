@@ -164,7 +164,7 @@ LaTeX Warning: Citation `FZ2017' on page 3 undefined on input line 233.
 LaTeX Warning: Citation `LP2020' on page 3 undefined on input line 234.
 
 
-LaTeX Warning: Reference `prop:transport' on page 3 undefined on input line 238
+LaTeX Warning: Reference `prop:transport' on page 3 undefined on input line 239
 .
 
 [3]
@@ -309,208 +309,211 @@ LaTeX Warning: Reference `cor:C4' on page 10 undefined on input line 831.
 LaTeX Warning: Reference `thm:T1' on page 10 undefined on input line 846.
 
 
-LaTeX Warning: Citation `Sendrier1997' on page 10 undefined on input line 858.
+LaTeX Warning: Reference `thm:C5' on page 10 undefined on input line 853.
 
 
-LaTeX Warning: Reference `thm:T4' on page 10 undefined on input line 868.
+LaTeX Warning: Citation `Sendrier1997' on page 10 undefined on input line 859.
+
+
+LaTeX Warning: Reference `thm:T4' on page 10 undefined on input line 874.
 
 [10]
 
-LaTeX Warning: Reference `thm:T4' on page 11 undefined on input line 907.
+LaTeX Warning: Reference `thm:T4' on page 11 undefined on input line 913.
 
 
-LaTeX Warning: Reference `lem:edge' on page 11 undefined on input line 911.
+LaTeX Warning: Reference `lem:edge' on page 11 undefined on input line 917.
 
 
-LaTeX Warning: Citation `DP2025' on page 11 undefined on input line 919.
+LaTeX Warning: Citation `DP2025' on page 11 undefined on input line 925.
 
 
-LaTeX Warning: Citation `DP2025' on page 11 undefined on input line 921.
+LaTeX Warning: Citation `DP2025' on page 11 undefined on input line 927.
 
 
-LaTeX Warning: Reference `thm:C6' on page 11 undefined on input line 928.
+LaTeX Warning: Reference `thm:C6' on page 11 undefined on input line 934.
 
 
 LaTeX Warning: Reference `cor:secondorder' on page 11 undefined on input line 9
-29.
+35.
 
 
-LaTeX Warning: Citation `DP2025' on page 11 undefined on input line 929.
+LaTeX Warning: Citation `DP2025' on page 11 undefined on input line 936.
 
 
-LaTeX Warning: Reference `thm:C5' on page 11 undefined on input line 957.
+LaTeX Warning: Reference `thm:C5' on page 11 undefined on input line 964.
 
 
-LaTeX Warning: Reference `lem:edge' on page 11 undefined on input line 960.
+LaTeX Warning: Reference `lem:edge' on page 11 undefined on input line 967.
 
 [11]
 
-LaTeX Warning: Reference `lem:varpieces' on page 12 undefined on input line 981
+LaTeX Warning: Reference `lem:varpieces' on page 12 undefined on input line 988
 .
 
 
-LaTeX Warning: Reference `lem:varpieces' on page 12 undefined on input line 990
+LaTeX Warning: Reference `lem:varpieces' on page 12 undefined on input line 997
 .
 
 
-LaTeX Warning: Reference `lem:edge' on page 12 undefined on input line 993.
+LaTeX Warning: Reference `lem:edge' on page 12 undefined on input line 1000.
 
 
-LaTeX Warning: Reference `thm:T4' on page 12 undefined on input line 1017.
+LaTeX Warning: Reference `thm:T4' on page 12 undefined on input line 1024.
 
 
-LaTeX Warning: Reference `ex:E1' on page 12 undefined on input line 1040.
+LaTeX Warning: Reference `ex:E1' on page 12 undefined on input line 1047.
 
 
-LaTeX Warning: Reference `ex:E2' on page 12 undefined on input line 1042.
+LaTeX Warning: Reference `ex:E2' on page 12 undefined on input line 1049.
 
 
-LaTeX Warning: Reference `ex:E3' on page 12 undefined on input line 1043.
+LaTeX Warning: Reference `ex:E3' on page 12 undefined on input line 1050.
 
 
-LaTeX Warning: Reference `ex:E4' on page 12 undefined on input line 1043.
+LaTeX Warning: Reference `ex:E4' on page 12 undefined on input line 1050.
 
 
-LaTeX Warning: Reference `ex:E5' on page 12 undefined on input line 1046.
+LaTeX Warning: Reference `ex:E5' on page 12 undefined on input line 1053.
 
 
-LaTeX Warning: Reference `ex:E6' on page 12 undefined on input line 1047.
+LaTeX Warning: Reference `ex:E6' on page 12 undefined on input line 1054.
 
 
-LaTeX Warning: Reference `ex:E3' on page 12 undefined on input line 1048.
+LaTeX Warning: Reference `ex:E3' on page 12 undefined on input line 1055.
 
 
-LaTeX Warning: Reference `ex:E5' on page 12 undefined on input line 1048.
+LaTeX Warning: Reference `ex:E5' on page 12 undefined on input line 1055.
 
 [12]
 
-LaTeX Warning: Reference `thm:T4' on page 13 undefined on input line 1054.
+LaTeX Warning: Reference `thm:T4' on page 13 undefined on input line 1061.
 
 
-LaTeX Warning: Reference `cor:jointsym' on page 13 undefined on input line 1075
+LaTeX Warning: Reference `cor:jointsym' on page 13 undefined on input line 1082
 .
 
 
-LaTeX Warning: Reference `thm:C6' on page 13 undefined on input line 1080.
+LaTeX Warning: Reference `thm:C6' on page 13 undefined on input line 1087.
 
 
-LaTeX Warning: Reference `cor:C3' on page 13 undefined on input line 1085.
+LaTeX Warning: Reference `cor:C3' on page 13 undefined on input line 1092.
 
 
-LaTeX Warning: Reference `prop:P1' on page 13 undefined on input line 1090.
+LaTeX Warning: Reference `prop:P1' on page 13 undefined on input line 1097.
 
 
-LaTeX Warning: Reference `cor:jointsym' on page 13 undefined on input line 1103
+LaTeX Warning: Reference `cor:jointsym' on page 13 undefined on input line 1110
 .
 
 
-LaTeX Warning: Reference `thm:T4' on page 13 undefined on input line 1121.
+LaTeX Warning: Reference `thm:T4' on page 13 undefined on input line 1128.
 
 
-LaTeX Warning: Reference `thm:T6' on page 13 undefined on input line 1121.
+LaTeX Warning: Reference `thm:T6' on page 13 undefined on input line 1128.
 
 [13]
 
-LaTeX Warning: Reference `thm:C6' on page 14 undefined on input line 1142.
+LaTeX Warning: Reference `thm:C6' on page 14 undefined on input line 1149.
 
 
-LaTeX Warning: Reference `cor:C3' on page 14 undefined on input line 1144.
+LaTeX Warning: Reference `cor:C3' on page 14 undefined on input line 1151.
 
 
-LaTeX Warning: Reference `cor:C4' on page 14 undefined on input line 1146.
+LaTeX Warning: Reference `cor:C4' on page 14 undefined on input line 1153.
 
 
 LaTeX Warning: Reference `cor:restricted' on page 14 undefined on input line 11
-47.
+54.
 
 
-LaTeX Warning: Reference `ex:E3' on page 14 undefined on input line 1154.
+LaTeX Warning: Reference `ex:E3' on page 14 undefined on input line 1161.
 
 
-LaTeX Warning: Reference `thm:T6' on page 14 undefined on input line 1186.
+LaTeX Warning: Reference `thm:T6' on page 14 undefined on input line 1193.
 
 (/usr/local/texlive/2026/texmf-dist/tex/latex/psnfss/ot1pcr.fd)
 
-LaTeX Warning: Reference `thm:T3' on page 14 undefined on input line 1192.
+LaTeX Warning: Reference `thm:T3' on page 14 undefined on input line 1199.
 
 
-LaTeX Warning: Reference `prop:assembly' on page 14 undefined on input line 119
-7.
+LaTeX Warning: Reference `prop:assembly' on page 14 undefined on input line 120
+4.
 
 
-LaTeX Warning: Reference `thm:T6' on page 14 undefined on input line 1197.
+LaTeX Warning: Reference `thm:T6' on page 14 undefined on input line 1204.
 
 
-LaTeX Warning: Reference `thm:T5' on page 14 undefined on input line 1206.
+LaTeX Warning: Reference `thm:T5' on page 14 undefined on input line 1213.
 
 
-LaTeX Warning: Reference `thm:T6' on page 14 undefined on input line 1209.
+LaTeX Warning: Reference `thm:T6' on page 14 undefined on input line 1216.
 
 [14]
 
-LaTeX Warning: Reference `cor:C3' on page 15 undefined on input line 1213.
+LaTeX Warning: Reference `cor:C3' on page 15 undefined on input line 1220.
 
 
-LaTeX Warning: Reference `cor:C4' on page 15 undefined on input line 1214.
+LaTeX Warning: Reference `cor:C4' on page 15 undefined on input line 1221.
 
 
-LaTeX Warning: Reference `thm:C5' on page 15 undefined on input line 1218.
+LaTeX Warning: Reference `thm:C5' on page 15 undefined on input line 1225.
 
 
-LaTeX Warning: Reference `thm:C6' on page 15 undefined on input line 1221.
+LaTeX Warning: Reference `thm:C6' on page 15 undefined on input line 1228.
 
 
-LaTeX Warning: Reference `ex:E5' on page 15 undefined on input line 1223.
+LaTeX Warning: Reference `ex:E5' on page 15 undefined on input line 1230.
 
 
-LaTeX Warning: Reference `thm:T5' on page 15 undefined on input line 1253.
+LaTeX Warning: Reference `thm:T5' on page 15 undefined on input line 1260.
 
 
-LaTeX Warning: Reference `ex:E5' on page 15 undefined on input line 1263.
+LaTeX Warning: Reference `ex:E5' on page 15 undefined on input line 1270.
 
 
-LaTeX Warning: Reference `ex:E6' on page 15 undefined on input line 1265.
+LaTeX Warning: Reference `ex:E6' on page 15 undefined on input line 1272.
 
 
-LaTeX Warning: Reference `ex:E4' on page 15 undefined on input line 1270.
+LaTeX Warning: Reference `ex:E4' on page 15 undefined on input line 1277.
 
 
-LaTeX Warning: Reference `sec:param' on page 15 undefined on input line 1272.
+LaTeX Warning: Reference `sec:param' on page 15 undefined on input line 1279.
 
 
-LaTeX Warning: Reference `sec:moments' on page 15 undefined on input line 1272.
+LaTeX Warning: Reference `sec:moments' on page 15 undefined on input line 1279.
 
 
 
-LaTeX Warning: Reference `thm:T3' on page 15 undefined on input line 1283.
+LaTeX Warning: Reference `thm:T3' on page 15 undefined on input line 1290.
 
 
-LaTeX Warning: Reference `sec:moments' on page 15 undefined on input line 1289.
+LaTeX Warning: Reference `sec:moments' on page 15 undefined on input line 1296.
 
 
 
 LaTeX Warning: Reference `lem:varpieces' on page 15 undefined on input line 129
-1.
+8.
 
 
-LaTeX Warning: Reference `thm:T3' on page 15 undefined on input line 1294.
+LaTeX Warning: Reference `thm:T3' on page 15 undefined on input line 1301.
 
 
-LaTeX Warning: Reference `thm:T6' on page 15 undefined on input line 1294.
+LaTeX Warning: Reference `thm:T6' on page 15 undefined on input line 1301.
 
 
-LaTeX Warning: Reference `sec:prelim' on page 15 undefined on input line 1295.
+LaTeX Warning: Reference `sec:prelim' on page 15 undefined on input line 1302.
 
 
 LaTeX Warning: Reference `sec:corollaries' on page 15 undefined on input line 1
-298.
+305.
 
 
-LaTeX Warning: Reference `sec:moments' on page 15 undefined on input line 1299.
+LaTeX Warning: Reference `sec:moments' on page 15 undefined on input line 1306.
 
 
 
-LaTeX Warning: Reference `thm:T4' on page 15 undefined on input line 1301.
+LaTeX Warning: Reference `thm:T4' on page 15 undefined on input line 1308.
 
 [15] [16] [17] (./FINAL_IEEE_TIT_SUBMISSION.aux)
 
@@ -547,7 +550,7 @@ ic/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/u
 rw/courier/ucrr8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/times
 /utmb8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/times/utmr8a.pf
 b></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on FINAL_IEEE_TIT_SUBMISSION.pdf (17 pages, 370857 bytes).
+Output written on FINAL_IEEE_TIT_SUBMISSION.pdf (17 pages, 371310 bytes).
 Transcript written on FINAL_IEEE_TIT_SUBMISSION.log.
 Latexmk: Getting log file 'FINAL_IEEE_TIT_SUBMISSION.log'
 Latexmk: Examining 'FINAL_IEEE_TIT_SUBMISSION.fls'
@@ -629,7 +632,7 @@ ic/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/u
 rw/courier/ucrr8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/times
 /utmb8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/times/utmr8a.pf
 b></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on FINAL_IEEE_TIT_SUBMISSION.pdf (17 pages, 371068 bytes).
+Output written on FINAL_IEEE_TIT_SUBMISSION.pdf (17 pages, 371556 bytes).
 Transcript written on FINAL_IEEE_TIT_SUBMISSION.log.
 Latexmk: Getting log file 'FINAL_IEEE_TIT_SUBMISSION.log'
 Latexmk: Examining 'FINAL_IEEE_TIT_SUBMISSION.fls'
@@ -710,7 +713,7 @@ ic/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/u
 rw/courier/ucrr8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/times
 /utmb8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/times/utmr8a.pf
 b></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on FINAL_IEEE_TIT_SUBMISSION.pdf (17 pages, 371068 bytes).
+Output written on FINAL_IEEE_TIT_SUBMISSION.pdf (17 pages, 371556 bytes).
 Transcript written on FINAL_IEEE_TIT_SUBMISSION.log.
 Latexmk: Getting log file 'FINAL_IEEE_TIT_SUBMISSION.log'
 Latexmk: Examining 'FINAL_IEEE_TIT_SUBMISSION.fls'

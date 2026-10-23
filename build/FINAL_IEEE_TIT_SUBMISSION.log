@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.10.18)  23 OCT 2026 12:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.10.18)  23 OCT 2026 12:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -253,7 +253,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ] [7] [8]
 [9] [10] [11] [12] [13]
 LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 1
-191.
+198.
 
 (/usr/local/texlive/2026/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
@@ -299,7 +299,7 @@ exmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb></usr/local/texlive/202
 mf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2026/texmf-dist/fo
 nts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/
 urw/times/utmri8a.pfb>
-Output written on FINAL_IEEE_TIT_SUBMISSION.pdf (17 pages, 371068 bytes).
+Output written on FINAL_IEEE_TIT_SUBMISSION.pdf (17 pages, 371556 bytes).
 PDF statistics:
  196 PDF objects out of 1000 (max. 8388607)
  121 compressed objects within 2 object streams

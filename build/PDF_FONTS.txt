@@ -1,1 +1,1 @@
-/__w/_temp/5ccaf05a-e186-4a06-8e50-d8b8093b0544.sh: 18: pdffonts: not found
+/__w/_temp/39d0152d-38b5-48a3-825b-429c8dc98987.sh: 18: pdffonts: not found
