@@ -315,226 +315,218 @@ LaTeX Warning: Citation `Sendrier1997' on page 10 undefined on input line 858.
 LaTeX Warning: Reference `thm:T4' on page 10 undefined on input line 868.
 
 [10]
-Overfull \hbox (22.7658pt too wide) in paragraph at lines 876--881
-\OT1/ptm/b/n/10 Lemma VIII.1 \OT1/ptm/m/n/10 (edge mo-ments)\OT1/ptm/b/n/10 . \
-OT1/ptm/m/it/10 For in-de-pen-dent $\OML/cmm/m/it/10 U; V$ \OT1/ptm/m/it/10 uni
--form on $\OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 ; [] ; P\OMS/cmsy
-/m/n/10 g$\OT1/ptm/m/it/10 , $\U/msb/m/n/10 E\OT1/cmr/m/n/10 [[](\OML/cmm/m/it/
-10 U; V\OT1/cmr/m/n/10 )] = \OML/cmm/m/it/10 ^^V[]$ \OT1/ptm/m/it/10 and $\U/ms
-b/m/n/10 E\OT1/cmr/m/n/10 [[](\OML/cmm/m/it/10 U; V\OT1/cmr/m/n/10 )[]] =
 
-LaTeX Warning: Reference `thm:T4' on page 11 undefined on input line 904.
+LaTeX Warning: Reference `thm:T4' on page 11 undefined on input line 907.
 
 
-LaTeX Warning: Reference `lem:edge' on page 11 undefined on input line 908.
+LaTeX Warning: Reference `lem:edge' on page 11 undefined on input line 911.
 
 
-LaTeX Warning: Citation `DP2025' on page 11 undefined on input line 916.
+LaTeX Warning: Citation `DP2025' on page 11 undefined on input line 919.
 
 
-LaTeX Warning: Citation `DP2025' on page 11 undefined on input line 918.
+LaTeX Warning: Citation `DP2025' on page 11 undefined on input line 921.
 
 
-LaTeX Warning: Reference `thm:C6' on page 11 undefined on input line 925.
+LaTeX Warning: Reference `thm:C6' on page 11 undefined on input line 928.
 
 
 LaTeX Warning: Reference `cor:secondorder' on page 11 undefined on input line 9
-26.
+29.
 
 
-LaTeX Warning: Citation `DP2025' on page 11 undefined on input line 926.
+LaTeX Warning: Citation `DP2025' on page 11 undefined on input line 929.
 
 
-LaTeX Warning: Reference `thm:C5' on page 11 undefined on input line 954.
+LaTeX Warning: Reference `thm:C5' on page 11 undefined on input line 957.
 
 
-LaTeX Warning: Reference `lem:edge' on page 11 undefined on input line 957.
+LaTeX Warning: Reference `lem:edge' on page 11 undefined on input line 960.
 
 [11]
 
-LaTeX Warning: Reference `lem:varpieces' on page 12 undefined on input line 978
+LaTeX Warning: Reference `lem:varpieces' on page 12 undefined on input line 981
 .
 
 
-LaTeX Warning: Reference `lem:varpieces' on page 12 undefined on input line 987
+LaTeX Warning: Reference `lem:varpieces' on page 12 undefined on input line 990
 .
 
 
-LaTeX Warning: Reference `lem:edge' on page 12 undefined on input line 990.
+LaTeX Warning: Reference `lem:edge' on page 12 undefined on input line 993.
 
 
-LaTeX Warning: Reference `thm:T4' on page 12 undefined on input line 1014.
+LaTeX Warning: Reference `thm:T4' on page 12 undefined on input line 1017.
 
 
-LaTeX Warning: Reference `ex:E1' on page 12 undefined on input line 1037.
+LaTeX Warning: Reference `ex:E1' on page 12 undefined on input line 1040.
 
 
-LaTeX Warning: Reference `ex:E2' on page 12 undefined on input line 1039.
+LaTeX Warning: Reference `ex:E2' on page 12 undefined on input line 1042.
 
 
-LaTeX Warning: Reference `ex:E3' on page 12 undefined on input line 1040.
+LaTeX Warning: Reference `ex:E3' on page 12 undefined on input line 1043.
 
 
-LaTeX Warning: Reference `ex:E4' on page 12 undefined on input line 1040.
+LaTeX Warning: Reference `ex:E4' on page 12 undefined on input line 1043.
 
 
-LaTeX Warning: Reference `ex:E5' on page 12 undefined on input line 1043.
+LaTeX Warning: Reference `ex:E5' on page 12 undefined on input line 1046.
 
 
-LaTeX Warning: Reference `ex:E6' on page 12 undefined on input line 1044.
+LaTeX Warning: Reference `ex:E6' on page 12 undefined on input line 1047.
 
 
-LaTeX Warning: Reference `ex:E3' on page 12 undefined on input line 1045.
+LaTeX Warning: Reference `ex:E3' on page 12 undefined on input line 1048.
 
 
-LaTeX Warning: Reference `ex:E5' on page 12 undefined on input line 1045.
+LaTeX Warning: Reference `ex:E5' on page 12 undefined on input line 1048.
 
 [12]
 
-LaTeX Warning: Reference `thm:T4' on page 13 undefined on input line 1051.
+LaTeX Warning: Reference `thm:T4' on page 13 undefined on input line 1054.
 
 
-LaTeX Warning: Reference `cor:jointsym' on page 13 undefined on input line 1072
+LaTeX Warning: Reference `cor:jointsym' on page 13 undefined on input line 1075
 .
 
 
-LaTeX Warning: Reference `thm:C6' on page 13 undefined on input line 1077.
+LaTeX Warning: Reference `thm:C6' on page 13 undefined on input line 1080.
 
 
-LaTeX Warning: Reference `cor:C3' on page 13 undefined on input line 1082.
+LaTeX Warning: Reference `cor:C3' on page 13 undefined on input line 1085.
 
 
-LaTeX Warning: Reference `prop:P1' on page 13 undefined on input line 1087.
+LaTeX Warning: Reference `prop:P1' on page 13 undefined on input line 1090.
 
 
-LaTeX Warning: Reference `cor:jointsym' on page 13 undefined on input line 1100
+LaTeX Warning: Reference `cor:jointsym' on page 13 undefined on input line 1103
 .
 
 
-LaTeX Warning: Reference `thm:T4' on page 13 undefined on input line 1118.
+LaTeX Warning: Reference `thm:T4' on page 13 undefined on input line 1121.
 
 
-LaTeX Warning: Reference `thm:T6' on page 13 undefined on input line 1118.
+LaTeX Warning: Reference `thm:T6' on page 13 undefined on input line 1121.
 
 [13]
 
-LaTeX Warning: Reference `thm:C6' on page 14 undefined on input line 1139.
+LaTeX Warning: Reference `thm:C6' on page 14 undefined on input line 1142.
 
 
-LaTeX Warning: Reference `cor:C3' on page 14 undefined on input line 1141.
+LaTeX Warning: Reference `cor:C3' on page 14 undefined on input line 1144.
 
 
-LaTeX Warning: Reference `cor:C4' on page 14 undefined on input line 1143.
+LaTeX Warning: Reference `cor:C4' on page 14 undefined on input line 1146.
 
 
 LaTeX Warning: Reference `cor:restricted' on page 14 undefined on input line 11
-44.
+47.
 
 
-LaTeX Warning: Reference `ex:E3' on page 14 undefined on input line 1151.
+LaTeX Warning: Reference `ex:E3' on page 14 undefined on input line 1154.
 
 
-Overfull \hbox (26.62352pt too wide) in paragraph at lines 1162--1174
-[]\OT1/ptm/m/n/10 For the record, the full joint dis-tri-bu-tion of $\OT1/cmr/m
-/n/10 ([][] \OML/cmm/m/it/10 C; [][] [][]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 C\OT
-1/cmr/m/n/10 ))$ \OT1/ptm/m/n/10 is $\OT1/cmr/m/n/8 (0\OML/cmm/m/it/8 ; \OT1/cm
-r/m/n/8 0)[] 1$\OT1/ptm/m/n/8 , $\OT1/cmr/m/n/8 (1\OML/cmm/m/it/8 ; \OT1/cmr/m/
-n/8 1)[] 7$\OT1/ptm/m/n/8 , $\OT1/cmr/m/n/8 (2\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 
-0)[] 1$\OT1/ptm/m/n/8 , $\OT1/cmr/m/n/8 (2\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 2)[]
- 27$\OT1/ptm/m/n/8 , $\OT1/cmr/m/n/8 (3\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 1)[] 6\
-OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 (3\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 2)[] 12$\OT1
-/ptm/m/n/8 ,
+Overfull \hbox (43.8181pt too wide) in paragraph at lines 1168--1177
+\OT1/cmr/m/n/8 (8\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 3)[] 84$\OT1/ptm/m/n/8 , $\OT
+1/cmr/m/n/8 (8\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 4)[] 144$\OT1/ptm/m/n/8 , $\OT1/
+cmr/m/n/8 (8\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 5)[] 84$\OT1/ptm/m/n/8 , $\OT1/cmr
+/m/n/8 (8\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 6)[] 21\OML/cmm/m/it/8 ; \OT1/cmr/m/n
+/8 (9\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 2)[] 24$\OT1/ptm/m/n/8 , $\OT1/cmr/m/n/8 
+(9\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 3)[] 86$\OT1/ptm/m/n/8 , $\OT1/cmr/m/n/8 (9\
+OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 4)[] 96$\OT1/ptm/m/n/8 , $\OT1/cmr/m/n/8 (9\OML
+/cmm/m/it/8 ; \OT1/cmr/m/n/8 5)[] 60$\OT1/ptm/m/n/8 , $\OT1/cmr/m/n/8 (10\OML/c
+mm/m/it/8 ; \OT1/cmr/m/n/8 2)[] 33\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 (10\OML/cmm/
+m/it/8 ; \OT1/cmr/m/n/8 3)[] 48$\OT1/ptm/m/n/8 , $\OT1/cmr/m/n/8 (10\OML/cmm/m/
+it/8 ; \OT1/cmr/m/n/8 4)[] 80$\OT1/ptm/m/n/8 , $\OT1/cmr/m/n/8 (11\OML/cmm/m/it
+/8 ; \OT1/cmr/m/n/8 1)[] 6$\OT1/ptm/m/n/8 , $\OT1/cmr/m/n/8 (11\OML/cmm/m/it/8 
+; \OT1/cmr/m/n/8 2)[] 12\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 (11\OML/cmm/m/it/8 ; \
+OT1/cmr/m/n/8 3)[] 59$\OT1/ptm/m/n/8 ,
 
-LaTeX Warning: Reference `thm:T6' on page 14 undefined on input line 1183.
+LaTeX Warning: Reference `thm:T6' on page 14 undefined on input line 1186.
 
 (/usr/local/texlive/2026/texmf-dist/tex/latex/psnfss/ot1pcr.fd)
 
-LaTeX Warning: Reference `thm:T3' on page 14 undefined on input line 1189.
+LaTeX Warning: Reference `thm:T3' on page 14 undefined on input line 1192.
 
 
 LaTeX Warning: Reference `prop:assembly' on page 14 undefined on input line 119
-4.
+7.
 
 
-LaTeX Warning: Reference `thm:T6' on page 14 undefined on input line 1194.
+LaTeX Warning: Reference `thm:T6' on page 14 undefined on input line 1197.
 
 
-LaTeX Warning: Reference `thm:T5' on page 14 undefined on input line 1203.
+LaTeX Warning: Reference `thm:T5' on page 14 undefined on input line 1206.
 
 
-LaTeX Warning: Reference `thm:T6' on page 14 undefined on input line 1206.
+LaTeX Warning: Reference `thm:T6' on page 14 undefined on input line 1209.
 
 [14]
 
-LaTeX Warning: Reference `cor:C3' on page 15 undefined on input line 1210.
+LaTeX Warning: Reference `cor:C3' on page 15 undefined on input line 1213.
 
 
-LaTeX Warning: Reference `cor:C4' on page 15 undefined on input line 1211.
+LaTeX Warning: Reference `cor:C4' on page 15 undefined on input line 1214.
 
 
-LaTeX Warning: Reference `thm:C5' on page 15 undefined on input line 1215.
+LaTeX Warning: Reference `thm:C5' on page 15 undefined on input line 1218.
 
 
-LaTeX Warning: Reference `thm:C6' on page 15 undefined on input line 1218.
+LaTeX Warning: Reference `thm:C6' on page 15 undefined on input line 1221.
 
 
-LaTeX Warning: Reference `ex:E5' on page 15 undefined on input line 1220.
+LaTeX Warning: Reference `ex:E5' on page 15 undefined on input line 1223.
 
 
-LaTeX Warning: Reference `thm:T5' on page 15 undefined on input line 1250.
+LaTeX Warning: Reference `thm:T5' on page 15 undefined on input line 1253.
 
 
-LaTeX Warning: Reference `ex:E5' on page 15 undefined on input line 1260.
+LaTeX Warning: Reference `ex:E5' on page 15 undefined on input line 1263.
 
 
-LaTeX Warning: Reference `ex:E6' on page 15 undefined on input line 1262.
+LaTeX Warning: Reference `ex:E6' on page 15 undefined on input line 1265.
 
 
-LaTeX Warning: Reference `ex:E4' on page 15 undefined on input line 1267.
+LaTeX Warning: Reference `ex:E4' on page 15 undefined on input line 1270.
 
 
-LaTeX Warning: Reference `sec:param' on page 15 undefined on input line 1269.
+LaTeX Warning: Reference `sec:param' on page 15 undefined on input line 1272.
 
 
-LaTeX Warning: Reference `sec:moments' on page 15 undefined on input line 1269.
-
-
-
-Overfull \hbox (49.7204pt too wide) in paragraph at lines 1246--1270
-\OT1/ptm/m/n/10 the scripts and their saved out-puts ac-com-pany the pa-per in 
-the di-rec-tory \OT1/pcr/m/n/10 code/\OT1/ptm/m/n/10 . (i) \OT1/ptm/m/it/10 Or-
-bit level \OT1/ptm/m/n/10 (\OT1/pcr/m/n/10 code/validate_p1_14.py\OT1/ptm/m/n/1
-0 ):
-
-LaTeX Warning: Reference `thm:T3' on page 15 undefined on input line 1280.
-
-
-LaTeX Warning: Reference `sec:moments' on page 15 undefined on input line 1286.
+LaTeX Warning: Reference `sec:moments' on page 15 undefined on input line 1272.
 
 
 
-LaTeX Warning: Reference `lem:varpieces' on page 15 undefined on input line 128
-8.
+LaTeX Warning: Reference `thm:T3' on page 15 undefined on input line 1283.
 
 
-LaTeX Warning: Reference `thm:T3' on page 15 undefined on input line 1291.
+LaTeX Warning: Reference `sec:moments' on page 15 undefined on input line 1289.
 
 
-LaTeX Warning: Reference `thm:T6' on page 15 undefined on input line 1291.
+
+LaTeX Warning: Reference `lem:varpieces' on page 15 undefined on input line 129
+1.
 
 
-LaTeX Warning: Reference `sec:prelim' on page 15 undefined on input line 1292.
+LaTeX Warning: Reference `thm:T3' on page 15 undefined on input line 1294.
+
+
+LaTeX Warning: Reference `thm:T6' on page 15 undefined on input line 1294.
+
+
+LaTeX Warning: Reference `sec:prelim' on page 15 undefined on input line 1295.
 
 
 LaTeX Warning: Reference `sec:corollaries' on page 15 undefined on input line 1
-295.
+298.
 
 
-LaTeX Warning: Reference `sec:moments' on page 15 undefined on input line 1296.
+LaTeX Warning: Reference `sec:moments' on page 15 undefined on input line 1299.
 
 
 
-LaTeX Warning: Reference `thm:T4' on page 15 undefined on input line 1298.
+LaTeX Warning: Reference `thm:T4' on page 15 undefined on input line 1301.
 
 [15] [16] [17] (./FINAL_IEEE_TIT_SUBMISSION.aux)
 
@@ -571,7 +563,7 @@ ic/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/u
 rw/courier/ucrr8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/times
 /utmb8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/times/utmr8a.pf
 b></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on FINAL_IEEE_TIT_SUBMISSION.pdf (17 pages, 370826 bytes).
+Output written on FINAL_IEEE_TIT_SUBMISSION.pdf (17 pages, 370946 bytes).
 Transcript written on FINAL_IEEE_TIT_SUBMISSION.log.
 Latexmk: Getting log file 'FINAL_IEEE_TIT_SUBMISSION.log'
 Latexmk: Examining 'FINAL_IEEE_TIT_SUBMISSION.fls'
@@ -623,32 +615,24 @@ ences, K.R. Man-galam Uni-ver-sity, Gu-ru-gram, In-dia (e-mail: arun-ya-
 (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd) [1{/usr/local/t
 exlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/20
 26/texmf-dist/fonts/enc/dvips/base/8r.enc}] [2] [3] [4] [5] [6] [7] [8]
-[9] [10]
-Overfull \hbox (22.7658pt too wide) in paragraph at lines 876--881
-\OT1/ptm/b/n/10 Lemma VIII.1 \OT1/ptm/m/n/10 (edge mo-ments)\OT1/ptm/b/n/10 . \
-OT1/ptm/m/it/10 For in-de-pen-dent $\OML/cmm/m/it/10 U; V$ \OT1/ptm/m/it/10 uni
--form on $\OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 ; [] ; P\OMS/cmsy
-/m/n/10 g$\OT1/ptm/m/it/10 , $\U/msb/m/n/10 E\OT1/cmr/m/n/10 [[](\OML/cmm/m/it/
-10 U; V\OT1/cmr/m/n/10 )] = \OML/cmm/m/it/10 ^^V[]$ \OT1/ptm/m/it/10 and $\U/ms
-b/m/n/10 E\OT1/cmr/m/n/10 [[](\OML/cmm/m/it/10 U; V\OT1/cmr/m/n/10 )[]] =
-[11] [12] [13]
-Overfull \hbox (26.62352pt too wide) in paragraph at lines 1162--1174
-[]\OT1/ptm/m/n/10 For the record, the full joint dis-tri-bu-tion of $\OT1/cmr/m
-/n/10 ([][] \OML/cmm/m/it/10 C; [][] [][]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 C\OT
-1/cmr/m/n/10 ))$ \OT1/ptm/m/n/10 is $\OT1/cmr/m/n/8 (0\OML/cmm/m/it/8 ; \OT1/cm
-r/m/n/8 0)[] 1$\OT1/ptm/m/n/8 , $\OT1/cmr/m/n/8 (1\OML/cmm/m/it/8 ; \OT1/cmr/m/
-n/8 1)[] 7$\OT1/ptm/m/n/8 , $\OT1/cmr/m/n/8 (2\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 
-0)[] 1$\OT1/ptm/m/n/8 , $\OT1/cmr/m/n/8 (2\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 2)[]
- 27$\OT1/ptm/m/n/8 , $\OT1/cmr/m/n/8 (3\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 1)[] 6\
-OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 (3\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 2)[] 12$\OT1
-/ptm/m/n/8 ,
-(/usr/local/texlive/2026/texmf-dist/tex/latex/psnfss/ot1pcr.fd) [14]
-Overfull \hbox (49.7204pt too wide) in paragraph at lines 1246--1270
-\OT1/ptm/m/n/10 the scripts and their saved out-puts ac-com-pany the pa-per in 
-the di-rec-tory \OT1/pcr/m/n/10 code/\OT1/ptm/m/n/10 . (i) \OT1/ptm/m/it/10 Or-
-bit level \OT1/ptm/m/n/10 (\OT1/pcr/m/n/10 code/validate_p1_14.py\OT1/ptm/m/n/1
-0 ):
-[15] [16] [17] (./FINAL_IEEE_TIT_SUBMISSION.aux) )
+[9] [10] [11] [12] [13]
+Overfull \hbox (43.8181pt too wide) in paragraph at lines 1168--1177
+\OT1/cmr/m/n/8 (8\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 3)[] 84$\OT1/ptm/m/n/8 , $\OT
+1/cmr/m/n/8 (8\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 4)[] 144$\OT1/ptm/m/n/8 , $\OT1/
+cmr/m/n/8 (8\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 5)[] 84$\OT1/ptm/m/n/8 , $\OT1/cmr
+/m/n/8 (8\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 6)[] 21\OML/cmm/m/it/8 ; \OT1/cmr/m/n
+/8 (9\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 2)[] 24$\OT1/ptm/m/n/8 , $\OT1/cmr/m/n/8 
+(9\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 3)[] 86$\OT1/ptm/m/n/8 , $\OT1/cmr/m/n/8 (9\
+OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 4)[] 96$\OT1/ptm/m/n/8 , $\OT1/cmr/m/n/8 (9\OML
+/cmm/m/it/8 ; \OT1/cmr/m/n/8 5)[] 60$\OT1/ptm/m/n/8 , $\OT1/cmr/m/n/8 (10\OML/c
+mm/m/it/8 ; \OT1/cmr/m/n/8 2)[] 33\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 (10\OML/cmm/
+m/it/8 ; \OT1/cmr/m/n/8 3)[] 48$\OT1/ptm/m/n/8 , $\OT1/cmr/m/n/8 (10\OML/cmm/m/
+it/8 ; \OT1/cmr/m/n/8 4)[] 80$\OT1/ptm/m/n/8 , $\OT1/cmr/m/n/8 (11\OML/cmm/m/it
+/8 ; \OT1/cmr/m/n/8 1)[] 6$\OT1/ptm/m/n/8 , $\OT1/cmr/m/n/8 (11\OML/cmm/m/it/8 
+; \OT1/cmr/m/n/8 2)[] 12\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 (11\OML/cmm/m/it/8 ; \
+OT1/cmr/m/n/8 3)[] 59$\OT1/ptm/m/n/8 ,
+(/usr/local/texlive/2026/texmf-dist/tex/latex/psnfss/ot1pcr.fd) [14] [15]
+[16] [17] (./FINAL_IEEE_TIT_SUBMISSION.aux) )
 (see the transcript file for additional information)</usr/local/texlive/2026/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2026/tex
 mf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/local/texlive/2026/
@@ -676,7 +660,7 @@ ic/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/u
 rw/courier/ucrr8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/times
 /utmb8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/times/utmr8a.pf
 b></usr/local/texlive/2026/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on FINAL_IEEE_TIT_SUBMISSION.pdf (17 pages, 370919 bytes).
+Output written on FINAL_IEEE_TIT_SUBMISSION.pdf (17 pages, 371055 bytes).
 Transcript written on FINAL_IEEE_TIT_SUBMISSION.log.
 Latexmk: Getting log file 'FINAL_IEEE_TIT_SUBMISSION.log'
 Latexmk: Examining 'FINAL_IEEE_TIT_SUBMISSION.fls'

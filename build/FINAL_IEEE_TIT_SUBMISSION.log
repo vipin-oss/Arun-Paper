@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.10.18)  23 OCT 2026 12:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.10.18)  23 OCT 2026 12:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -251,42 +251,30 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1{/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr
 /local/texlive/2026/texmf-dist/fonts/enc/dvips/base/8r.enc}] [2] [3] [4] [5] [6
 ] [7] [8]
-[9] [10]
-Overfull \hbox (22.7658pt too wide) in paragraph at lines 876--881
-\OT1/ptm/b/n/10 Lemma VIII.1 \OT1/ptm/m/n/10 (edge mo-ments)\OT1/ptm/b/n/10 . \
-OT1/ptm/m/it/10 For in-de-pen-dent $\OML/cmm/m/it/10 U; V$ \OT1/ptm/m/it/10 uni
--form on $\OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 ; [] ; P\OMS/cmsy
-/m/n/10 g$\OT1/ptm/m/it/10 , $\U/msb/m/n/10 E\OT1/cmr/m/n/10 [[](\OML/cmm/m/it/
-10 U; V\OT1/cmr/m/n/10 )] = \OML/cmm/m/it/10 ^^V[]$ \OT1/ptm/m/it/10 and $\U/ms
-b/m/n/10 E\OT1/cmr/m/n/10 [[](\OML/cmm/m/it/10 U; V\OT1/cmr/m/n/10 )[]] =
- []
-
-[11] [12] [13]
-Overfull \hbox (26.62352pt too wide) in paragraph at lines 1162--1174
-[]\OT1/ptm/m/n/10 For the record, the full joint dis-tri-bu-tion of $\OT1/cmr/m
-/n/10 ([][] \OML/cmm/m/it/10 C; [][] [][]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 C\OT
-1/cmr/m/n/10 ))$ \OT1/ptm/m/n/10 is $\OT1/cmr/m/n/8 (0\OML/cmm/m/it/8 ; \OT1/cm
-r/m/n/8 0)[] 1$\OT1/ptm/m/n/8 , $\OT1/cmr/m/n/8 (1\OML/cmm/m/it/8 ; \OT1/cmr/m/
-n/8 1)[] 7$\OT1/ptm/m/n/8 , $\OT1/cmr/m/n/8 (2\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 
-0)[] 1$\OT1/ptm/m/n/8 , $\OT1/cmr/m/n/8 (2\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 2)[]
- 27$\OT1/ptm/m/n/8 , $\OT1/cmr/m/n/8 (3\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 1)[] 6\
-OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 (3\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 2)[] 12$\OT1
-/ptm/m/n/8 ,
+[9] [10] [11] [12] [13]
+Overfull \hbox (43.8181pt too wide) in paragraph at lines 1168--1177
+\OT1/cmr/m/n/8 (8\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 3)[] 84$\OT1/ptm/m/n/8 , $\OT
+1/cmr/m/n/8 (8\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 4)[] 144$\OT1/ptm/m/n/8 , $\OT1/
+cmr/m/n/8 (8\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 5)[] 84$\OT1/ptm/m/n/8 , $\OT1/cmr
+/m/n/8 (8\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 6)[] 21\OML/cmm/m/it/8 ; \OT1/cmr/m/n
+/8 (9\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 2)[] 24$\OT1/ptm/m/n/8 , $\OT1/cmr/m/n/8 
+(9\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 3)[] 86$\OT1/ptm/m/n/8 , $\OT1/cmr/m/n/8 (9\
+OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 4)[] 96$\OT1/ptm/m/n/8 , $\OT1/cmr/m/n/8 (9\OML
+/cmm/m/it/8 ; \OT1/cmr/m/n/8 5)[] 60$\OT1/ptm/m/n/8 , $\OT1/cmr/m/n/8 (10\OML/c
+mm/m/it/8 ; \OT1/cmr/m/n/8 2)[] 33\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 (10\OML/cmm/
+m/it/8 ; \OT1/cmr/m/n/8 3)[] 48$\OT1/ptm/m/n/8 , $\OT1/cmr/m/n/8 (10\OML/cmm/m/
+it/8 ; \OT1/cmr/m/n/8 4)[] 80$\OT1/ptm/m/n/8 , $\OT1/cmr/m/n/8 (11\OML/cmm/m/it
+/8 ; \OT1/cmr/m/n/8 1)[] 6$\OT1/ptm/m/n/8 , $\OT1/cmr/m/n/8 (11\OML/cmm/m/it/8 
+; \OT1/cmr/m/n/8 2)[] 12\OML/cmm/m/it/8 ; \OT1/cmr/m/n/8 (11\OML/cmm/m/it/8 ; \
+OT1/cmr/m/n/8 3)[] 59$\OT1/ptm/m/n/8 ,
  []
 
 LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 1
-188.
+191.
 (/usr/local/texlive/2026/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-) [14]
-Overfull \hbox (49.7204pt too wide) in paragraph at lines 1246--1270
-\OT1/ptm/m/n/10 the scripts and their saved out-puts ac-com-pany the pa-per in 
-the di-rec-tory \OT1/pcr/m/n/10 code/\OT1/ptm/m/n/10 . (i) \OT1/ptm/m/it/10 Or-
-bit level \OT1/ptm/m/n/10 (\OT1/pcr/m/n/10 code/validate_p1_14.py\OT1/ptm/m/n/1
-0 ):
- []
-
-[15] [16] [17] (./FINAL_IEEE_TIT_SUBMISSION.aux)
+) [14] [15]
+[16] [17] (./FINAL_IEEE_TIT_SUBMISSION.aux)
  ***********
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-09-09>
@@ -299,7 +287,7 @@ Here is how much of TeX's memory you used:
  32197 multiletter control sequences out of 15000+600000
  669154 words of font info for 120 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,10n,65p,231b,289s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 56i,10n,65p,231b,286s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 ></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.
 pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cmextra/cme
@@ -327,7 +315,7 @@ exmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb></usr/local/texlive/202
 mf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2026/texmf-dist/fo
 nts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/
 urw/times/utmri8a.pfb>
-Output written on FINAL_IEEE_TIT_SUBMISSION.pdf (17 pages, 370919 bytes).
+Output written on FINAL_IEEE_TIT_SUBMISSION.pdf (17 pages, 371055 bytes).
 PDF statistics:
  196 PDF objects out of 1000 (max. 8388607)
  121 compressed objects within 2 object streams
