@@ -874,10 +874,13 @@ independent and uniform on \(\{0,\dots,P\}\). For one orbit write
 
 \begin{lemma}[edge moments]\label{lem:edge}
 For independent \(U, V\) uniform on \(\{0,\dots,P\}\),
-\(\E[\min(U,V)] = \mu_P\) and
-\(\E[\min(U,V)^2] = \frac{P(P^2+P+1)}{6(P+1)}\).
-For \(0 \le c \le P\), \(F(c) := \E[\min(c,U)] =
-\frac{c(2P-c+1)}{2(P+1)}\).
+\[
+\E[\min(U,V)] = \mu_P,
+\qquad
+\E[\min(U,V)^2] = \frac{P(P^2+P+1)}{6(P+1)} .
+\]
+For \(0 \le c \le P\),
+\(F(c) := \E[\min(c,U)] = \frac{c(2P-c+1)}{2(P+1)}\).
 \end{lemma}
 
 \begin{proof}
@@ -1161,7 +1164,7 @@ of weight \(1\) with six edges, contributes \(6\mu_2 = 10/3\).
 
 For the record, the full joint distribution of
 \((\dim_{\Fq} C, \dim_{\Fq}\Hull_k(C))\) is
-{\footnotesize
+\par{\footnotesize
 \((0,0){:}\,1\), \((1,1){:}\,7\), \((2,0){:}\,1\), \((2,2){:}\,27\), \((3,1){:}\,6,
 (3,2){:}\,12\), \((3,3){:}\,59\), \((4,2){:}\,33\), \((4,3){:}\,48\), \((4,4){:}\,80,
 (5,2){:}\,24\), \((5,3){:}\,86\), \((5,4){:}\,96\), \((5,5){:}\,60\), \((6,2){:}\,24,
@@ -1185,7 +1188,7 @@ generator: here, the exponent of \(f_i\) in \(h^{\#}\) equals the
 predecessor value \(P - \alpha_{i-1}\) for every one of the \(2187\)
 assignments, while the successor value \(P - \alpha_{i+1}\) agrees only
 for \(27\) of them (checked in
-\texttt{code/validate\_audit\_fixes.py}). The predecessor orientation is
+\texttt{code/}\allowbreak\texttt{code/validate\_audit\_fixes.py}). The predecessor orientation is
 fixed by the code-first pairing (Theorem~\ref{thm:T3}).
 \end{example}
 
@@ -1237,16 +1240,16 @@ hence \(\E[\Hull] = 7/2\) and \(\operatorname{Var}(\Hull) = 15/4\), the
 LCD count is \(2 = 2^1\) (one orbit), and the self-orthogonal and
 dual-containing counts are \(10\) each. Every value was recomputed by
 Gram-rank brute force over the explicitly constructed codes
-(\texttt{code/validate\_audit\_fixes.py}), so the constacyclic theory is
+(\texttt{code/}\allowbreak\texttt{code/validate\_audit\_fixes.py}), so the constacyclic theory is
 exercised here beyond the cyclic case \(\lambda = 1\) and the negacyclic
 case \(\lambda = -1\).
 \end{example}
 
-\paragraph{Computational verification.}
+\paragraph{Computational verification}
 All formulas above were checked by exact (integer and rational)
 computation; the scripts and their saved outputs accompany the paper in
 the directory \texttt{code/}. (i) \emph{Orbit level}
-(\texttt{code/validate\_p1\_14.py}): direct enumeration of exponent
+(\texttt{code/}\allowbreak\texttt{code/validate\_p1\_14.py}): direct enumeration of exponent
 tuples against the transfer traces of Theorem~\ref{thm:T5}, on the grid
 of \(52\) pairs \((P,L)\) with \(P \in \{1,2,3,4,5,7,8,9\}\),
 \(1 \le L \le 8\) and \((P+1)^L \le 10^5\); the moment closed forms were
@@ -1263,7 +1266,7 @@ of order four in Example~\ref{ex:E6} (\(16\) assignments) and further
 field-level cases with \(P \in \{4, 8, 9\}\) (\(\mathbb{F}_2\) with
 \(P = 4\) (\(25\)) and \(P = 8\) (\(81\)); \(\mathbb{F}_3\) with
 \(P = 9\) (\(100\))) are checked in
-\texttt{code/validate\_audit\_fixes.py}, which also verifies the
+\texttt{code/}\allowbreak\texttt{code/validate\_audit\_fixes.py}, which also verifies the
 hull-generator orientation statement of Example~\ref{ex:E4}. These computations are supporting evidence for the
 tested cases; the proofs of
 Sections~\ref{sec:param}--\ref{sec:moments} are independent of them.
