@@ -123,7 +123,13 @@ jobs:
             echo "nothing to publish"
           else
             git commit -m "build: CI-compiled PDF and logs (run ${{ github.run_id }}) [skip ci]"
-            git push
+            # A human push can land while this job runs, so retry exactly once
+            # after rebasing. Bounded: one rebase, one retry, never a loop.
+            git push || {
+              echo "push rejected; rebasing once and retrying"
+              git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+              git push
+            }
           fi
 
       - name: Fail if compilation did not produce a PDF
