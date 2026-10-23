@@ -1,28 +1,28 @@
-27 embedded fonts (all subset Type1/PFA):
-CYFFUT+MSBM7 [pfa] Type1
-DHSSSU+CMEX10 [pfa] Type1
-DYUUPN+CMR7 [pfa] Type1
-EIKLQP+CMEX9 [pfa] Type1
-EJKTVU+CMEX7 [pfa] Type1
-FCXACO+CMMI7 [pfa] Type1
-HBBDGA+CMR6 [pfa] Type1
-HBIEHQ+CMSY6 [pfa] Type1
-HMPEFZ+CMSY5 [pfa] Type1
-JCAKSM+CMMI6 [pfa] Type1
-JRXPDO+CMMI5 [pfa] Type1
-KJYJIX+CMSY10 [pfa] Type1
-KKNTSO+CMR10 [pfa] Type1
-LIYYTD+CMR8 [pfa] Type1
-LNANOG+MSBM10 [pfa] Type1
-LSFAOB+CMR9 [pfa] Type1
-NWRYYL+CMMI8 [pfa] Type1
-OFFQHC+CMMI10 [pfa] Type1
-OMWZAL+NimbusMonL-Regu [pfa] Type1
-SVFCYI+CMSY9 [pfa] Type1
-TAOWTY+NimbusRomNo9L-Regu [pfa] Type1
-UEIPLS+CMMI9 [pfa] Type1
-UQGCVU+NimbusRomNo9L-Medi [pfa] Type1
-XFRVQP+CMR5 [pfa] Type1
-XHVUBA+NimbusRomNo9L-ReguItal [pfa] Type1
-ZOXBQB+MSBM5 [pfa] Type1
-ZWLYBE+CMSY7 [pfa] Type1
+27 embedded fonts:
+CYFFUT+MSBM7 [pfa]
+DHSSSU+CMEX10 [pfa]
+DYUUPN+CMR7 [pfa]
+EIKLQP+CMEX9 [pfa]
+EJKTVU+CMEX7 [pfa]
+FCXACO+CMMI7 [pfa]
+HBBDGA+CMR6 [pfa]
+HBIEHQ+CMSY6 [pfa]
+HMPEFZ+CMSY5 [pfa]
+JCAKSM+CMMI6 [pfa]
+JRXPDO+CMMI5 [pfa]
+KJYJIX+CMSY10 [pfa]
+KKNTSO+CMR10 [pfa]
+LIYYTD+CMR8 [pfa]
+LNANOG+MSBM10 [pfa]
+LSFAOB+CMR9 [pfa]
+NWRYYL+CMMI8 [pfa]
+OFFQHC+CMMI10 [pfa]
+OMWZAL+NimbusMonL-Regu [pfa]
+SVFCYI+CMSY9 [pfa]
+TAOWTY+NimbusRomNo9L-Regu [pfa]
+UEIPLS+CMMI9 [pfa]
+UQGCVU+NimbusRomNo9L-Medi [pfa]
+XFRVQP+CMR5 [pfa]
+XHVUBA+NimbusRomNo9L-ReguItal [pfa]
+ZOXBQB+MSBM5 [pfa]
+ZWLYBE+CMSY7 [pfa]
