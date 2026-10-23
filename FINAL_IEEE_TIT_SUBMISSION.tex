@@ -232,11 +232,11 @@ The Euclidean dual is denoted \(C^\perp\).
 This is the \(k\)-Galois inner product introduced by Fan and
 Zhang~\cite{FZ2017}. The code-first slot order agrees with the Galois
 dual convention of Liu and Pan~\cite{LP2020}; in the finite-field case
-the dictionary is \(D(C) = \sigma^{e-k}(C^\perp)\). The slot order is part of the definition: the candidate \(y\) occupies
-the \(\sigma\)-twisted slot, and this is what makes
-\(D(C) = \rho(C^\perp)\) (coordinatewise \(\rho\);
-Proposition~\ref{prop:transport}) rather than the analogous statement
-with \(\sigma\). All dual formulas below use this convention. The global
+the dictionary is \(D(C) = \rho(C^\perp)\), where \(\rho\) acts
+coordinatewise, \(\alpha \mapsto \alpha^{p^{d_s-k}}\). The slot order is part of the definition: the candidate \(y\) occupies
+the \(\sigma\)-twisted slot, and this is what selects \(\rho\) rather
+than \(\sigma\) in that dictionary
+(Proposition~\ref{prop:transport}). All dual formulas below use this convention. The global
 pairing on \(A^n\) is the tuple of component pairings; a code over \(A\)
 is an \(A\)-submodule of \(A^n\).
 
@@ -849,13 +849,19 @@ alphabet and twist; we therefore put the uniform measure on assignments,
 equivalently on the codes of this family itself (not on random linear
 codes). The mean and variance below are the exact ensemble averages of
 \(\dim_{\Fq}\Hull_k\) over this family. Since
-\(\mu_P / P \to 1/3\) as \(P \to \infty\) (and \(\mu_1 = 1/4\)), the mean
-hull dimension is a positive proportion of the ambient dimension
-\(\Delta\) --- roughly \(\Delta/3\) for large \(P\), \(\Delta/4\) at
-\(P = 1\), apart from the length-one-orbit correction --- so the mean
-hull dimension grows linearly with \(n\), whereas the hull dimension of
-a random linear code stays bounded in
-probability~\cite{Sendrier1997}. The variance formulas quantify the
+\(\mu_P / P \to 1/3\) and \(\nu_P / P \to 1/4\) as \(P \to \infty\),
+Theorem~\ref{thm:C5} yields
+\(\Delta/6 \le \E[\dim_{\Fq}\Hull_k(C)] \le \Delta/3\) for every
+\(P \ge 2\), where \(\Delta = \sum_s m_s n\) is the ambient
+\(\Fq\)-dimension; hence for every admissible family with \(P \ge 2\)
+the mean hull dimension grows linearly in \(n\) with an explicit
+constant, whereas the hull dimension of a random linear code stays
+bounded in probability~\cite{Sendrier1997}. At \(P = 1\) we have
+\(\nu_1 = 0\), so the mean equals \(\tfrac14 \sum_{L_O \ge 2} w_O L_O\):
+it is a positive proportion of \(\Delta\) exactly when orbits of length
+at least two carry positive weight, and it vanishes identically when
+every orbit has length one, in which case every code of the family is
+LCD. The variance formulas quantify the
 fluctuations around this behaviour. Comparisons with average-dimension formulas in the literature
 should be made only under matching hypotheses; the results below are
 stated strictly for the labeled repeated-root ensemble defined here.
@@ -924,9 +930,10 @@ of the degrees of the distinct factors in reciprocal cycles of length
 via \(P - \frac{P(4P+5)}{6(P+1)} = \mu_P\) and
 \(P - \frac{3P+1}{4} + \frac{\delta_P}{4(P+1)} = \nu_P\), to
 \(\nu_P \Delta_1 + \mu_P \sum_{t \ge 2} a_t \Delta_t\), which is the
-display above. No variance or covariance formula is given there; the
-second-order results below (Theorem~\ref{thm:C6} and
-Corollary~\ref{cor:secondorder}) have no counterpart in \cite{DP2025}.
+display above. That work treats average hull dimensions, that is, the first
+moment; the second-order results below (Theorem~\ref{thm:C6} and
+Corollary~\ref{cor:secondorder}) are established here independently of
+\cite{DP2025}.
 \end{remark}
 
 For the variance, orbit contributions are independent (disjoint exponent
