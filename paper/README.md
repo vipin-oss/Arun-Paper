@@ -34,7 +34,31 @@ tables/
   joint_<slug>.csv        full joint multiplicities N_{kappa,eta} per family
 ```
 
-## Compile
+## IEEE version (`paper/ieee/`)
+
+For an IEEE journal submission there is a second, IEEEtran-format package — same
+mathematical content, IEEE layout, IEEE-specific front/back matter, 192-word
+abstract, 5 index terms, 31 references, and both a two-column journal file and
+a single-column double-spaced peer-review file:
+
+```
+paper/ieee/
+  main.tex                 two-column IEEEtran journal version
+  main_peerreview.tex      single-column, double-spaced peer-review version
+  body.tex                 shared manuscript body (identical in both)
+  references.bib           exactly the 31 cited entries
+  figures/                 3 vector PDFs
+  supplementary/           code + all generated data (zip this for submission)
+  build.sh                 builds both PDFs
+  SUBMISSION_CHECKLIST.md  page/abstract/reference budget + venue table
+```
+
+See `paper/ieee/SUBMISSION_CHECKLIST.md` for the managed quantities (abstract
+192 words vs the 200-word limit, 31 references, 3 figures, 2 tables, estimated
+14–16 two-column pages) and for what to change if you send it to IEEE Access or
+to a letters venue instead.
+
+## Compile (arXiv / non-IEEE version)
 
 ```bash
 pdflatex main && bibtex main && pdflatex main && pdflatex main
