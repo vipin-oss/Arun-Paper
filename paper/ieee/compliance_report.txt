@@ -11,8 +11,8 @@ REGULAR PAPER - camera-ready layout (two column)   (main.tex)
   ok    R8  31 references cited, all present in references.bib; none uncited
   ok    R9  3 vector figures (captions below), 2 tables (captions above, booktabs rules)
   ----  quantities: 3 theorems, 12 lemmas, 15 propositions, 6 corollaries, 2 definitions, 8 examples, 8 remarks, 34 proofs
-  ----  quantities: 93 displayed equations, 7 sections, ~12865 words of text
-  ----  estimate: 15-19 two-column pages (8843 prose words, 93 displays, 3 figures, 2 tables, 31 references)
+  ----  quantities: 93 displayed equations, 7 sections, ~12908 words of text
+  ----  estimate: 15-19 two-column pages (8886 prose words, 93 displays, 3 figures, 2 tables, 31 references)
   ----  estimate: 35-47 pages in the double-spaced peer-review format
   RESULT: PASS
 
@@ -29,8 +29,8 @@ REGULAR PAPER - submission copy (single column, double spaced)   (main_peerrevie
   ok    R8  31 references cited, all present in references.bib; none uncited
   ok    R9  3 vector figures (captions below), 2 tables (captions above, booktabs rules)
   ----  quantities: 3 theorems, 12 lemmas, 15 propositions, 6 corollaries, 2 definitions, 8 examples, 8 remarks, 34 proofs
-  ----  quantities: 93 displayed equations, 7 sections, ~12841 words of text
-  ----  estimate: 15-19 two-column pages (8822 prose words, 93 displays, 3 figures, 2 tables, 31 references)
+  ----  quantities: 93 displayed equations, 7 sections, ~12884 words of text
+  ----  estimate: 15-19 two-column pages (8865 prose words, 93 displays, 3 figures, 2 tables, 31 references)
   ----  estimate: 35-47 pages in the double-spaced peer-review format
   RESULT: PASS
 
