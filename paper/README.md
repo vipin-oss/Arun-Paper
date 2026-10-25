@@ -43,20 +43,30 @@ a single-column double-spaced peer-review file:
 
 ```
 paper/ieee/
-  main.tex                 two-column IEEEtran journal version
-  main_peerreview.tex      single-column, double-spaced peer-review version
+  main.tex                 two-column IEEEtran layout  (regular-paper format)
+  main_peerreview.tex      same paper, single column + double spaced (for review)
   body.tex                 shared manuscript body (identical in both)
   references.bib           exactly the 31 cited entries
   figures/                 3 vector PDFs
   supplementary/           code + all generated data (zip this for submission)
+  compliance_check.py      automated formal checks + budget measurement
+  compliance_report.txt    saved output: all IEEE regular-paper checks pass
+  COVER_LETTER.md          cover letter with placeholders
   build.sh                 builds both PDFs
-  SUBMISSION_CHECKLIST.md  page/abstract/reference budget + venue table
+  SUBMISSION_CHECKLIST.md  full checklist
 ```
 
-See `paper/ieee/SUBMISSION_CHECKLIST.md` for the managed quantities (abstract
-192 words vs the 200-word limit, 31 references, 3 figures, 2 tables, estimated
-14–16 two-column pages) and for what to change if you send it to IEEE Access or
-to a letters venue instead.
+It is submitted as a **regular paper** (no letter/correspondence form, no
+5-page limit): 7 numbered sections, 2 appendices, Conclusion (singular) +
+Acknowledgment + References in the IEEE order.
+
+Measured budgets (`python3 compliance_check.py`, saved in
+`compliance_report.txt`): abstract **192 words** (limit 200, no citations, no
+displays), **5** alphabetized index terms, **31** references (all cited, none
+uncited), **3** vector figures, **2** tables, **93** displays, estimated
+**15–19 two-column pages** of a regular paper. The checker also verifies the
+IEEE author/`\thanks` block, the absence of Elsevier-only matter, the section
+order, all labels/refs/citations and the float conventions.
 
 ## Compile (arXiv / non-IEEE version)
 
