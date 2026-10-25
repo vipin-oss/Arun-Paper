@@ -62,7 +62,7 @@ def words(text):
     return len(text.split())
 
 
-def check(texfile, label, report, peerreview=False):
+def check(texfile, label, report, peerreview=False, singlecolumn=False):
     raw, body = expand(texfile)
     ok = True
 
@@ -79,24 +79,49 @@ def check(texfile, label, report, peerreview=False):
     report.append("=" * 78)
 
     # R1 class ------------------------------------------------------------
-    m = re.search(r"\\documentclass\[([^\]]*)\]\{IEEEtran\}", raw)
-    if not m:
-        fail("R1  IEEEtran not used with an option list")
-    else:
-        opts = [o.strip() for o in m.group(1).split(",")]
-        if "journal" not in opts:
-            fail(f"R1  journal option missing (got {opts})")
-        elif "peerreview" in opts and not peerreview:
-            fail("R1  camera-ready file must not use the peerreview option")
+    if singlecolumn:
+        m = re.search(r"\\documentclass\[([^\]]*)\]\{article\}", raw)
+        if not m:
+            fail("R1  single-column file should use \\documentclass[...]{article}")
         else:
-            info(f"R1  IEEEtran[{','.join(opts)}] "
-                 f"- {'peer-review' if peerreview else 'regular paper'}, "
-                 f"two-column={'no' if 'peerreview' in opts else 'yes'}")
+            opts = [o.strip() for o in m.group(1).split(",")]
+            problems = []
+            if "twocolumn" in opts:
+                problems.append("twocolumn option present")
+            flat = raw.replace(" ", "")
+            for need, why in (("mathptmx", "Times font"), ("geometry", "page margins"),
+                              ("amsmath", "math")):
+                if not re.search(r"\\usepackage(\[[^\]]*\])?\{[^}]*" + need, flat):
+                    problems.append(f"{need} missing ({why})")
+            if "\\appendices" not in raw:
+                problems.append("\\appendices not defined for the shared body")
+            if problems:
+                fail("R1  single-column layout: " + "; ".join(problems))
+            else:
+                info("R1  article class, ONE column, Times (mathptmx), 2.5 cm margins, "
+                     "IEEE-style headings, \\appendices defined")
+    else:
+        m = re.search(r"\\documentclass\[([^\]]*)\]\{IEEEtran\}", raw)
+        if not m:
+            fail("R1  IEEEtran not used with an option list")
+        else:
+            opts = [o.strip() for o in m.group(1).split(",")]
+            if "journal" not in opts:
+                fail(f"R1  journal option missing (got {opts})")
+            elif "peerreview" in opts and not peerreview:
+                fail("R1  camera-ready file must not use the peerreview option")
+            else:
+                info(f"R1  IEEEtran[{','.join(opts)}] "
+                     f"- {'peer-review' if peerreview else 'regular paper'}, "
+                     f"two-column={'no' if 'peerreview' in opts else 'yes'}")
 
     # R2 abstract ---------------------------------------------------------
-    m = re.search(r"\\begin\{abstract\}(.*?)\\end\{abstract\}", body, re.S)
+    if singlecolumn:
+        m = re.search(r"Abstract\}\}---(.*?)\\vspace", body, re.S)
+    else:
+        m = re.search(r"\\begin\{abstract\}(.*?)\\end\{abstract\}", body, re.S)
     if not m:
-        fail("R2  no abstract environment")
+        fail("R2  no abstract found")
     else:
         ab = m.group(1)
         n = words(ab)
@@ -113,9 +138,12 @@ def check(texfile, label, report, peerreview=False):
             info(f"R2  abstract {n} words (limit 200), no citations, no displays")
 
     # R3 index terms ------------------------------------------------------
-    m = re.search(r"\\begin\{IEEEkeywords\}(.*?)\\end\{IEEEkeywords\}", body, re.S)
+    if singlecolumn:
+        m = re.search(r"Index Terms\}\}---(.*?)\\vspace", body, re.S)
+    else:
+        m = re.search(r"\\begin\{IEEEkeywords\}(.*?)\\end\{IEEEkeywords\}", body, re.S)
     if not m:
-        fail("R3  no IEEEkeywords environment (IEEE 'Index Terms')")
+        fail("R3  no index terms found (IEEE 'Index Terms')")
     else:
         kws = [k.strip() for k in re.split(r"[,;]", m.group(1).replace("\n", " ")) if k.strip()]
         kws = [k.rstrip(".") for k in kws]
@@ -131,7 +159,7 @@ def check(texfile, label, report, peerreview=False):
 
     # R4 author block -----------------------------------------------------
     head = body[:body.index("\\maketitle") if "\\maketitle" in body else len(body)]
-    if "peerreview" in raw and "\\IEEEpeerreviewmaketitle" in body:
+    if "\\IEEEpeerreviewmaketitle" in body:
         head = body[:body.index("\\IEEEpeerreviewmaketitle")]
     needs = {
         "affiliation(s)": r"is with the",
@@ -162,7 +190,8 @@ def check(texfile, label, report, peerreview=False):
         info("R5  no Elsevier-only declarations, MSC codes or keywords line")
 
     # R6 section structure -------------------------------------------------
-    main_body = body.split("\\appendices")[0]   # appendix sections are not numbered sections
+    doc = body[body.index("\\begin{document}"):] if "\\begin{document}" in body else body
+    main_body = doc.split("\\appendices")[0]     # appendix sections are not numbered sections
     secs = re.findall(r"\\section\{([^}]*)\}", main_body)
     secs_clean = [re.sub(r"\\texorpdfstring\{[^}]*\}\{[^}]*\}", "k", s) for s in secs]
     problems = []
@@ -270,12 +299,16 @@ def check(texfile, label, report, peerreview=False):
 
 def main():
     report = []
-    ok1 = check("main.tex", "REGULAR PAPER - camera-ready layout (two column)",
+    ok1 = check("main_singlecolumn.tex",
+                "REGULAR PAPER - single column, single spaced (read/share)",
+                report, singlecolumn=True)
+    ok2 = check("main.tex", "REGULAR PAPER - camera-ready layout (two column)",
                 report, peerreview=False)
-    ok2 = check("main_peerreview.tex", "REGULAR PAPER - submission copy (single column, double spaced)",
+    ok3 = check("main_peerreview.tex",
+                "REGULAR PAPER - submission copy (single column, double spaced)",
                 report, peerreview=True)
     print("\n".join(report))
-    both = ok1 and ok2
+    both = ok1 and ok2 and ok3
     print("ALL IEEE REGULAR-PAPER CHECKS PASSED" if both else "SOME CHECKS FAILED")
     return 0 if both else 1
 

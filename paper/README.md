@@ -43,6 +43,7 @@ a single-column double-spaced peer-review file:
 
 ```
 paper/ieee/
+  main_singlecolumn.tex    ONE column, single spaced (read/share; no IEEEtran needed)
   main.tex                 two-column IEEEtran layout  (regular-paper format)
   main_peerreview.tex      same paper, single column + double spaced (for review)
   body.tex                 shared manuscript body (identical in both)

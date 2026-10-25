@@ -1,4 +1,22 @@
 ==============================================================================
+REGULAR PAPER - single column, single spaced (read/share)   (main_singlecolumn.tex)
+==============================================================================
+  ok    R1  article class, ONE column, Times (mathptmx), 2.5 cm margins, IEEE-style headings, \appendices defined
+  ok    R2  abstract 192 words (limit 200), no citations, no displays
+  ok    R3  5 index terms, alphabetized: Constacyclic codes, Galois hulls, LCD codes, repeated-root codes, transfer matrices
+  ok    R4  author block complete (7 \thanks footnotes)
+  ok    R5  no Elsevier-only declarations, MSC codes or keywords line
+  ok    R6  7 numbered sections; Conclusion, Acknowledgment and References in place; appendix=yes
+  ok    R7  106 labels, all 73 reference targets defined, no duplicates
+  ok    R8  31 references cited, all present in references.bib; none uncited
+  ok    R9  3 vector figures (captions below), 2 tables (captions above, booktabs rules)
+  ----  quantities: 3 theorems, 12 lemmas, 15 propositions, 6 corollaries, 2 definitions, 8 examples, 8 remarks, 34 proofs
+  ----  quantities: 93 displayed equations, 7 sections, ~12956 words of text
+  ----  estimate: 15-19 two-column pages (8907 prose words, 93 displays, 3 figures, 2 tables, 31 references)
+  ----  estimate: 35-47 pages in the double-spaced peer-review format
+  RESULT: PASS
+
+==============================================================================
 REGULAR PAPER - camera-ready layout (two column)   (main.tex)
 ==============================================================================
   ok    R1  IEEEtran[journal] - regular paper, two-column=yes

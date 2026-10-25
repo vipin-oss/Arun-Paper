@@ -9,6 +9,7 @@ Everything in this folder belongs to that one regular paper:
 
 | file | purpose |
 |---|---|
+| `main_singlecolumn.tex` | **one column, single spaced** (Times, IEEE-style headings) — the version to read, print or share; needs no `IEEEtran.cls` |
 | `main.tex` | **two-column IEEEtran journal layout** (regular-paper format, camera-ready style) |
 | `main_peerreview.tex` | the *same* regular paper in **single-column, double-spaced** form, which is what the editorial system wants for review |
 | `body.tex` | the manuscript body; both wrappers `\input` it, so the two PDFs can never diverge |
@@ -48,6 +49,10 @@ the number of displays, figures, tables and references; read the true count off
 
 ## 2. Regular-paper setting that is already applied
 
+* Three layouts of one file: `main_singlecolumn.tex` (article class, one column,
+  single spaced, 11 pt Times, IEEE-style `I.`/`A.` headings, `Appendix A/B`),
+  `main.tex` (IEEEtran two columns) and `main_peerreview.tex` (IEEEtran
+  single column, double spaced). They share `body.tex`.
 * `\documentclass[journal]{IEEEtran}` — two columns, Times, 10 pt, US Letter,
   IEEE section/equation numbering, IEEE-styled theorem headings, journal
   running head (`\markboth`) and the `\IEEEpubid` copyright line.
